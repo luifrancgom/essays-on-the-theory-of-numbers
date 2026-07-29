@@ -7,3 +7,4 @@ references/files/
 # Quarto
 /_book/
 /.quarto/
+**/*.quarto_ipynb
