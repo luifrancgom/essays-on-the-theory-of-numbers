@@ -12,7 +12,7 @@ Gutenberg”), you agree to comply with all the terms of the Full Project
 Gutenberg-tm License (available with this file or online at
 <http://gutenberg.net/license>).
 
-# Section 1. General Terms of Use and Redistributing Project Gutenberg-tm electronic works
+## Section 1. General Terms of Use and Redistributing Project Gutenberg-tm electronic works
 
 **1.A.** By reading or using any part of this Project Gutenberg-tm
 electronic work, you indicate that you have read, understand, agree to
@@ -222,7 +222,7 @@ or cause to occur: (a) distribution of this or any Project Gutenberg-tm
 work, (b) alteration, modification, or additions or deletions to any
 Project Gutenberg-tm work, and (c) any Defect you cause.
 
-# Section 2. Information about the Mission of Project Gutenberg-tm
+## Section 2. Information about the Mission of Project Gutenberg-tm
 
 Project Gutenberg-tm is synonymous with the free distribution of
 electronic works in formats readable by the widest variety of computers
@@ -242,7 +242,7 @@ how your efforts and donations can help, see
 <a href="#sec-4" class="quarto-xref">Section 4</a> and the Foundation
 web page at [http://www.pglaf.org]().
 
-# Section 3. Information about the Project Gutenberg Literary Archive Foundation
+## Section 3. Information about the Project Gutenberg Literary Archive Foundation
 
 The Project Gutenberg Literary Archive Foundation is a non profit
 501(c)(3) educational corporation organized under the laws of the state
@@ -259,12 +259,14 @@ throughout numerous locations. Its business office is located at 809
 North 1500 West, Salt Lake City, UT 84116, (801) 596-1887, email
 business@pglaf.org. Email contact links and up to date contact
 information can be found at the Foundation’s web site and official page
-at http://pglaf.org
+at <http://pglaf.org>
 
-For additional contact information: Dr. Gregory B. Newby Chief Executive
-and Director gbnewby@pglaf.org
+For additional contact information:\
+  Dr. Gregory B. Newby\
+  Chief Executive and Director\
+  gbnewby@pglaf.org
 
-# Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
+## Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
 
 Project Gutenberg-tm depends upon and cannot survive without wide spread
 public support and donations to carry out its mission of increasing the
@@ -281,7 +283,7 @@ considerable effort, much paperwork and many fees to meet and keep up
 with these requirements. We do not solicit donations in locations where
 we have not received written confirmation of compliance. To SEND
 DONATIONS or determine the status of compliance for any particular state
-visit http://pglaf.org
+visit <http://pglaf.org>
 
 While we cannot and do not solicit contributions from states where we
 have not met the solicitation requirements, we know of no prohibition
@@ -295,9 +297,9 @@ the United States. U.S. laws alone swamp our small staff.
 Please check the Project Gutenberg Web pages for current donation
 methods and addresses. Donations are accepted in a number of other ways
 including including checks, online payments and credit card donations.
-To donate, please visit: http://pglaf.org/donate
+To donate, please visit: <http://pglaf.org/donate>
 
-# Section 5. General Information About Project Gutenberg-tm electronic works
+## Section 5. General Information About Project Gutenberg-tm electronic works
 
 Professor Michael S. Hart is the originator of the Project Gutenberg-tm
 concept of a library of electronic works that could be freely shared
@@ -309,9 +311,9 @@ editions, all of which are confirmed as Public Domain in the U.S. unless
 a copyright notice is included. Thus, we do not necessarily keep eBooks
 in compliance with any particular paper edition.
 
-Most people start at our Web site which has the main PG search facility:
-
-<http://www.gutenberg.net>
+Most people start at our Web site which has the main PG search
+facility:\
+  <http://www.gutenberg.net>
 
 This Web site includes information about Project Gutenberg-tm, including
 how to make donations to the Project Gutenberg Literary Archive
