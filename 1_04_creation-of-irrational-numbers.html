@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.14">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Creation of irrational numbers – Essays on the theory of numbers</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./1_05_continuity-of-the-domain-of-real-numbers.html" rel="next">
+<link href="./1_03_continuity-of-the-straight-line.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7832d8100c30e5308af25d4a964213de.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c1d38ffccc688af79644afcd63528fb2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1_00_continuity-and-irrational-numbers.html">Continuity and irrational numbers</a></li><li class="breadcrumb-item"><a href="./1_04_creation-of-irrational-numbers.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creation of irrational numbers</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Essays on the theory of numbers</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Essays-on-the-theory-of-numbers.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./1_00_continuity-and-irrational-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuity and irrational numbers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_01_properties-of-rational-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Properties of rational numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_02_comparison-with-points-of-a-straight-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Comparison of the rational numbers with the points of a straight line</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_03_continuity-of-the-straight-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Continuity of the straight line</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_04_creation-of-irrational-numbers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creation of irrational numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_06_operations-with-real-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operations with real numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1_07_infinitesimal-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Infinitesimal analysis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./2_00_the-nature-and-meaning-of-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The nature and meaning of numbers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_01_systems-of-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Systems of elements</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_02_transformation-of-a-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Transformation of a system</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_03_similarity-of-a-transformation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_04_transformation-of-a-system-in-itself.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Transformation of a system in itself</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_05_the-finite-and-infinite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The finite and infinite</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_06_simply-infinite-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_07_greater-and-less-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Greater and less numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_08_finite-and-infinite-parts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_09_definition-by-induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition by induction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_10_class-of-simply-infinite-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Class of simply infinite systems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_11_addition-of-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Addition of numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_12_multiplication-of-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Multiplication of numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_13_involution-of-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Involution of numbers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_14_number-of-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1_00_continuity-and-irrational-numbers.html">Continuity and irrational numbers</a></li><li class="breadcrumb-item"><a href="./1_04_creation-of-irrational-numbers.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creation of irrational numbers</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creation of irrational numbers</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>From the last remarks it is sufficiently obvious how the discontinuous domain <span class="math inline">\(R\)</span> of rational numbers may be rendered complete so as to form a continuous domain. In Section I it was pointed out that every rational number <span class="math inline">\(a\)</span> effects a separation of the system <span class="math inline">\(R\)</span> into two classes such that every number <span class="math inline">\(a_1\)</span> of the first class <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> of the second class <span class="math inline">\(A_2\)</span>; the number <span class="math inline">\(a\)</span> is either the greatest number of the class <span class="math inline">\(A_1\)</span> or the least number of the class <span class="math inline">\(A_2\)</span>. If now any separation of the system <span class="math inline">\(R\)</span> into two classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> is given which possesses only <em>this</em> characteristic property that every number <span class="math inline">\(a_1\)</span> in <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> in <span class="math inline">\(A_2\)</span>, then for brevity we shall call such a separation a <em>cut</em> [Schnitt] and designate it by <span class="math inline">\((A_1, A_2)\)</span>. We can then say that every rational number <span class="math inline">\(a\)</span> produces one cut or, strictly speaking, two cuts, which, however, we shall not look upon as essentially different; this cut possesses, <em>besides</em>, the property that either among the numbers of the first class there exists a greatest or among the numbers of the second class a least number. And conversely, if a cut possesses this property, then it is produced by this greatest or least rational number.</p>
+<p>But it is easy to show that there exist infinitely many cuts not produced by rational numbers. The following example suggests itself most readily.</p>
+<p>Let <span class="math inline">\(D\)</span> be a positive integer but not the square of an integer, then there exists a positive integer <span class="math inline">\(\lambda\)</span> such that</p>
+<p><span class="math display">\[
+\lambda^2 &lt; D &lt;(\lambda + 1)^2.
+\]</span></p>
+<p>If we assign to the second class <span class="math inline">\(A_2\)</span>, every positive rational number <span class="math inline">\(a_2\)</span> whose square is <span class="math inline">\(&gt; D\)</span>, to the first class <span class="math inline">\(A_1\)</span> all other rational numbers <span class="math inline">\(a_1\)</span>, this separation forms a cut <span class="math inline">\((A_1, A_2)\)</span>, i.e., every number <span class="math inline">\(a_1\)</span> is less than every number <span class="math inline">\(a_2\)</span>. For if <span class="math inline">\(a_1 = 0\)</span>, or is negative, then on that ground <span class="math inline">\(a_1\)</span> is less than any number <span class="math inline">\(a_2\)</span>, because, by definition, this last is positive; if <span class="math inline">\(a_1\)</span> is positive, then is its square <span class="math inline">\(\leqq D\)</span>, and hence <span class="math inline">\(a_1\)</span> is less than any positive number <span class="math inline">\(a_2\)</span> whose square is <span class="math inline">\(&gt; D\)</span>.</p>
+<p>But this cut is produced by no rational number. To demonstrate this it must be shown first of all that there exists no rational number whose square <span class="math inline">\(= D\)</span>. Although this is known from the first elements of the theory of numbers, still the following indirect proof may find place here. If there exist a rational number whose square <span class="math inline">\(= D\)</span>, then there exist two positive integers <span class="math inline">\(t\)</span>, <span class="math inline">\(u\)</span>, that satisfy the equation <span class="math display">\[
+t^2 - Du^2 = 0,
+\]</span> and we may assume that <span class="math inline">\(u\)</span> is the <em>least</em> positive integer possessing the property that its square, by multiplication by <span class="math inline">\(D\)</span>, may be converted into the square of an integer <span class="math inline">\(t\)</span>. Since evidently <span class="math display">\[
+\lambda u &lt; t &lt; (\lambda + 1) u,
+\]</span> the number <span class="math inline">\(u' = t - \lambda u\)</span> is a positive integer certainly <em>less</em> than <span class="math inline">\(u\)</span>. If further we put <span class="math display">\[
+t' = Du - \lambda t,
+\]</span> <span class="math inline">\(t'\)</span> is likewise a positive integer, and we have <span class="math display">\[
+t'^2 - Du'^2 = (\lambda^2 - D)(t^2 - Du^2) = 0,
+\]</span> which is contrary to the assumption respecting <span class="math inline">\(u\)</span>.</p>
+<p>Hence the square of every rational number <span class="math inline">\(x\)</span> is either <span class="math inline">\(&lt; D\)</span> or <span class="math inline">\(&gt; D\)</span>. From this it easily follows that there is neither in the class <span class="math inline">\(A_1\)</span> a greatest, nor in the class <span class="math inline">\(A_2\)</span> a least number. For if we put <span class="math display">\[
+y = \frac{x(x^2 + 3D)}{3x^2 + D},
+\]</span> we have</p>
+<p><span class="math display">\[
+y - x = \frac{2x(D - x^2)}{3x^2 + D}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+y^2 - D = \frac{(x^2 - D)^3}{(3x^2 + D)^2}.
+\]</span></p>
+<p>If in this we assume <span class="math inline">\(x\)</span> to be a positive number from the class <span class="math inline">\(A_1\)</span>, then <span class="math inline">\(x^2&lt;D\)</span>, and hence <span class="math inline">\(y&gt;x\)</span> and <span class="math inline">\(y^2&lt;D\)</span>. Therefore <span class="math inline">\(y\)</span> likewise belongs to the class <span class="math inline">\(A_1\)</span>. But if we assume <span class="math inline">\(x\)</span> to be a number from the class <span class="math inline">\(A_2\)</span>, then <span class="math inline">\(x^2&gt;D\)</span>, and hence <span class="math inline">\(y&lt;x\)</span>, <span class="math inline">\(y&gt;0\)</span>, and <span class="math inline">\(y^2&gt;D\)</span>. Therefore <span class="math inline">\(y\)</span> likewise belongs to the class <span class="math inline">\(A_2\)</span>. This cut is therefore produced by no rational number.</p>
+<p>In this property that not all cuts are produced by rational numbers consists the incompleteness or discontinuity of the domain <span class="math inline">\(R\)</span> of all rational numbers.</p>
+<p>Whenever, then, we have to do with a cut <span class="math inline">\((A_1, A_2)\)</span> produced by no rational number, we create a new, an <em>irrational</em> number <span class="math inline">\(\alpha\)</span>, which we regard as completely defined by this cut <span class="math inline">\((A_1, A_2)\)</span>; we shall say that the number <span class="math inline">\(\alpha\)</span> corresponds to this cut, or that it produces this cut. From now on, therefore, to every definite cut there corresponds a definite rational or irrational number, and we regard two numbers as <em>different</em> or <em>unequal</em> always and only when they correspond to essentially different cuts.</p>
+<p>In order to obtain a basis for the orderly arrangement of all <em>real</em>, i.e., of all rational and irrational numbers we must investigate the relation between any two cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> produced by any two numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. Obviously a cut <span class="math inline">\((A_1, A_2)\)</span> is given completely when one of the two classes, e.g., the first <span class="math inline">\(A_1\)</span> is known, because the second <span class="math inline">\(A_2\)</span> consists of all rational numbers not contained in <span class="math inline">\(A_1\)</span>, and the characteristic property of such a first class lies in this that if the number <span class="math inline">\(a_1\)</span> is contained in it, it also contains all numbers less than <span class="math inline">\(a_1\)</span>. If now we compare two such first classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span> with each other, it may happen</p>
+<p>1. That they are perfectly identical, i.e., that every number contained in <span class="math inline">\(A_1\)</span> is also contained in <span class="math inline">\(B_1\)</span>, and that every number contained in <span class="math inline">\(B_1\)</span> is also contained in <span class="math inline">\(A_1\)</span>. In this case <span class="math inline">\(A_2\)</span> is necessarily identical with <span class="math inline">\(B_2\)</span>, and the two cuts are perfectly identical, which we denote in symbols by <span class="math inline">\(\alpha=\beta\)</span> or <span class="math inline">\(\beta=\alpha\)</span>.</p>
+<p>But if the two classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span> are not identical, then there exists in the one, e.g., in <span class="math inline">\(A_1\)</span>, a number <span class="math inline">\(a'_1=b'_2\)</span> not contained in the other <span class="math inline">\(B_1\)</span> and consequently found in <span class="math inline">\(B_2\)</span>; hence all numbers <span class="math inline">\(b_1\)</span> contained in <span class="math inline">\(B_1\)</span> are certainly less than this number <span class="math inline">\(a'_1=b'_2\)</span> and therefore all numbers <span class="math inline">\(b_1\)</span> are contained in <span class="math inline">\(A_1\)</span>.</p>
+<p>2. If now this number <span class="math inline">\(a'_1\)</span> is the only one in <span class="math inline">\(A_1\)</span> that is not contained in <span class="math inline">\(B_1\)</span>, then is every other number <span class="math inline">\(a_1\)</span> contained in <span class="math inline">\(A_1\)</span> also contained in <span class="math inline">\(B_1\)</span> and is consequently <span class="math inline">\(&lt;a'_1\)</span>, i.e., <span class="math inline">\(a'_1\)</span> is the greatest among all the numbers <span class="math inline">\(a_1\)</span>, hence the cut <span class="math inline">\((A_1, A_2)\)</span> is produced by the rational number <span class="math inline">\(a=a'_1=b'_2\)</span>. Concerning the other cut <span class="math inline">\((B_1, B_2)\)</span> we know already that all numbers <span class="math inline">\(b_1\)</span> in <span class="math inline">\(B_1\)</span> are also contained in <span class="math inline">\(A_1\)</span> and are less than the number <span class="math inline">\(a'_1=b'_2\)</span> which is contained in <span class="math inline">\(B_2\)</span>; every other number <span class="math inline">\(b_2\)</span> contained in <span class="math inline">\(B_2\)</span> must, however, be greater than <span class="math inline">\(b'_2\)</span>, for otherwise it would be less than <span class="math inline">\(a'_1\)</span>, therefore contained in <span class="math inline">\(A_1\)</span> and hence in <span class="math inline">\(B_1\)</span>; hence <span class="math inline">\(b'_2\)</span> is the least among all numbers contained in <span class="math inline">\(B_2\)</span>, and consequently the cut <span class="math inline">\((B_1, B_2)\)</span> is produced by the same rational number <span class="math inline">\(\beta = b'_2 = a'_1 = \alpha\)</span>. The two cuts are then only unessentially different.</p>
+<p>3. If, however, there exist in <span class="math inline">\(A_1\)</span> at least two different numbers <span class="math inline">\(a'_1 = b'_2\)</span> and <span class="math inline">\(a''_1 = b''_2\)</span>, which are not contained in <span class="math inline">\(B_1\)</span>, then there exist infinitely many of them, because all the infinitely many numbers lying between <span class="math inline">\(a'_1\)</span> and <span class="math inline">\(a''_1\)</span> are obviously contained in <span class="math inline">\(A_1\)</span> (Section I, II.) but not in <span class="math inline">\(B_1\)</span>. In this case we say that the numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> corresponding to these two essentially different cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> are <em>different</em>, and further that <span class="math inline">\(\alpha\)</span> is <em>greater</em> than <span class="math inline">\(\beta\)</span>, that <span class="math inline">\(\beta\)</span> is <em>less</em> than <span class="math inline">\(\alpha\)</span>, which we express in symbols by <span class="math inline">\(\alpha &gt; \beta\)</span> as well as <span class="math inline">\(\beta &lt; \alpha\)</span>. It is to be noticed that this definition coincides completely with the one given earlier, when <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> are rational.</p>
+<p>The remaining possible cases are these:</p>
+<p>4. If there exists in <span class="math inline">\(B_1\)</span> one and only one number <span class="math inline">\(b'_1 = a'_2\)</span>, that is not contained in <span class="math inline">\(A_1\)</span> then the two cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> are only unessentially different and they are produced by one and the same rational number <span class="math inline">\(\alpha = a'_2 = b'_1 = \beta\)</span>.</p>
+<p>5. But if there are in <span class="math inline">\(B_1\)</span> at least two numbers which are not contained in <span class="math inline">\(A_1\)</span>, then <span class="math inline">\(\beta &gt; \alpha\)</span>, <span class="math inline">\(\alpha &lt; \beta\)</span>.</p>
+<p>As this exhausts the possible cases, it follows that of two different numbers one is necessarily the greater, the other the less, which gives two possibilities. A third case is impossible. This was indeed involved in the use of the <em>comparative</em> (greater, less) to designate the relation between <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>; but this use has only now been justified. In just such investigations one needs to exercise the greatest care so that even with the best intention to be honest he shall not, through a hasty choice of expressions borrowed from other notions already developed, allow himself to be led into the use of inadmissible transfers from one domain to the other.</p>
+<p>If now we consider again somewhat carefully the case <span class="math inline">\(\alpha&gt;\beta\)</span> it is obvious that the less number <span class="math inline">\(\beta\)</span>, if rational, certainly belongs to the class <span class="math inline">\(A_1\)</span>; for since there is in <span class="math inline">\(A_1\)</span> a number <span class="math inline">\(a'_1=b'_2\)</span> which belongs to the class <span class="math inline">\(B_2\)</span>, it follows that the number <span class="math inline">\(\beta\)</span>, whether the greatest number in <span class="math inline">\(B_1\)</span> or the least in <span class="math inline">\(B_2\)</span> is certainly <span class="math inline">\(\leqq a'_1\)</span> and hence contained in <span class="math inline">\(A_1\)</span>. Likewise it is obvious from <span class="math inline">\(\alpha&gt;\beta\)</span> that the greater number <span class="math inline">\(\alpha\)</span>, if rational, certainly belongs to the class <span class="math inline">\(B_2\)</span>, because <span class="math inline">\(\alpha \geqq a'_1\)</span>. Combining these two considerations we get the following result: If a cut is produced by the number <span class="math inline">\(\alpha\)</span> then any rational number belongs to the class <span class="math inline">\(A_1\)</span> or to the class <span class="math inline">\(A_2\)</span> according as it is less or greater than <span class="math inline">\(\alpha\)</span>; if the number <span class="math inline">\(\alpha\)</span> is itself rational it may belong to either class.</p>
+<p>From this we obtain finally the following: If <span class="math inline">\(\alpha&gt;\beta\)</span>, i.e., if there are infinitely many numbers in <span class="math inline">\(A_1\)</span> not contained in <span class="math inline">\(B_1\)</span> then there are infinitely many such numbers that at the same time are different from <span class="math inline">\(\alpha\)</span> and from <span class="math inline">\(\beta\)</span>; every such rational number <span class="math inline">\(c\)</span> is <span class="math inline">\(&lt;\alpha\)</span>, because it is contained in <span class="math inline">\(A_1\)</span> and at the same time it is <span class="math inline">\(&gt;\beta\)</span> because contained in <span class="math inline">\(B_2\)</span>.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./1_03_continuity-of-the-straight-line.html" class="pagination-link" aria-label="Continuity of the straight line">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Continuity of the straight line</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="pagination-link" aria-label="Continuity of the domain of real numbers">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
