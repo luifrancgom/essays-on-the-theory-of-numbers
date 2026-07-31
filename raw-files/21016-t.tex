@@ -61,6 +61,24 @@
 \usepackage[or]{teubner}		% polyphonic Greek support
 \usepackage{graphicx} 			% support \reflectbox
 \usepackage{mathtools}			% support \shortintertext
+\newcommand\partof{\mathrel{\raisebox{0.45ex}{$\mathfrak{3}$}}}   % Part-of symbol
+\newcommand\wholeof{\mathrel{\reflectbox{$\partof$}}}             % Whole-of symbol (once only)
+
+%simulated paragraph command (indented)
+\newcommand\mypara{\medskip\textbf}
+
+%simulated chapter heading & toc command
+\newcommand\mychap[2]{
+\medskip\begin{center}{\Large #2}\end{center}
+\addtocontents{toc}{\medskip\protect \centering #1\@. #2.\medskip}
+}
+
+%simulated section heading & toc command
+\newcommand\mysect[3]{
+\medskip\begin{center}{\large #2.}\end{center}
+\begin{center}\uppercase{#3.}\end{center}
+\addcontentsline{toc}{section}{\protect\phantom{#1}#2\@. #3}
+}
 
 \begin{document}
 %\setstocksize{794pt}{614pt}
@@ -159,7 +177,7 @@ The Magic Square, The Fourth Dimension, The Squaring
 of the Circle. Pages, 149. Price, Cloth, 75c.\ net (3s.\ net).
 
 \item[]\hspace{-2em}A BRIEF HISTORY OF ELEMENTARY MATHEMATICS\@.
-By \textsc{Dr.\ Karl Fink}, of Tï¿½bingen. From the German by \textit{W.~W.
+By \textsc{Dr.\ Karl Fink}, of Tübingen. From the German by \textit{W.~W.
 Beman} and \textit{D.~E. Smith}, Pp.~333. Cloth, \$1.50 net
 (5s.\ 6d.\ net).
 
@@ -175,7 +193,7 @@ THE OPEN COURT PUBLISHING COMPANY
 
 {\scriptsize 324 DEARBORN ST., CHICAGO.}
 
-{\small LONDON: Kegan Paul, Trench, Trï¿½bner \& Co.}
+{\small LONDON: Kegan Paul, Trench, Trübner \& Co.}
 \end{center}
 % [File: 002.png]
 %title page
@@ -227,7 +245,7 @@ THE OPEN COURT PUBLISHING COMPANY
 
 {\footnotesize LONDON AGENTS}
 
-{\footnotesize \textsc{Kegan Paul, Trench, Trï¿½bner \& Co., Ltd.}}
+{\footnotesize \textsc{Kegan Paul, Trench, Trübner \& Co., Ltd.}}
 
 1901
 \end{center}
@@ -249,28 +267,85 @@ BY
 \end{center}
 
 % [File: 004.png]
-\tableofcontents
-
-\part{CONTINUITY AND IRRATIONAL NUMBERS}
-
+%[**F1: ToC commented out, but proofed text left for comparison.]
+%
+%\tableofcontents
+%
+%CONTENTS.
+%
+%I. CONTINUITY AND IRRATIONAL NUMBERS.
+%
+%Page
+%Preface     1
+%
+%I. Properties of Rational Numbers     3
+%
+%II. Comparison of the Rational Numbers with the Points
+%of a Straight Line     6
+%
+%III. Continuity of the Straight Line     8
+%
+%IV. Creation of Irrational Numbers     12
+%
+%V. Continuity of the Domain of Real Numbers     19
+%
+%VI. Operations with Real Numbers     21
+%
+%VII. Infinitesimal Analysis     24
+%
+%
+%II. THE NATURE AND MEANING OF NUMBERS
+%
+%Prefaces     31
+%
+%I. Systems of Elements     44
+%
+%II. Transformation of a System     50
+%
+%III. Similarity of a Transformation. Similar Systems     53
+%
+%IV. Transformation of a System in Itself     56
+%
+%V. The Finite and Infinite     63
+%
+%VI. Simply Infinite Systems. Series of Natural Numbers     67
+%
+%VII. Greater and Less Numbers     70
+%
+%VIII. Finite and Infinite Parts of the Number-Series     81
+%
+%IX. Definition of a Transformation of the Number-Series
+%by Induction     83
+%
+%X. The Class of Simply Infinite Systems     92
+%
+%XI. Addition of Numbers     96
+%
+%XII. Multiplication of Numbers     101
+%
+%XIII. Involution of Numbers     104
+%
+%XIV. Number of the Elements of a Finite System     105
+%
 \thispagestyle{empty}
 % [File: 005.png]
 
 \newpage
 \mainmatter
 \pagestyle{plain}
-\chapter{CONTINUITY AND IRRATIONAL NUMBERS}
+%\part*{CONTINUITY AND IRRATIONAL NUMBERS}
 
 % [File: 006.png]
 %[Blank Page]
 % [File: 007.png]
 
-\section*{Preface}
+\mychap{I}{CONTINUITY AND IRRATIONAL NUMBERS}
+\addcontentsline{toc}{section}{Preface}
 
 My attention was first directed toward the considerations
 which form the subject of this pamphlet
 in the autumn of 1858. As professor in the
-Polytechnic School in Zï¿½rich I found myself for the
+Polytechnic School in Zürich I found myself for the
 first time obliged to lecture upon the elements of the
 differential calculus and felt more keenly than ever
 before the lack of a really scientific foundation for
@@ -310,7 +385,7 @@ discover its true origin in the elements of arithmetic
 and thus at the same time to secure a real definition
 of the essence of continuity. I succeeded Nov.~24,~%
 1858, and a few days afterward I communicated the
-results of my meditations to my dear friend Durï¿½ge
+results of my meditations to my dear friend Durège
 with whom I had a long and lively discussion. Later
 I explained these views of a scientific basis of arithmetic
 to a few of my pupils, and here in Braunschweig
@@ -346,7 +421,7 @@ of real numbers as complete in itself.
 
 %I.
 
-\section{Properties of Rational Numbers}
+\mysect{XVII}{I}{Properties of Rational Numbers}
 
 %\hspace{\parindent}
 The development of the arithmetic of rational
@@ -385,8 +460,8 @@ of infinitely greater perfection. This system,
 % [File: 011.png---\Firefly Diva\\sahobart\glimpseofchaos\hutcheson\-----
 which I shall denote by $R$, possesses first of all a completeness
 and self-containedness which I have designated
-in another place\footnote{\textit{Vorlesungen ï¿½ber Zahlentheorie}, by P.~G.~Lejeune Dirichlet. 2d~ed. ï¿½159.} as characteristic of a \textit{body of
-numbers} [Zahlkï¿½rper] and which consists in this that
+in another place\footnote{\textit{Vorlesungen über Zahlentheorie}, by P.~G.~Lejeune Dirichlet. 2d~ed. §159.} as characteristic of a \textit{body of
+numbers} [Zahlkörper] and which consists in this that
 the four fundamental operations are always performable
 with any two individuals in $R$, i.~e., the result is
 always an individual of $R$, the single case of division
@@ -443,7 +518,7 @@ the second class $A_2$.
 
 %II.
 
-\section{Comparison of the Rational Numbers with the Points of a Straight Line}
+\mysect{XVI}{II}{Comparison of the Rational Numbers with the Points of a Straight Line}
 
 The above-mentioned properties of rational numbers
 recall the corresponding relations of position of
@@ -501,7 +576,7 @@ of the present.
 
 %III.
 
-\section{Continuity of the Straight Line}
+\mysect{XV}{III}{Continuity of the Straight Line}
 \label{EISIII}
 
 Of the greatest importance, however, is the fact
@@ -626,7 +701,7 @@ with the above principle.
 
 %IV.
 
-\section{Creation of Irrational Numbers}
+\mysect{XII}{IV}{Creation of Irrational Numbers}
 \label{EISIV}
 
 From the last remarks it is sufficiently obvious
@@ -856,7 +931,7 @@ because contained in $B_2$.
 
 %V.
 
-\section{Continuity of the Domain of Real Numbers}
+\mysect{XIII}{V}{Continuity of the Domain of Real Numbers}
 
 In consequence of the distinctions just established
 the system $\mathfrak{R}$ of all real numbers forms a well-arranged
@@ -928,7 +1003,7 @@ is produced. Which was to be proved.
 
 %VI.
 
-\section{Operations with Real Numbers}
+\mysect{XII}{VI}{Operations with Real Numbers}
 \label{EISVI}
 
 To reduce any operation with two real numbers
@@ -1036,9 +1111,7 @@ which, however, cannot be carried further here.
 \newpage
 %VII.
 
-\section{Infinitesimal Analysis}
-
-\label{sec:infinitesimal_analysis}
+\mysect{XI}{VII}{Infinitesimal Analysis}
 
 Here at the close we ought to explain the connection
 between the preceding investigations and certain
@@ -1147,14 +1220,13 @@ analysis.
 
 % [File: 034.png]
 %\part*{THE NATURE AND MEANING OF NUMBERS}
-\part{THE NATURE AND MEANING OF NUMBERS}
 
 % [File: 035.png]
 %[Blank Page]
 % [File: 036.png]
 \newpage
-\chapter{THE NATURE AND MEANING OF NUMBERS}
-\section*{Prefaces}
+\mychap{II}{THE NATURE AND MEANING OF NUMBERS}
+\addcontentsline{toc}{section}{Prefaces}
 \begin{center}
 {\large PREFACE TO THE FIRST EDITION.}
 \end{center}
@@ -1165,7 +1237,7 @@ so reasonable yet I cannot regard it as having been
 met even in the most recent methods of laying the
 foundations of the simplest science; viz., that part of
 logic which deals with the theory of numbers.\footnote{Of the works which have come under my observation I mention the valuable
-\textit{Lehrbuch der Arithmetik und Algebra} of E.~Schrï¿½der (Leipzig, 1873),
+\textit{Lehrbuch der Arithmetik und Algebra} of E.~Schröder (Leipzig, 1873),
 which contains a bibliography of the subject, and in addition the memoirs of
 Kronecker and von Helmholtz upon the Number-Concept and upon Counting
 and Measuring (in the collection of philosophical essays published in honor
@@ -1197,7 +1269,7 @@ to a thing, or to represent a thing by a thing,
 an ability without which no thinking is possible.
 Upon this unique and therefore absolutely indispensable
 foundation, as I have already affirmed in an announcement
-of this paper,\footnote{Dirichlet's \textit{Vorlesungen ï¿½ber Zahlentheorie}, third edition, 1879, ï¿½ 163, note
+of this paper,\footnote{Dirichlet's \textit{Vorlesungen über Zahlentheorie}, third edition, 1879, § 163, note
 on page 470.} must, in my judgment,
 the whole science of numbers be established. The
 design of such a presentation I had formed before the
@@ -1316,7 +1388,7 @@ which could be controlled by the old notions
 only with difficulty. On this subject I gave a lecture
 before the philosophic faculty in the summer of 1854
 on the occasion of my admission as privat-docent in
-Gï¿½ttingen. The scope of this lecture met with the
+Göttingen. The scope of this lecture met with the
 approval of Gauss; but this is not the place to go
 into further detail.
 
@@ -1359,8 +1431,8 @@ this matter more clearly I note the following
 example: If we select three non-collinear points $A$,
 $B$, $C$ at pleasure, with the single limitation that the
 ratios of the distances $AB$, $AC$, $BC$ are algebraic
-numbers,\footnote{Dirichlet's \textit{Vorlesungen ï¿½ber Zahlentheorie}, ï¿½~159 of the second edition,
-ï¿½~160 of the third.} and regard as existing in space only those
+numbers,\footnote{Dirichlet's \textit{Vorlesungen über Zahlentheorie}, §~159 of the second edition,
+§~160 of the third.} and regard as existing in space only those
 points $M$, for which the ratios of $AM$, $BM$, $CM$ to $AB$
 are likewise algebraic numbers, then is the space made
 up of the points $M$, as is easy to see, everywhere discontinuous;
@@ -1389,7 +1461,7 @@ space clear and definite.
 
 The same theory of irrational numbers founded
 upon the phenomenon of the cut is set forth in the
-\textit{Introduction ï¿½ la thï¿½orie des fonctions d'une variable} by
+\textit{Introduction à la théorie des fonctions d'une variable} by
 J.~Tannery (Paris, 1886). If I rightly understand a
 passage in the preface to this work, the author has
 thought out his theory independently, that is, at a
@@ -1403,13 +1475,13 @@ Pasch in his \textit{Einleitung in die Differential- und Integralrechnung}
 (Leipzig, 1883). But I cannot quite agree
 with Tannery when he calls this theory the development
 of an idea due to J.~Bertrand and contained in
-his \textit{Traitï¿½ d'arithmï¿½tique}, consisting in this that an irrational
+his \textit{Traité d'arithmétique}, consisting in this that an irrational
 number is defined by the specification of all
 rational numbers that are less and all those that are
 greater than the number to be defined. As regards
 this statement which is repeated by Stolz---apparently
 without careful investigation---in the preface to the
-second part of his \textit{Vorlesungen ï¿½ber allgemeine Arithmetik}
+second part of his \textit{Vorlesungen über allgemeine Arithmetik}
 (Leipzig, 1886), I venture to remark the following:
 That an irrational number is to be considered
 as fully defined by the specification just described,
@@ -1477,7 +1549,7 @@ of the infinite system had been pointed out before
 the appearance of my paper by G.~Cantor (\textit{Ein
 Beitrag zur Mannigfaltigkeitslehre}, \textit{Crelle's Journal}, Vol.~%
 84, 1878), as also by Bolzano (\textit{Paradoxien des Unendlichen},
-ï¿½~20, 1851). But neither of these authors made
+§~20, 1851). But neither of these authors made
 the attempt to use this property for the definition of
 the infinite and upon this foundation to establish with
 rigorous logic the science of numbers, and just in this
@@ -1516,7 +1588,7 @@ I became acquainted with G.~Frege's \textit{Grundlagen der
 Arithmetik}, which had already appeared in the year
 1884. However different the view of the essence of
 number adopted in that work is from my own, yet it
-contains, particularly from ï¿½~79 on, points of very
+contains, particularly from §~79 on, points of very
 close contact with my paper, especially with my definition
 (44). The agreement, to be sure, is not easy
 to discover on account of the different form of expression;
@@ -1524,8 +1596,8 @@ to discover on account of the different form of expression;
 but the positiveness with which the author
 speaks of the logical inference from $n$ to $n+1$ (page
 \pageref{Ind132}, below) shows plainly that here he stands upon the
-same ground with me. In the meantime E.~Schrï¿½der's
-\textit{Vorlesungen ï¿½ber die Algebra der Logik} has been almost
+same ground with me. In the meantime E.~Schröder's
+\textit{Vorlesungen über die Algebra der Logik} has been almost
 completed (1890--1891). Upon the importance of this
 extremely suggestive work, to which I pay my highest
 tribute, it is impossible here to enter further; I will
@@ -1551,7 +1623,7 @@ symbols.
 
 %I.
 
-\section{Systems of Elements}
+\mysect{XVII}{I}{Systems of Elements}
 
 \mypara{1.} In what follows I understand by \textit{thing} every
 object of our thought. In order to be able easily to
@@ -1767,10 +1839,10 @@ element of $A$, $B$, $C$,~\ldots, which was to be proved.
 
 %II.
 
-\section{Transformation of a System}
+\mysect{XVI}{II}{Transformation of a System}
 
 \mypara{21.} Definition.\footnote
-  {See Dirichlet's \textit{Vorlesungen ï¿½ber Zahlentheorie}, 3d edition, 1879, ï¿½~163.}
+  {See Dirichlet's \textit{Vorlesungen über Zahlentheorie}, 3d edition, 1879, §~163.}
 By a \textit{transformation} [\textit{Abbildung}]
 $\phi$ of a system $S$ we understand a law according to
 which to every determinate element $s$ of $S$ there \textit{belongs}
@@ -1879,10 +1951,9 @@ can be denoted briefly by $\chi\psi\phi$.
 %III.
 
 \mysect{XV}{III}{Similarity of a Transformation. Similar Systems}
-\section{Similarity of a Transformation. Similar Systems}
 
 \mypara{26.} Definition.  A transformation $\phi$ of a system $S$
-is said to be \textit{similar} [\textit{ï¿½hnlich}] or \textit{distinct}, when to different
+is said to be \textit{similar} [\textit{ähnlich}] or \textit{distinct}, when to different
 elements $a$, $b$ of the system $S$ there always correspond
 different transforms $a' = \phi(a)$, $b' = \phi(b)$.
 Since in this case conversely from $s' = t'$ we always
@@ -1984,7 +2055,7 @@ to be proved.
 
 %IV.
 
-\section{Transformation of a System in Itself}
+\mysect{XII}{IV}{Transformation of a System in Itself}
 
 \mypara{36.} Definition. If $\phi$ is a similar or dissimilar transformation
 of a system $S$, and $\phi(S)$ part of a system
@@ -2284,7 +2355,7 @@ reader.
 
 %V.
 
-\section{The Finite and Infinite}
+\mysect{XIII}{V}{The Finite and Infinite}
 
 \mypara{64.} Definition.\footnote
   {If one does not care to employ the notion of similar systems (32) he must
@@ -2310,7 +2381,7 @@ part (2), (6).
 \mypara{66.} Theorem.  There exist infinite systems.
 
 Proof.\footnote
-  {A similar consideration is found in ï¿½~13 of the \textit{Paradoxien des Unendlichen}
+  {A similar consideration is found in §~13 of the \textit{Paradoxien des Unendlichen}
   by Bolzano (Leipzig, 1851).}
 My own realm of thoughts, i.~e., the totality
 $S$ of all things, which can be objects of my
@@ -2418,7 +2489,7 @@ in this case also the proof demanded has been secured.
 
 %VI.
 
-\section{Simply Infinite Systems. Series of Natural Numbers}
+\mysect{XII}{VI}{Simply Infinite Systems. Series of Natural Numbers}
 
 \mypara{71.} Definition. A system $N$ is said to be \textit{simply
 infinite} when there exists a similar transformation $\phi$ of
@@ -2529,7 +2600,7 @@ number-series $N$.
 
 %VII.
 
-\section{Greater and Less Numbers}
+\mysect{XI}{VII}{Greater and Less Numbers}
 
 \mypara{81.} Theorem. Every number $n$ is different from
 the following number $n'$.
@@ -2952,7 +3023,7 @@ The proof follows from (116), (117).
 
 %VIII.
 
-\section{Finite and Infinite Parts of the Number-Series}
+\mysect{X}{VIII}{Finite and Infinite Parts of the Number-Series}
 
 \mypara{119.} Theorem. Every system $Z_n$ in (98) is finite.
 
@@ -3057,7 +3128,7 @@ not exist in $T$.
 \newpage
 %IX.
 
-\section{Definition of a Transformation of the Number-Series by Induction}
+\mysect{VII}{IX}{Definition of a Transformation of the Number-Series by Induction}
 
 \mypara{124.} In what follows we denote numbers by small
 Italics and retain throughout all symbols of the previous
@@ -3079,7 +3150,7 @@ mentioned condition I., although properly it is a consequence of II.\ and III.}
   &I\@. $\psi_n{Z_n} \partof \Omega$ \\
  I&I\@. $\psi_n(1)=\omega$ \\
 II&I\@. $\psi_n(t')=\theta\psi_n(t)$,
-\end{tabular}%
+\end{tabular}
 if $t<n$, where the symbol
 $\theta\psi_n$ has the meaning given in (25).
 
@@ -3102,7 +3173,7 @@ conditions
   &I$'$. $\psi_p(Z_p) \partof \Omega$ \\
  I&I$'$. $\psi_p(1)=\omega$\\
 II&I$'$. $\psi_p(m')=\theta\psi_p(m)$,
-\end{tabular}%
+\end{tabular}
 when $m<p$, then there is
 also contained in it by (21), because $Z_n \partof Z_p$ (107) a
 transformation of $Z_{n}$ which obviously satisfies the
@@ -3152,7 +3223,7 @@ which satisfies the conditions
  &I\@. $\psi(N) \partof \Omega$\\
 I&I\@. $\psi(1)=\omega$\\
 % [File: 091.png]
-\text{III\@. }& \psi(n') = \theta\psi(n),
+II&I\@. $\psi(n') = \theta\psi(n)$,
 \end{tabular}
 where $n$ represents every number.
 
@@ -3408,7 +3479,7 @@ to the earlier theorems (57), (58).
 
 %X.
 
-\section{The Class of Simply Infinite Systems}
+\mysect{VIII}{X}{The Class of Simply Infinite Systems}
 
 \mypara{132.} Theorem. All simply infinite systems are
 similar to the number-series $N$ and consequently by
@@ -3550,7 +3621,7 @@ theorem (126).
 
 %XI.
 
-\section{Addition of Numbers}
+\mysect{VII}{XI}{Addition of Numbers}
 
 \mypara{135.} Definition. It is natural to apply the definition
 set forth in theorem (126) of a transformation $\psi$
@@ -3743,7 +3814,7 @@ also by (136) $l=m+n'$, which was to be proved.
 
 %XII.
 
-\section{Multiplication of Numbers}
+\mysect{VI}{XII}{Multiplication of Numbers}
 
 \mypara{147.} Definition. After having found in XI an infinite
 system of new transformations of the number-series
@@ -3883,7 +3954,7 @@ m+\psi(n)$ for all numbers $n$.
 
 %XIII.
 
-\section{Involution of Numbers}
+\mysect{V}{XIII}{Involution of Numbers}
 
 \mypara{155.} Definition. If in theorem (126) we again put
 $\Omega = N$, and further $\omega=a$, $\theta(n)=an=na$, we get a
@@ -3960,7 +4031,7 @@ for the following number $n'$, which was to be proved.
 
 %XIV.
 
-\section{Number of the Elements of a Finite System}
+\mysect{II}{XIV}{Number of the Elements of a Finite System}
 
 \mypara{159.} Theorem. If $\Sigma$ is an infinite system, then is
 every one of the number-systems $Z_n$ defined in (98)
@@ -4318,7 +4389,7 @@ THE PRIMARY FACTORS OF ORGANIC EVOLUTION.
 \smallskip
 
 \parindent=0em \normalsize
-Mï¿½LLER, F. MAX.
+MÜLLER, F. MAX.
 \nopagebreak
 
 \parindent=3ex\hangindent=9ex\small
@@ -4596,7 +4667,7 @@ KARMA\@. \textsc{A Story of Early Buddhism.}
 \nopagebreak
 
 \parindent=6ex\hangindent=9ex\footnotesize
-Illustrated by Japanese artists. Crï¿½pe paper, 75c (3s.~6d.).
+Illustrated by Japanese artists. Crêpe paper, 75c (3s.~6d.).
 \smallskip
 
 \parindent=3ex\hangindent=9ex \small
@@ -4725,11 +4796,11 @@ Illustrated. Pp.~130. Cloth, \$1.00 (5s.).
 % [File: 124.png]
 
 \parindent=0em \normalsize
-Aï¿½VAGHOSHA.
+AÇVAGHOSHA.
 \nopagebreak
 
 \parindent=3ex\hangindent=9ex \small
-DISCOURSE ON THE AWAKENING OF FAITH in the Mahï¿½yï¿½na.
+DISCOURSE ON THE AWAKENING OF FAITH in the Mahâyâna.
 \nopagebreak
 
 \parindent=6ex\hangindent=6ex\footnotesize
@@ -4828,7 +4899,7 @@ THE PRINCIPLES OF BACTERIOLOGY.
 
 
 \parindent=0em \normalsize
-Lï¿½VY-BRUHL, PROF.\ L.
+LÉVY-BRUHL, PROF.\ L.
 \nopagebreak
 
 \parindent=3ex\hangindent=9ex \small
@@ -4922,7 +4993,7 @@ CHICAGO:
 
 Monon Building, 324 Dearborn St.
 
-{\small LONDON: Kegan Paul, Trench, Trï¿½bner \& Company, Ltd.}
+{\small LONDON: Kegan Paul, Trench, Trübner \& Company, Ltd.}
 \end{center}
 
 % [File: 125.png]
@@ -4951,10 +5022,10 @@ The following have already appeared in the series:
 
 \item[]\hspace{-3ex}\llap{2.}
 \textit{Three Introductory Lectures on the Science of Thought}, By \textsc{F.~Max
-Mï¿½ller}.  25c (1s.~6d.).
+Müller}.  25c (1s.~6d.).
 
 \item[]\hspace{-3ex}\llap{3.}
-\textit{Three Lectures on the Science of Language}. \textsc{F.~Max Mï¿½ller}. 25c (1s.~6d.)
+\textit{Three Lectures on the Science of Language}. \textsc{F.~Max Müller}. 25c (1s.~6d.)
 
 \item[]\hspace{-3ex}\llap{4.}
 \textit{The Diseases of Personality}, By \textsc{Th.~Ribot}. 25c (1s.~6d.).
@@ -5100,7 +5171,7 @@ Naegeli}. 15c (9d.).
 
 \textsc{\small CHICAGO: 324 Dearborn Street.}
 
-{\small LONDON: Kegan Paul, Trench, Trï¿½bner \& Company, Ltd.}
+{\small LONDON: Kegan Paul, Trench, Trübner \& Company, Ltd.}
 \end{center}
 
 % [File: 126.png]
