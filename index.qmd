@@ -1,5 +1,9 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook (see @sec-license) or online at [www.gutenberg.net](https://www.gutenberg.net). This digital edition presents Richard Dedekind's *Essays on the Theory of Numbers*, translated from the original German by Wooster Woodruff Beman.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Originally released on April 8, 2007 as Project Gutenberg `[EBook #21016]`, this volume was prepared from source material encoded in TeX. The original source files, including the TeX sources (`21016-t.tex`, `21016-t.zip`) and compiled documents (`21016-pdf.pdf`) along with all associated files across various formats, are available at [http://www.gutenberg.org/2/1/0/1/21016/](http://www.gutenberg.org/2/1/0/1/21016/). 
+
+The preparation and digitisation of this text were carried out by Jonathan Ingram, Keith Edkins, and the Online Distributed Proofreading Team at [http://www.pgdp.net](http://www.pgdp.net).
+
+This Quarto edition was prepared by Luis Francisco Gómez. The complete source code and project files are hosted on GitHub at [https://github.com/luifrancgom/essays-on-the-theory-of-numbers](https://github.com/luifrancgom/essays-on-the-theory-of-numbers).
