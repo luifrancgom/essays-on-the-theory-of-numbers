@@ -9,7 +9,8 @@ book:
   date-format: "YYYY"
   downloads: [pdf]
   chapters:
-    - index.qmd  
+    - index.qmd
+    - transcribers-notes.qmd  
     - part: 1_00_continuity-and-irrational-numbers.qmd
       chapters:
         - 1_01_properties-of-rational-numbers.qmd
@@ -35,19 +36,52 @@ book:
         - 2_12_multiplication-of-numbers.qmd
         - 2_13_involution-of-numbers.qmd
         - 2_14_number-of-elements-of-a-finite-system.qmd
+    - license.qmd
     - references.qmd
-
-bibliography: references/essays-on-the-theory-of-numbers.bib
-csl: references/ieee.csl
 
 format:
   html:
+    # format options
     theme:
       - cosmo
       - scss/custom.scss
+    html-math-method: mathjax
+    # includes
+    include-in-header: 
+      - file: partials/html/header.html
   pdf:
+    # format options
+    pdf-engine: xelatex
+    # table of contents
+    toc-depth: 1
+    # fonts
+    fontsize: 12pt
+    # colors
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+    colorlinks: true
     # layout
     documentclass: scrbook
+    # references
+    link-citations: true
+    link-bibliography: true
+    # includes
+    include-in-header: 
+      - file: partials/latex/header.tex
 
+# language: 
+lang: en
+language: 
+  crossref-ch-prefix: "Section"
 
+# cross references
+crossref:
+  # https://quarto.org/docs/reference/metadata/crossref.html
+  # not working
+  # https://github.com/orgs/quarto-dev/discussions/14738#discussioncomment-17828315
+  sec-labels: roman
 
+# citations
+bibliography: references/essays-on-the-theory-of-numbers.bib
+csl: references/ieee.csl

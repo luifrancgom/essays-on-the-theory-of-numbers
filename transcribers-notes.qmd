@@ -1,0 +1,5 @@
+# Transcriber's notes {.unnumbered}
+
+In this edition, the symbol $\partof$ is used as a typographical approximation for the author's original *part* of relational symbol, which should not be confused with the numerical digit $3$. Correspondingly, the symbol $\wholeof$ serves as its inverse (*whole* of), representing the converse relationship such that $S \wholeof A$ is logically equivalent to $A \partof S$.
+
+**Note**: Pending the parts about internal page reference and typographical errors.
