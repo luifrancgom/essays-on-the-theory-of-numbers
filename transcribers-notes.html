@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>21&nbsp; Number of elements of a finite system – Essays on the theory of numbers</title>
+<title>Transcriber’s notes – Essays on the theory of numbers</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,8 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./license.html" rel="next">
-<link href="./2_13_involution-of-numbers.html" rel="prev">
+<link href="./1_00_continuity-and-irrational-numbers.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_14_number-of-elements-of-a-finite-system.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./transcribers-notes.html">Transcriber’s notes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./transcribers-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="./transcribers-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Transcriber’s notes</span></a>
   </div>
 </li>
@@ -283,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_14_number-of-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link active">
+  <a href="./2_14_number-of-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></span></a>
   </div>
 </li>
@@ -312,9 +341,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_14_number-of-elements-of-a-finite-system.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></h1>
+<h1 class="title">Transcriber’s notes</h1>
 </div>
 
 
@@ -331,6 +360,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>In this edition, the symbol <span class="math inline">\(\partof\)</span> is used as a typographical approximation for the author’s original <em>part</em> of relational symbol, which should not be confused with the numerical digit <span class="math inline">\(3\)</span>. Correspondingly, the symbol <span class="math inline">\(\wholeof\)</span> serves as its inverse (<em>whole</em> of), representing the converse relationship such that <span class="math inline">\(S \wholeof A\)</span> is logically equivalent to <span class="math inline">\(A \partof S\)</span>.</p>
+<p><strong>Note</strong>: Pending the parts about internal page reference and typographical errors.</p>
 
 
 
@@ -737,13 +768,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./2_13_involution-of-numbers.html" class="pagination-link" aria-label="Involution of numbers">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Involution of numbers</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./license.html" class="pagination-link" aria-label="License">
-        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">License</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./1_00_continuity-and-irrational-numbers.html" class="pagination-link" aria-label="Continuity and irrational numbers">
+        <span class="nav-page-text">Continuity and irrational numbers</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

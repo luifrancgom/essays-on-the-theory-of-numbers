@@ -75,6 +75,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- ==============================
+     Custom commands (MathJax)
+     ============================== -->
+<script>
+    window.MathJax = {
+        tex: {
+            macros: {
+                partof: "\\mathrel{\\mathfrak{Z}}",
+                wholeof: "\\mathrel{\\style{transform:scaleX(-1)}{\\mathfrak{Z}}}"
+            }
+        }
+    };
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -151,6 +164,12 @@ window.Quarto = {
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./transcribers-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transcriber’s notes</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./1_00_continuity-and-irrational-numbers.html" class="sidebar-item-text sidebar-link">
@@ -187,7 +206,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -299,6 +318,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">License</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">

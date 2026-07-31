@@ -75,6 +75,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- ==============================
+     Custom commands (MathJax)
+     ============================== -->
+<script>
+    window.MathJax = {
+        tex: {
+            macros: {
+                partof: "\\mathrel{\\mathfrak{Z}}",
+                wholeof: "\\mathrel{\\style{transform:scaleX(-1)}{\\mathfrak{Z}}}"
+            }
+        }
+    };
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -151,6 +164,12 @@ window.Quarto = {
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./transcribers-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transcriber’s notes</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./1_00_continuity-and-irrational-numbers.html" class="sidebar-item-text sidebar-link">
@@ -187,7 +206,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -301,6 +320,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">License</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bibliography</span></a>
   </div>
@@ -335,7 +360,7 @@ window.Quarto = {
 </header>
 
 
-<p>From the last remarks it is sufficiently obvious how the discontinuous domain <span class="math inline">\(R\)</span> of rational numbers may be rendered complete so as to form a continuous domain. In Section I it was pointed out that every rational number <span class="math inline">\(a\)</span> effects a separation of the system <span class="math inline">\(R\)</span> into two classes such that every number <span class="math inline">\(a_1\)</span> of the first class <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> of the second class <span class="math inline">\(A_2\)</span>; the number <span class="math inline">\(a\)</span> is either the greatest number of the class <span class="math inline">\(A_1\)</span> or the least number of the class <span class="math inline">\(A_2\)</span>. If now any separation of the system <span class="math inline">\(R\)</span> into two classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> is given which possesses only <em>this</em> characteristic property that every number <span class="math inline">\(a_1\)</span> in <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> in <span class="math inline">\(A_2\)</span>, then for brevity we shall call such a separation a <em>cut</em> [Schnitt] and designate it by <span class="math inline">\((A_1, A_2)\)</span>. We can then say that every rational number <span class="math inline">\(a\)</span> produces one cut or, strictly speaking, two cuts, which, however, we shall not look upon as essentially different; this cut possesses, <em>besides</em>, the property that either among the numbers of the first class there exists a greatest or among the numbers of the second class a least number. And conversely, if a cut possesses this property, then it is produced by this greatest or least rational number.</p>
+<p>From the last remarks it is sufficiently obvious how the discontinuous domain <span class="math inline">\(R\)</span> of rational numbers may be rendered complete so as to form a continuous domain. In <a href="1_01_properties-of-rational-numbers.html" class="quarto-xref"><span>Section 1</span></a> it was pointed out that every rational number <span class="math inline">\(a\)</span> effects a separation of the system <span class="math inline">\(R\)</span> into two classes such that every number <span class="math inline">\(a_1\)</span> of the first class <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> of the second class <span class="math inline">\(A_2\)</span>; the number <span class="math inline">\(a\)</span> is either the greatest number of the class <span class="math inline">\(A_1\)</span> or the least number of the class <span class="math inline">\(A_2\)</span>. If now any separation of the system <span class="math inline">\(R\)</span> into two classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> is given which possesses only <em>this</em> characteristic property that every number <span class="math inline">\(a_1\)</span> in <span class="math inline">\(A_1\)</span> is less than every number <span class="math inline">\(a_2\)</span> in <span class="math inline">\(A_2\)</span>, then for brevity we shall call such a separation a <em>cut</em> [Schnitt] and designate it by <span class="math inline">\((A_1, A_2)\)</span>. We can then say that every rational number <span class="math inline">\(a\)</span> produces one cut or, strictly speaking, two cuts, which, however, we shall not look upon as essentially different; this cut possesses, <em>besides</em>, the property that either among the numbers of the first class there exists a greatest or among the numbers of the second class a least number. And conversely, if a cut possesses this property, then it is produced by this greatest or least rational number.</p>
 <p>But it is easy to show that there exist infinitely many cuts not produced by rational numbers. The following example suggests itself most readily.</p>
 <p>Let <span class="math inline">\(D\)</span> be a positive integer but not the square of an integer, then there exists a positive integer <span class="math inline">\(\lambda\)</span> such that</p>
 <p><span class="math display">\[
@@ -368,7 +393,7 @@ y^2 - D = \frac{(x^2 - D)^3}{(3x^2 + D)^2}.
 <p>1. That they are perfectly identical, i.e., that every number contained in <span class="math inline">\(A_1\)</span> is also contained in <span class="math inline">\(B_1\)</span>, and that every number contained in <span class="math inline">\(B_1\)</span> is also contained in <span class="math inline">\(A_1\)</span>. In this case <span class="math inline">\(A_2\)</span> is necessarily identical with <span class="math inline">\(B_2\)</span>, and the two cuts are perfectly identical, which we denote in symbols by <span class="math inline">\(\alpha=\beta\)</span> or <span class="math inline">\(\beta=\alpha\)</span>.</p>
 <p>But if the two classes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span> are not identical, then there exists in the one, e.g., in <span class="math inline">\(A_1\)</span>, a number <span class="math inline">\(a'_1=b'_2\)</span> not contained in the other <span class="math inline">\(B_1\)</span> and consequently found in <span class="math inline">\(B_2\)</span>; hence all numbers <span class="math inline">\(b_1\)</span> contained in <span class="math inline">\(B_1\)</span> are certainly less than this number <span class="math inline">\(a'_1=b'_2\)</span> and therefore all numbers <span class="math inline">\(b_1\)</span> are contained in <span class="math inline">\(A_1\)</span>.</p>
 <p>2. If now this number <span class="math inline">\(a'_1\)</span> is the only one in <span class="math inline">\(A_1\)</span> that is not contained in <span class="math inline">\(B_1\)</span>, then is every other number <span class="math inline">\(a_1\)</span> contained in <span class="math inline">\(A_1\)</span> also contained in <span class="math inline">\(B_1\)</span> and is consequently <span class="math inline">\(&lt;a'_1\)</span>, i.e., <span class="math inline">\(a'_1\)</span> is the greatest among all the numbers <span class="math inline">\(a_1\)</span>, hence the cut <span class="math inline">\((A_1, A_2)\)</span> is produced by the rational number <span class="math inline">\(a=a'_1=b'_2\)</span>. Concerning the other cut <span class="math inline">\((B_1, B_2)\)</span> we know already that all numbers <span class="math inline">\(b_1\)</span> in <span class="math inline">\(B_1\)</span> are also contained in <span class="math inline">\(A_1\)</span> and are less than the number <span class="math inline">\(a'_1=b'_2\)</span> which is contained in <span class="math inline">\(B_2\)</span>; every other number <span class="math inline">\(b_2\)</span> contained in <span class="math inline">\(B_2\)</span> must, however, be greater than <span class="math inline">\(b'_2\)</span>, for otherwise it would be less than <span class="math inline">\(a'_1\)</span>, therefore contained in <span class="math inline">\(A_1\)</span> and hence in <span class="math inline">\(B_1\)</span>; hence <span class="math inline">\(b'_2\)</span> is the least among all numbers contained in <span class="math inline">\(B_2\)</span>, and consequently the cut <span class="math inline">\((B_1, B_2)\)</span> is produced by the same rational number <span class="math inline">\(\beta = b'_2 = a'_1 = \alpha\)</span>. The two cuts are then only unessentially different.</p>
-<p>3. If, however, there exist in <span class="math inline">\(A_1\)</span> at least two different numbers <span class="math inline">\(a'_1 = b'_2\)</span> and <span class="math inline">\(a''_1 = b''_2\)</span>, which are not contained in <span class="math inline">\(B_1\)</span>, then there exist infinitely many of them, because all the infinitely many numbers lying between <span class="math inline">\(a'_1\)</span> and <span class="math inline">\(a''_1\)</span> are obviously contained in <span class="math inline">\(A_1\)</span> (Section I, II.) but not in <span class="math inline">\(B_1\)</span>. In this case we say that the numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> corresponding to these two essentially different cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> are <em>different</em>, and further that <span class="math inline">\(\alpha\)</span> is <em>greater</em> than <span class="math inline">\(\beta\)</span>, that <span class="math inline">\(\beta\)</span> is <em>less</em> than <span class="math inline">\(\alpha\)</span>, which we express in symbols by <span class="math inline">\(\alpha &gt; \beta\)</span> as well as <span class="math inline">\(\beta &lt; \alpha\)</span>. It is to be noticed that this definition coincides completely with the one given earlier, when <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> are rational.</p>
+<p>3. If, however, there exist in <span class="math inline">\(A_1\)</span> at least two different numbers <span class="math inline">\(a'_1 = b'_2\)</span> and <span class="math inline">\(a''_1 = b''_2\)</span>, which are not contained in <span class="math inline">\(B_1\)</span>, then there exist infinitely many of them, because all the infinitely many numbers lying between <span class="math inline">\(a'_1\)</span> and <span class="math inline">\(a''_1\)</span> are obviously contained in <span class="math inline">\(A_1\)</span> (<a href="1_01_properties-of-rational-numbers.html" class="quarto-xref"><span>Section 1</span></a>, II.) but not in <span class="math inline">\(B_1\)</span>. In this case we say that the numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> corresponding to these two essentially different cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> are <em>different</em>, and further that <span class="math inline">\(\alpha\)</span> is <em>greater</em> than <span class="math inline">\(\beta\)</span>, that <span class="math inline">\(\beta\)</span> is <em>less</em> than <span class="math inline">\(\alpha\)</span>, which we express in symbols by <span class="math inline">\(\alpha &gt; \beta\)</span> as well as <span class="math inline">\(\beta &lt; \alpha\)</span>. It is to be noticed that this definition coincides completely with the one given earlier, when <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> are rational.</p>
 <p>The remaining possible cases are these:</p>
 <p>4. If there exists in <span class="math inline">\(B_1\)</span> one and only one number <span class="math inline">\(b'_1 = a'_2\)</span>, that is not contained in <span class="math inline">\(A_1\)</span> then the two cuts <span class="math inline">\((A_1, A_2)\)</span> and <span class="math inline">\((B_1, B_2)\)</span> are only unessentially different and they are produced by one and the same rational number <span class="math inline">\(\alpha = a'_2 = b'_1 = \beta\)</span>.</p>
 <p>5. But if there are in <span class="math inline">\(B_1\)</span> at least two numbers which are not contained in <span class="math inline">\(A_1\)</span>, then <span class="math inline">\(\beta &gt; \alpha\)</span>, <span class="math inline">\(\alpha &lt; \beta\)</span>.</p>
@@ -786,8 +811,8 @@ y^2 - D = \frac{(x^2 - D)^3}{(3x^2 + D)^2}.
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="pagination-link" aria-label="Continuity of the domain of real numbers">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="pagination-link" aria-label="Continuity of the domain of real Numbers">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
