@@ -36,7 +36,7 @@ book:
         - 2_12_multiplication-of-numbers.qmd
         - 2_13_involution-of-numbers.qmd
         - 2_14_number-of-elements-of-a-finite-system.qmd
-    - license.qmd
+    - _license.qmd
     - references.qmd
 
 format:
