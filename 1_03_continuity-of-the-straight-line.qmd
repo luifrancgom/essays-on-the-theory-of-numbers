@@ -1,4 +1,4 @@
-# Continuity of the straight line
+# Continuity of the straight line {#sec-continuity-of-the-straight-line}
 
 Of the greatest importance, however, is the fact that in the straight line $L$ there are infinitely many points which correspond to no rational number. If the point $p$ corresponds to the rational number $a$, then, as is well known, the length $o\,p$ is commensurable with the invariable unit of measure used in the construction, i.e., there exists a third length, a so-called common measure, of which these two lengths are integral multiples. But the ancient Greeks already knew and had demonstrated that there are lengths incommensurable with a given unit of length, e.g., the diagonal of the square whose side is the unit of length. If we lay off such a length from the point $o$ upon the line we obtain an end-point which corresponds to no rational number. Since further it can be easily shown that there are infinitely many lengths which are incommensurable with the unit of length, we may affirm: The straight line $L$ is infinitely richer in point-individuals than the domain $R$ of rational numbers in number-individuals.
 
