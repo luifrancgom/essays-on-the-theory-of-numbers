@@ -1,1 +1,19 @@
 # The nature and meaning of numbers
+
+## Preface to the first edition
+
+*`\greekfont ἀεί ὁ ἄνθρωπος ἀριθμητίζει.`{=latex}`ἀεί ὁ ἄνθρωπος ἀριθμητίζει.`{=html}*
+
+::: {.flushright latex="" custom-style="flushright"}
+R. Dedekind.
+:::
+
+[Harzburg]{.smallcaps}, October 5, 1887.
+
+## Preface to the second edition
+
+::: {.flushright latex="" custom-style="flushright"}
+R. Dedekind.
+:::
+
+[Harzburg]{.smallcaps}, August 24, 1893.
