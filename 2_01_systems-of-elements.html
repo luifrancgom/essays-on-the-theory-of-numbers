@@ -26,7 +26,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -89,6 +109,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -314,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_01_systems-of-elements.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Systems of elements</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Systems of elements</span></h1>
+<h1 class="title"><span id="sec-systems-of-elements" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Systems of elements</span></span></h1>
 </div>
 
 
@@ -331,8 +380,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-1"><strong>1.</strong></span> In what follows I understand by <em>thing</em> every object of our thought. In order to be able easily to speak of things, we designate them by symbols, e.g., by letters, and we venture to speak briefly of the thing <span class="math inline">\(a\)</span> or of <span class="math inline">\(a\)</span> simply, when we mean the thing denoted by <span class="math inline">\(a\)</span> and not at all the letter <span class="math inline">\(a\)</span> itself. A thing is completely determined by all that can be affirmed or thought concerning it. A thing <span class="math inline">\(a\)</span> is the same as <span class="math inline">\(b\)</span> (identical with <span class="math inline">\(b\)</span>), and <span class="math inline">\(b\)</span> the same as <span class="math inline">\(a\)</span>, when all that can be thought concerning <span class="math inline">\(a\)</span> can also be thought concerning <span class="math inline">\(b\)</span>, and when all that is true of <span class="math inline">\(b\)</span> can also be thought of <span class="math inline">\(a\)</span>. That <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are only symbols or names for one and the same thing is indicated by the notation <span class="math inline">\(a=b\)</span>, and also by <span class="math inline">\(b=a\)</span>. If further <span class="math inline">\(b=c\)</span>, that is, if <span class="math inline">\(c\)</span> as well as <span class="math inline">\(a\)</span> is a symbol for the thing denoted by <span class="math inline">\(b\)</span>, then is also <span class="math inline">\(a=c\)</span>. If the above coincidence of the thing denoted by <span class="math inline">\(a\)</span> with the thing denoted by <span class="math inline">\(b\)</span> does not exist, then are the things <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> said to be different, <span class="math inline">\(a\)</span> is another thing than <span class="math inline">\(b\)</span>, <span class="math inline">\(b\)</span> another thing than <span class="math inline">\(a\)</span>; there is some property belonging to the one that does not belong to the other.</p>
+<p><span id="par-2"><strong>2.</strong></span> It very frequently happens that different things, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(\ldots\)</span> for some reason can be considered from a common point of view, can be associated in the mind, and we say that they form a <em>system</em> <span class="math inline">\(S\)</span>; we call the things <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(\ldots\)</span> <em>elements</em> of the system <span class="math inline">\(S\)</span>, they are <em>contained</em> in <span class="math inline">\(S\)</span>; conversely, <span class="math inline">\(S\)</span> <em>consists</em> of these elements. Such a system <span class="math inline">\(S\)</span> (an aggregate, a manifold, a totality) as an object of our thought is likewise a thing <a href="./2_01_systems-of-elements.html#par-1">(1)</a>; it is completely determined when with respect to every thing it is determined whether it is an element of <span class="math inline">\(S\)</span> or not.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The system <span class="math inline">\(S\)</span> is hence the same as the system <span class="math inline">\(T\)</span>, in symbols <span class="math inline">\(S=T\)</span>, when every element of <span class="math inline">\(S\)</span> is also element of <span class="math inline">\(T\)</span>, and every element of <span class="math inline">\(T\)</span> is also element of <span class="math inline">\(S\)</span>. For uniformity of expression it is advantageous to include also the special case where a system <span class="math inline">\(S\)</span> consists of a <em>single</em> (one and only one) element <span class="math inline">\(a\)</span>, i.e., the thing <span class="math inline">\(a\)</span> is element of <span class="math inline">\(S\)</span>, but every thing different from <span class="math inline">\(a\)</span> is not an element of <span class="math inline">\(S\)</span>. On the other hand, we intend here for certain reasons wholly to exclude the empty system which contains no element at all, although for other investigations it may be appropriate to imagine such a system.</p>
+<p><span id="par-3"><strong>3.</strong></span> Definition. A system <span class="math inline">\(A\)</span> is said to be <em>part</em> of a system <span class="math inline">\(S\)</span> when every element of <span class="math inline">\(A\)</span> is also element of <span class="math inline">\(S\)</span>. Since this relation between a system <span class="math inline">\(A\)</span> and a system <span class="math inline">\(S\)</span> will occur continually in what follows, we shall express it briefly by the symbol <span class="math inline">\(A \partof S\)</span>. The inverse symbol <span class="math inline">\(S \wholeof A\)</span>, by which the same fact might be expressed, for simplicity and clearness I shall wholly avoid, but for a lack of a better word I shall sometimes say that <span class="math inline">\(S\)</span> is <em>whole</em> of <span class="math inline">\(A\)</span>, by which I mean to express that among the elements of <span class="math inline">\(S\)</span> are found all the elements of <span class="math inline">\(A\)</span>. Since further every element <span class="math inline">\(s\)</span> of a system <span class="math inline">\(S\)</span> by <a href="./2_01_systems-of-elements.html#par-2">(2)</a> can be itself regarded as a system, we can hereafter employ the notation <span class="math inline">\(s \partof S\)</span>.</p>
+<p><span id="par-4"><strong>4.</strong></span> Theorem. <span class="math inline">\(A \partof A\)</span>, by reason of <a href="./2_01_systems-of-elements.html#par-3">(3)</a>.</p>
+<p><span id="par-5"><strong>5.</strong></span> Theorem. If <span class="math inline">\(A \partof B\)</span> and <span class="math inline">\(B \partof A\)</span>, then <span class="math inline">\(A = B\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-3">(3)</a>, <a href="./2_01_systems-of-elements.html#par-2">(2)</a>.</p>
+<p><span id="par-6"><strong>6.</strong></span> Definition. A system <span class="math inline">\(A\)</span> is said to be a <em>proper</em> [<em>echter</em>] part of <span class="math inline">\(S\)</span>, when <span class="math inline">\(A\)</span> is part of <span class="math inline">\(S\)</span>, but different from <span class="math inline">\(S\)</span>. According to <a href="./2_01_systems-of-elements.html#par-5">(5)</a> then <span class="math inline">\(S\)</span> is not a part of <span class="math inline">\(A\)</span>, i.e., there is in <span class="math inline">\(S\)</span> an element which is not an element of <span class="math inline">\(A\)</span>.</p>
+<p><span id="par-7"><strong>7.</strong></span> Theorem. If <span class="math inline">\(A \partof B\)</span> and <span class="math inline">\(B \partof C\)</span>, which may be denoted briefly by <span class="math inline">\(A \partof B \partof C\)</span>, then is <span class="math inline">\(A \partof C\)</span>, and <span class="math inline">\(A\)</span> is certainly a proper part of <span class="math inline">\(C\)</span>, if <span class="math inline">\(A\)</span> is a proper part of <span class="math inline">\(B\)</span> or if <span class="math inline">\(B\)</span> is a proper part of <span class="math inline">\(C\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-3">(3)</a>, <a href="./2_01_systems-of-elements.html#par-6">(6)</a>.</p>
+<p><span id="par-8"><strong>8.</strong></span> Definition. By the system <em>compounded</em> out of any systems <span class="math inline">\(A\)</span>, B, C, <span class="math inline">\(\ldots\)</span> to be denoted by <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> we mean that system whose elements are determined by the following prescription: a thing is considered as element of <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> when and only when it is element of some one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, C, <span class="math inline">\(\ldots\)</span>, i.e., when it is element of <span class="math inline">\(A\)</span>, or <span class="math inline">\(B\)</span>, or <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span>. We include also the case where only a single system <span class="math inline">\(A\)</span> exists; then obviously <span class="math inline">\(\mathfrak{M}(A)=A\)</span>. We observe further that the system <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> compounded out of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> is carefully to be distinguished from the system whose elements are the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> themselves.</p>
+<p><span id="par-9"><strong>9.</strong></span> Theorem. The systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> are parts of <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-8">(8)</a>, <a href="./2_01_systems-of-elements.html#par-3">(3)</a>.</p>
+<p><span id="par-10"><strong>10.</strong></span> Theorem. If <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> are parts of a system <span class="math inline">\(S\)</span>, then is <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots) \partof S\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-8">(8)</a>, <a href="./2_01_systems-of-elements.html#par-3">(3)</a>.</p>
+<p><span id="par-11"><strong>11.</strong></span> Theorem. If <span class="math inline">\(P\)</span> is part of one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> then is <span class="math inline">\(P \partof \mathfrak{M}(A, B, C, \ldots)\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-9">(9)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a>.</p>
+<p><span id="par-12"><strong>12.</strong></span> Theorem. If each of the systems <span class="math inline">\(P\)</span>, Q, <span class="math inline">\(\ldots\)</span> is part of one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> then is <span class="math inline">\(\mathfrak{M}(P, Q, \ldots) \partof \mathfrak{M}(A, B, C, \ldots)\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-11">(11)</a>, <a href="./2_01_systems-of-elements.html#par-10">(10)</a>.</p>
+<p><span id="par-13"><strong>13.</strong></span> Theorem. If <span class="math inline">\(A\)</span> is compounded out of any of the systems <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span> then is <span class="math inline">\(A \partof \mathfrak{M}(P, Q, \ldots)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every element of <span class="math inline">\(A\)</span> is by <a href="./2_01_systems-of-elements.html#par-8">(8)</a> element of one of the systems <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span>, consequently by <a href="./2_01_systems-of-elements.html#par-8">(8)</a> also element of <span class="math inline">\(\mathfrak{M}(P, Q, \ldots)\)</span>, whence the theorem follows by <a href="./2_01_systems-of-elements.html#par-3">(3)</a>.</p>
+</div>
+<p><span id="par-14"><strong>14.</strong></span> Theorem. If each of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> is compounded out of any of the systems <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span> then is <span class="math display">\[
+\mathfrak{M}(A,B,C, \ldots) \partof \mathfrak{M}(P,Q, \ldots)
+\]</span></p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-13">(13)</a>, <a href="./2_01_systems-of-elements.html#par-10">(10)</a>.</p>
+<p><span id="par-15"><strong>15.</strong></span> Theorem. If each of the systems <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span> is part of one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, C, <span class="math inline">\(\ldots\)</span>, and if each of the latter is compounded out of any of the former, then is <span class="math display">\[
+\mathfrak{M}(P, Q, \ldots) = \mathfrak{M}(A, B, C, \ldots).
+\]</span></p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-12">(12)</a>, <a href="./2_01_systems-of-elements.html#par-14">(14)</a>, <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+<p><span id="par-16"><strong>16.</strong></span> Theorem. If <span class="math display">\[
+\begin{gathered}
+A = \mathfrak{M}(P, Q) \text{ and } B = \mathfrak{M}(Q, R) \\
+\text{then is } \mathfrak{M}(A, R) = \mathfrak{M}(P, B).
+\end{gathered}
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by the preceding theorem <a href="./2_01_systems-of-elements.html#par-15">(15)</a> <span class="math display">\[
+\mathfrak{M}(A, R) \text{ as well as } \mathfrak{M}(P, B) = \mathfrak{M}(P, Q, R).
+\]</span></p>
+</div>
+<p><span id="par-17"><strong>17.</strong></span> Definition. A thing <span class="math inline">\(g\)</span> is said to be <em>common</em> element of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span>, if it is contained in each of these systems (that is in <span class="math inline">\(A\)</span> <em>and</em> in <span class="math inline">\(B\)</span> <em>and</em> in <span class="math inline">\(C\)</span> <span class="math inline">\(\ldots\)</span>). Likewise a system <span class="math inline">\(T\)</span> is said to be a <em>common part</em> of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> when <span class="math inline">\(T\)</span> is part of each of these systems; and by the <em>community</em> [<em>Gemeinheit</em>] of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> we understand the perfectly determinate system <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span> which consists of all the common elements <span class="math inline">\(g\)</span> of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> and hence is likewise a common part of those systems. We again include the case where only a single system <span class="math inline">\(A\)</span> occurs; then <span class="math inline">\(\mathfrak{G}(A)\)</span> (is to be put) <span class="math inline">\(=A\)</span>. But the case may also occur that the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> possess no common element at all, therefore no common part, no community; they are then called systems <em>without</em> common part, and the symbol <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span> is meaningless (compare the end of <a href="./2_01_systems-of-elements.html#par-2">(2)</a>). We shall however almost always in theorems concerning communities leave it to the reader to add in thought the condition of their existence and to discover the proper interpretation of these theorems for the case of non-existence.</p>
+<p><span id="par-18"><strong>18.</strong></span> Theorem. Every common part of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> is part of <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-17">(17)</a>.</p>
+<p><span id="par-19"><strong>19.</strong></span> Theorem. Every part of <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span> is common part of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, C, <span class="math inline">\(\ldots\)</span>.</p>
+<p>The proof follows from <a href="./2_01_systems-of-elements.html#par-17">(17)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a>.</p>
+<p><span id="par-20"><strong>20.</strong></span> Theorem. If each of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> is whole <a href="./2_01_systems-of-elements.html#par-3">(3)</a> of one of the systems <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span> then is <span class="math display">\[
+\mathfrak{G}(P, Q, \ldots) \partof \mathfrak{G}(A, B, C, \ldots)
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every element of <span class="math inline">\(\mathfrak{G}(P, Q, \ldots)\)</span> is common element of <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\ldots\)</span>, therefore also common element of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span>, which was to be proved.</p>
+</div>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-kronecker_ueber_1886" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">L. Kronecker, <span>“Ueber einige <span>Anwendungen</span> der <span>Modulsysteme</span> auf elementare algebraische <span>Fragen</span>.”</span> <em>Journal für die reine und angewandte Mathematik (Crelles Journal)</em>, vol. 1886, no. 99, pp. 329–371, Jan. 1886, doi: <a href="https://doi.org/10.1515/crll.1886.99.329">10.1515/crll.1886.99.329</a>.</div>
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>In what manner this determination is brought about, and whether we know a way of deciding upon it, is a matter of indifference for all that follows; the general laws to be developed in no way depend upon it; they hold under all circumstances. I mention this expressly because Kronecker not long ago (<em>Crelle’s Journal</em>, Vol. 99, pp.&nbsp;334–336) <span class="citation" data-cites="kronecker_ueber_1886"><a href="references.html#ref-kronecker_ueber_1886" role="doc-biblioref">[1]</a></span> has endeavored to impose certain limitations upon the free formation of concepts in mathematics which I do not believe to be justified; but there seems to be no call to enter upon this matter with more detail until the distinguished mathematician shall have published his reasons for the necessity or merely the expediency of these limitations.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
