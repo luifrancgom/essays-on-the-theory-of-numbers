@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -177,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,6 +360,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>To reduce any operation with two real numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> to operations with rational numbers, it is only necessary from the cuts <span class="math inline">\((A_1, A_2)\)</span>, <span class="math inline">\((B_1, B_2)\)</span> produced by the numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> in the system <span class="math inline">\(R\)</span> to define the cut <span class="math inline">\((C_1, C_2)\)</span> which is to correspond to the result of the operation, <span class="math inline">\(\gamma\)</span>. I confine myself here to the discussion of the simplest case, that of addition.</p>
+<p>If <span class="math inline">\(c\)</span> is any rational number, we put it into the class <span class="math inline">\(C_1\)</span>, provided there are two numbers one <span class="math inline">\(a_1\)</span> in <span class="math inline">\(A_1\)</span> and one <span class="math inline">\(b_1\)</span> in <span class="math inline">\(B_1\)</span> such that their sum <span class="math inline">\(a_1+b_1 \geqq c\)</span>; all other rational numbers shall be put into the class <span class="math inline">\(C_2\)</span>. This separation of all rational numbers into the two classes <span class="math inline">\(C_1\)</span>, <span class="math inline">\(C_2\)</span> evidently forms a cut, since every number <span class="math inline">\(c_1\)</span> in <span class="math inline">\(C_1\)</span> is less than every number <span class="math inline">\(c_2\)</span> in <span class="math inline">\(C_2\)</span>. If both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are rational, then every number <span class="math inline">\(c_1\)</span> contained in <span class="math inline">\(C_1\)</span> is <span class="math inline">\(\leqq\alpha+\beta\)</span>, because <span class="math inline">\(a_1\leqq\alpha\)</span>, <span class="math inline">\(b_1\leqq\beta\)</span>, and therefore <span class="math inline">\(a_1+b_1 \leqq\alpha+\beta\)</span>; further, if there were contained in <span class="math inline">\(C_2\)</span> a number <span class="math inline">\(c_2&lt;\alpha+\beta\)</span>, hence <span class="math inline">\(\alpha+\beta=c_2+p\)</span>, where <span class="math inline">\(p\)</span> is a positive rational number, then we should have</p>
+<p><span class="math display">\[
+c_2=(\alpha- \frac{1}{2} p)+(\beta- \frac{1}{2} p),
+\]</span></p>
+<p>which contradicts the definition of the number <span class="math inline">\(c_2\)</span>, because <span class="math inline">\(\alpha- \frac{1}{2} p\)</span> is a number in <span class="math inline">\(A_1\)</span>, and <span class="math inline">\(\beta- \frac{1}{2} p\)</span> a number in <span class="math inline">\(B_1\)</span>; consequently every number <span class="math inline">\(c_2\)</span> contained in <span class="math inline">\(C_2\)</span> is <span class="math inline">\(\geqq\alpha+\beta\)</span>. Therefore in this case the cut <span class="math inline">\((C_1, C_2)\)</span> is produced by the sum <span class="math inline">\(\alpha+\beta\)</span>. Thus we shall not violate the definition which holds in the arithmetic of rational numbers if in all cases we understand by the sum <span class="math inline">\(\alpha+\beta\)</span> of any two real numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> that number <span class="math inline">\(\gamma\)</span> by which the cut <span class="math inline">\((C_1, C_2)\)</span> is produced. Further, if only one of the two numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> is rational, e.g., <span class="math inline">\(\alpha\)</span>, it is easy to see that it makes no difference with the sum <span class="math inline">\(\gamma=\alpha+\beta\)</span> whether the number <span class="math inline">\(\alpha\)</span> is put into the class <span class="math inline">\(A_1\)</span> or into the class <span class="math inline">\(A_2\)</span>.</p>
+<p>Just as addition is defined, so can the other operations of the so-called elementary arithmetic be defined, viz., the formation of differences, products, quotients, powers, roots, logarithms, and in this way we arrive at real proofs of theorems (as, e.g., <span class="math inline">\(\sqrt{2}\cdot\sqrt{3} =\sqrt{6}\)</span>), which to the best of my knowledge have never been established before. The excessive length that is to be feared in the definitions of the more complicated operations is partly inherent in the nature of the subject but can for the most part be avoided. Very useful in this connection is the notion of an <em>interval</em>, i.e., a system <span class="math inline">\(A\)</span> of rational numbers possessing the following characteristic property: if <span class="math inline">\(a\)</span> and <span class="math inline">\(a'\)</span> are numbers of the system <span class="math inline">\(A\)</span>, then are all rational numbers lying between <span class="math inline">\(a\)</span> and <span class="math inline">\(a'\)</span> contained in <span class="math inline">\(A\)</span>. The system <span class="math inline">\(R\)</span> of all rational numbers, and also the two classes of any cut are intervals. If there exist a rational number <span class="math inline">\(a_1\)</span> which is less and a rational number <span class="math inline">\(a_2\)</span> which is greater than every number of the interval <span class="math inline">\(A\)</span>, then <span class="math inline">\(A\)</span> is called a finite interval; there then exist infinitely many numbers in the same condition as <span class="math inline">\(a_1\)</span> and infinitely many in the same condition as <span class="math inline">\(a_2\)</span>; the whole domain <span class="math inline">\(R\)</span> breaks up into three parts <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(A_2\)</span> and there enter two perfectly definite rational or irrational numbers <span class="math inline">\(\alpha_1\)</span>, <span class="math inline">\(\alpha_2\)</span> which may be called respectively the lower and upper (or the less and greater) <em>limits</em> of the interval; the lower limit <span class="math inline">\(\alpha_1\)</span> is determined by the cut for which the system <span class="math inline">\(A_1\)</span> forms the first class and the upper <span class="math inline">\(\alpha_2\)</span> by the cut for which the system <span class="math inline">\(A_2\)</span> forms the second class. Of every rational or irrational number <span class="math inline">\(\alpha\)</span> lying between <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_2\)</span> it may be said that it lies <em>within</em> the interval <span class="math inline">\(A\)</span>. If all numbers of an interval <span class="math inline">\(A\)</span> are also numbers of an interval <span class="math inline">\(B\)</span>, then <span class="math inline">\(A\)</span> is called a portion of <span class="math inline">\(B\)</span>.</p>
+<p>Still lengthier considerations seem to loom up when we attempt to adapt the numerous theorems of the arithmetic of rational numbers (as, e.g., the theorem <span class="math inline">\((a+b)c=ac+bc\)</span>) to any real numbers. This, however, is not the case. It is easy to see that it all reduces to showing that the arithmetic operations possess a certain continuity. What I mean by this statement may be expressed in the form of a general theorem:</p>
+<blockquote class="blockquote">
+<p>“If the number <span class="math inline">\(\lambda\)</span> is the result of an operation performed on the numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\ldots\)</span> and <span class="math inline">\(\lambda\)</span> lies within the interval <span class="math inline">\(L\)</span>, then intervals <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, … can be taken within which lie the numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\ldots\)</span> such that the result of the same operation in which the numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\ldots\)</span> are replaced by arbitrary numbers of the intervals <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, C, … is always a number lying within the interval <span class="math inline">\(L\)</span>.”</p>
+</blockquote>
+<p>The forbidding clumsiness, however, which marks the statement of such a theorem convinces us that something must be brought in as an aid to expression; this is, in fact, attained in the most satisfactory way by introducing the ideas of <em>variable magnitudes</em>, <em>functions</em>, <em>limiting values</em>, and it would be best to base the definitions of even the simplest arithmetic operations upon these ideas, a matter which, however, cannot be carried further here.</p>
 
 
 
@@ -737,8 +778,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="pagination-link" aria-label="Continuity of the domain of real Numbers">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span>
+      <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="pagination-link" aria-label="Continuity of the domain of real numbers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

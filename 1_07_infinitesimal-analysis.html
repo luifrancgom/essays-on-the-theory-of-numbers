@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -177,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1_05_continuity-of-the-domain-of-real-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real Numbers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Continuity of the domain of real numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,6 +360,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Here at the close we ought to explain the connection between the preceding investigations and certain fundamental theorems of infinitesimal analysis.</p>
+<p>We say that a variable magnitude <span class="math inline">\(x\)</span> which passes through successive definite numerical values approaches a fixed limiting value <span class="math inline">\(\alpha\)</span> when in the course of the process <span class="math inline">\(x\)</span> lies finally between two numbers between which <span class="math inline">\(\alpha\)</span> itself lies, or, what amounts to the same, when the difference <span class="math inline">\(x-\alpha\)</span> taken absolutely becomes finally less than any given value different from zero.</p>
+<p>One of the most important theorems may be stated in the following manner:</p>
+<blockquote class="blockquote">
+<p>“If a magnitude <span class="math inline">\(x\)</span> grows continually but not beyond all limits it approaches a limiting value.”</p>
+</blockquote>
+<p>I prove it in the following way. By hypothesis there exists one and hence there exist infinitely many numbers <span class="math inline">\(\alpha_2\)</span> such that <span class="math inline">\(x\)</span> remains continually <span class="math inline">\(&lt;\alpha_2\)</span>; I designate by <span class="math inline">\(\mathfrak{A}_2\)</span> the system of all these numbers <span class="math inline">\(\alpha_2\)</span>, by <span class="math inline">\(\mathfrak{A}_1\)</span> the system of all other numbers <span class="math inline">\(\alpha_1\)</span>; each of the latter possesses the property that in the course of the process <span class="math inline">\(x\)</span> becomes finally <span class="math inline">\(\geqq \alpha_1\)</span>, hence every number <span class="math inline">\(\alpha_1\)</span> is less than every number <span class="math inline">\(\alpha_2\)</span> and consequently there exists a number <span class="math inline">\(\alpha\)</span> which is either the greatest in <span class="math inline">\(\mathfrak{A}_1\)</span> or the least in <span class="math inline">\(\mathfrak{A}_2\)</span> (<a href="./1_05_continuity-of-the-domain-of-real-numbers.html#par-7-continuity-of-the-domain-of-real-numbers"><span class="quarto-xref"><span>Section 5</span></span>, IV.</a>). The former cannot be the case since <span class="math inline">\(x\)</span> never ceases to grow, hence <span class="math inline">\(\alpha\)</span> is the least number in <span class="math inline">\(\mathfrak{A}_2\)</span>. Whatever number <span class="math inline">\(\alpha_1\)</span> be taken we shall have finally <span class="math inline">\(\alpha_1&lt;x&lt;\alpha\)</span>, i.e., <span class="math inline">\(x\)</span> approaches the limiting value <span class="math inline">\(\alpha\)</span>.</p>
+<p>This theorem is equivalent to the principle of continuity, i.e., it loses its validity as soon as we assume a single real number not to be contained in the domain <span class="math inline">\(\mathfrak{R}\)</span>; or otherwise expressed: if this theorem is correct, then is also theorem <a href="./1_05_continuity-of-the-domain-of-real-numbers.html#par-7-continuity-of-the-domain-of-real-numbers"><span class="quarto-xref"><span>Section 5</span></span>, IV.</a> correct.</p>
+<p>Another theorem of infinitesimal analysis, likewise equivalent to this, which is still oftener employed, may be stated as follows:</p>
+<blockquote class="blockquote">
+<p>“If in the variation of a magnitude <span class="math inline">\(x\)</span> we can for every given positive magnitude <span class="math inline">\(\delta\)</span> assign a corresponding position from and after which <span class="math inline">\(x\)</span> changes by less than <span class="math inline">\(\delta\)</span> then <span class="math inline">\(x\)</span> approaches a limiting value.”</p>
+</blockquote>
+<p>This converse of the easily demonstrated theorem that every variable magnitude which approaches a limiting value finally changes by less than any given positive magnitude can be derived as well from the preceding theorem as directly from the principle of continuity. I take the latter course. Let <span class="math inline">\(\delta\)</span> be any positive magnitude (i.e., <span class="math inline">\(\delta&gt;0\)</span>), then by hypothesis a time will come after which <span class="math inline">\(x\)</span> will change by less than <span class="math inline">\(\delta\)</span>, i.e., if at this time <span class="math inline">\(x\)</span> has the value <span class="math inline">\(a\)</span>, then afterwards we shall continually have <span class="math inline">\(x&gt;a-\delta\)</span> and <span class="math inline">\(x&lt;a+\delta\)</span>. I now for a moment lay aside the original hypothesis and make use only of the theorem just demonstrated that all later values of the variable <span class="math inline">\(x\)</span> lie between two assignable finite values. Upon this I base a double separation of all real numbers. To the system <span class="math inline">\(\mathfrak{A}_2\)</span> I assign a number <span class="math inline">\(\alpha_2\)</span> (e.g., <span class="math inline">\(a+\delta\)</span>) when in the course of the process <span class="math inline">\(x\)</span> becomes finally <span class="math inline">\(\leqq \alpha_2\)</span>; to the system <span class="math inline">\(\mathfrak{A}_1\)</span> I assign every number not contained in <span class="math inline">\(\mathfrak{A}_2\)</span>; if <span class="math inline">\(\alpha_1\)</span> is such a number, then, however far the process may have advanced, it will still happen infinitely many times that <span class="math inline">\(x&gt;\alpha_2\)</span>. Since every number <span class="math inline">\(\alpha_1\)</span> is less than every number <span class="math inline">\(\alpha_2\)</span> there exists a perfectly definite number <span class="math inline">\(\alpha\)</span> which produces this cut <span class="math inline">\((\mathfrak{A}_1, \mathfrak{A}_2)\)</span> of the system <span class="math inline">\(\mathfrak{R}\)</span> and which I will call the upper limit of the variable <span class="math inline">\(x\)</span> which always remains finite. Likewise as a result of the behavior of the variable <span class="math inline">\(x\)</span> a second cut <span class="math inline">\((\mathfrak{B}_1, \mathfrak{B}_2)\)</span> of the system <span class="math inline">\(\mathfrak{R}\)</span> is produced; a number <span class="math inline">\(\beta_2\)</span> (e.g., <span class="math inline">\(a-\delta\)</span>) is assigned to <span class="math inline">\(\mathfrak{B}_2\)</span> when in the course of the process <span class="math inline">\(x\)</span> becomes finally <span class="math inline">\(\geqq\beta\)</span>; every other number <span class="math inline">\(\beta_2\)</span>, to be assigned to <span class="math inline">\(\mathfrak{B}_2\)</span>, has the property that <span class="math inline">\(x\)</span> is never finally <span class="math inline">\(\geqq \beta_2\)</span>; therefore infinitely many times <span class="math inline">\(x\)</span> becomes <span class="math inline">\(&lt;\beta_2\)</span>; the number <span class="math inline">\(\beta\)</span> by which this cut is produced I call the lower limiting value of the variable <span class="math inline">\(x\)</span>. The two numbers <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> are obviously characterised by the following property: if <span class="math inline">\(\epsilon\)</span> is an arbitrarily small positive magnitude then we have always finally <span class="math inline">\(x &lt; \alpha + \epsilon\)</span> and <span class="math inline">\(x &gt; \beta - \epsilon\)</span>, but never finally <span class="math inline">\(x &lt; \alpha - \epsilon\)</span> and never finally <span class="math inline">\(x &gt; \beta + \epsilon\)</span>. Now two cases are possible. If <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are different from each other, then necessarily <span class="math inline">\(\alpha &gt; \beta\)</span>, since continually <span class="math inline">\(\alpha_2 \geqq \beta_2\)</span>; the variable <span class="math inline">\(x\)</span> oscillates, and, however far the process advances, always undergoes changes whose amount surpasses the value <span class="math inline">\((\alpha - \beta) -2\epsilon\)</span> where <span class="math inline">\(\epsilon\)</span> is an arbitrarily small positive magnitude. The original hypothesis to which I now return contradicts this consequence; there remains only the second case <span class="math inline">\(\alpha = \beta\)</span> since it has already been shown that, however small be the positive magnitude <span class="math inline">\(\epsilon\)</span>, we always have finally <span class="math inline">\(x &lt; \alpha + \epsilon\)</span> and <span class="math inline">\(x &gt; \beta - \epsilon\)</span>, <span class="math inline">\(x\)</span> approaches the limiting value <span class="math inline">\(\alpha\)</span>, which was to be proved.</p>
+<p>These examples may suffice to bring out the connection between the principle of continuity and infinitesimal analysis.</p>
 
 
 
