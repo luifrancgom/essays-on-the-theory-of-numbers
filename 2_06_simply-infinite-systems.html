@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Simply infinite systems – Essays on the theory of numbers</title>
+<title>13&nbsp; Simply infinite systems. Series of natural numbers – Essays on the theory of numbers</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_06_simply-infinite-systems.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_06_simply-infinite-systems.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems. Series of natural numbers</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -236,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_06_simply-infinite-systems.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems. Series of natural numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,8 +288,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_10_class-of-simply-infinite-systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Class of simply infinite systems</span></span></a>
+  <a href="./2_10_the-class-of-simply-infinite-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">The class of simply infinite systems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -312,9 +341,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_06_simply-infinite-systems.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_06_simply-infinite-systems.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems. Series of natural numbers</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems</span></h1>
+<h1 class="title"><span id="sec-simply-infinite-systems" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simply infinite systems. Series of natural numbers</span></span></h1>
 </div>
 
 
@@ -331,6 +360,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-71"><strong>71.</strong></span> Definition. A system <span class="math inline">\(N\)</span> is said to be <em>simply infinite</em> when there exists a similar transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(N\)</span> in itself such that <span class="math inline">\(N\)</span> appears as chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> of an element not contained in <span class="math inline">\(\phi(N)\)</span>. We call this element, which we shall denote in what follows by the symbol 1, the <em>base-element</em> of <span class="math inline">\(N\)</span> and say the simply infinite system <span class="math inline">\(N\)</span> is <em>set in order</em> [<em>geordnet</em>] by this transformation <span class="math inline">\(\phi\)</span>. If we retain the earlier convenient symbols for transforms and chains (<a href="2_04_transformation-of-a-system-in-itself.html" class="quarto-xref"><span>Section 11</span></a>) then the essence of a simply infinite system <span class="math inline">\(N\)</span> consists in the existence of a transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(N\)</span> and an element 1 which satisfy the following conditions <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span>:</p>
+<p><span class="math inline">\(\alpha\)</span>. <span class="math inline">\(N' \partof N\)</span>.</p>
+<p><span class="math inline">\(\beta\)</span>. <span class="math inline">\(N=1_0\)</span>.</p>
+<p><span class="math inline">\(\gamma\)</span>. The element 1 is not contained in <span class="math inline">\(N'\)</span>.</p>
+<p><span class="math inline">\(\delta\)</span>. The transformation <span class="math inline">\(\phi\)</span> is similar.</p>
+<p>Obviously it follows from <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> that every simply infinite system <span class="math inline">\(N\)</span> is actually an infinite system <a href="./2_05_the-finite-and-infinite.html#par-64">(64)</a> because it is similar to a proper part <span class="math inline">\(N'\)</span> of itself.</p>
+<p><span id="par-72"><strong>72.</strong></span> Theorem. In every infinite system <span class="math inline">\(S\)</span> a simply infinite system <span class="math inline">\(N\)</span> is contained as a part.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="./2_05_the-finite-and-infinite.html#par-64">(64)</a> there exists a similar transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(S\)</span> such that <span class="math inline">\(\phi(S)\)</span> or <span class="math inline">\(S'\)</span> is a proper part of <span class="math inline">\(S\)</span>; hence there exists an element 1 in <span class="math inline">\(S\)</span> which is not contained in <span class="math inline">\(S'\)</span>. The chain <span class="math inline">\(N=1_0\)</span>, which corresponds to this transformation <span class="math inline">\(\phi\)</span> of the system <span class="math inline">\(S\)</span> in itself <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a>, is a simply infinite system set in order by <span class="math inline">\(\phi\)</span>; for the characteristic conditions <span class="math inline">\(\alpha, \beta, \gamma, \delta\)</span> in <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> are obviously all fulfilled.</p>
+</div>
+<p><span id="par-73"><strong>73.</strong></span> Definition. If in the consideration of a simply infinite system <span class="math inline">\(N\)</span> set in order by a transformation <span class="math inline">\(\phi\)</span> we entirely neglect the special character of the elements; simply retaining their distinguishability and taking into account only the relations to one another in which they are placed by the order-setting transformation <span class="math inline">\(\phi\)</span>, then are these elements called <em>natural numbers</em> or <em>ordinal numbers</em> or simply <em>numbers</em>, and the base-element 1 is called the <em>base-number</em> of the <em>number-series</em> <span class="math inline">\(N\)</span>. With reference to this freeing the elements from every other content (abstraction) we are justified in calling numbers a free creation of the human mind. The relations or laws which are derived entirely from the conditions <span class="math inline">\(\alpha, \beta, \gamma, \delta\)</span> in <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> and therefore are always the same in all ordered simply infinite systems, whatever names may happen to be given to the individual elements (compare <a href="./2_10_the-class-of-simply-infinite-systems.html#par-134">134</a>), form the first object of the <em>science of numbers</em> or <em>arithmetic</em>. From the general notions and theorems of <a href="2_04_transformation-of-a-system-in-itself.html" class="quarto-xref"><span>Section 11</span></a> about the transformation of a system in itself we obtain immediately the following fundamental laws where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(\ldots\)</span> <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>, <span class="math inline">\(\ldots\)</span> always denote elements of <span class="math inline">\(N\)</span>, therefore numbers, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> parts of <span class="math inline">\(N\)</span>, <span class="math inline">\(a'\)</span>, <span class="math inline">\(b'\)</span>, <span class="math inline">\(\ldots\)</span> <span class="math inline">\(m'\)</span>, <span class="math inline">\(n'\)</span>, <span class="math inline">\(\ldots\)</span> <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span> <span class="math inline">\(\ldots\)</span> the corresponding transforms, which are produced by the order-setting transformation <span class="math inline">\(\phi\)</span> and are always elements or parts of <span class="math inline">\(N\)</span>; the transform <span class="math inline">\(n'\)</span> of a number <span class="math inline">\(n\)</span> is also called the number <em>following</em> <span class="math inline">\(n\)</span>.</p>
+<p><span id="par-74"><strong>74.</strong></span> Theorem. Every number <span class="math inline">\(n\)</span> by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> is contained in its chain <span class="math inline">\(n_0\)</span> and by <a href="./2_04_transformation-of-a-system-in-itself.html#par-53">(53)</a> the condition <span class="math inline">\(n \partof m_0\)</span> is equivalent to <span class="math inline">\(n_0 \partof m_0\)</span>.</p>
+<p><span id="par-75"><strong>75.</strong></span> Theorem. By <a href="./2_04_transformation-of-a-system-in-itself.html#par-57">(57)</a> <span class="math inline">\(n'_0=(n_0)'=(n')_0\)</span>.</p>
+<p><span id="par-76"><strong>76.</strong></span> Theorem. By <a href="./2_04_transformation-of-a-system-in-itself.html#par-46">(46)</a> <span class="math inline">\(n'_0 \partof n_0\)</span>.</p>
+<p><span id="par-77"><strong>77.</strong></span> Theorem. By <a href="./2_04_transformation-of-a-system-in-itself.html#par-58">(58)</a> <span class="math inline">\(n_0 = \mathfrak{M}(n,n'_0)\)</span>.</p>
+<p><span id="par-78"><strong>78.</strong></span> Theorem. <span class="math inline">\(N = \mathfrak{M}(1,N')\)</span>, hence every number different from the base-number 1 is element of <span class="math inline">\(N'\)</span>, i.e., transform of a number.</p>
+<p>The proof follows from <a href="./2_06_simply-infinite-systems.html#par-77">(77)</a> and <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a>.</p>
+<p><span id="par-79"><strong>79.</strong></span> Theorem. <span class="math inline">\(N\)</span> is the only number-chain containing the base-number 1.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if 1 is element of a number-chain <span class="math inline">\(K\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> the associated chain <span class="math inline">\(N \partof K\)</span>, hence <span class="math inline">\(N=K\)</span>, because it is self-evident that <span class="math inline">\(K \partof N\)</span>.</p>
+</div>
+<p><span id="par-80"><strong>80.</strong></span> Theorem of complete induction (inference from <span class="math inline">\(n\)</span> to <span class="math inline">\(n'\)</span>). In order to show that a theorem holds for all numbers <span class="math inline">\(n\)</span> of a chain <span class="math inline">\(m_0\)</span>, it is sufficient to show,</p>
+<p><span class="math inline">\(\rho\)</span>. that it holds for <span class="math inline">\(n=m\)</span>, and</p>
+<p><span class="math inline">\(\sigma\)</span>. that from the validity of the theorem for a number <span class="math inline">\(n\)</span> of the chain <span class="math inline">\(m_0\)</span> its validity for the following number <span class="math inline">\(n'\)</span> always follows.</p>
+<p>This results immediately from the more general theorem <a href="./2_04_transformation-of-a-system-in-itself.html#par-59">(59)</a> or <a href="./2_04_transformation-of-a-system-in-itself.html#par-60">(60)</a>. The most frequently occurring case is where <span class="math inline">\(m = 1\)</span> and therefore <span class="math inline">\(m_0\)</span> is the complete number-series <span class="math inline">\(N\)</span>.</p>
 
 
 
