@@ -1,1 +1,56 @@
-# Transformation of a system
+# Transformation of a system {#sec-transformation-of-a-system}
+
+[**21.**]{#par-21} Definition.[^fn-1-chap-9] By a *transformation* [*Abbildung*] $\phi$ of a system $S$ we understand a law according to which to every determinate element $s$ of $S$ there *belongs* a determinate thing which is called the *transform* of $s$ and denoted by $\phi(s)$; we say also that $\phi(s)$ *corresponds* to the element $s$, that $\phi(s)$ *results* or is *produced* from $s$ by the transformation $\phi$, that $s$ is *transformed* into $\phi(s)$ by the transformation $\phi$. If now $T$ is any part of $S$, then in the transformation $\phi$ of $S$ is likewise contained a determinate transformation of $T$, which for the sake of simplicity may be denoted by the same symbol $\phi$ and consists in this that to every element $t$ of the system $T$ there corresponds the same transform $\phi(t)$, which $t$ possesses as element of $S$; at the same time the system consisting of all transforms $\phi(t)$ shall be called the transform of $T$ and be denoted by $\phi(T)$, by which also the significance of $\phi(S)$ is defined. As an example of a transformation of a system we may regard the mere assignment of determinate symbols or names to its elements. The simplest transformation of a system is that by which each of its elements is transformed into itself; it will be called the *identical* transformation of the system. For convenience, in the following theorems [(22)](2_02_transformation-of-a-system.qmd#par-22), [(23)](2_02_transformation-of-a-system.qmd#par-23), [(24)](2_02_transformation-of-a-system.qmd#par-24), which deal with an arbitrary transformation $\phi$ of an arbitrary system $S$, we shall denote the transforms of elements $s$ and parts $T$ respectively by $s'$ and $T'$; in addition we agree that small and capital italics without accent shall always signify elements and parts of this system $S$.
+
+[**22.**]{#par-22} Theorem.[^fn-2-chap-9] If $A \partof B$ then $A' \partof B'$.
+
+::: {.proof}
+For every element of $A'$ is the transform of an element contained in $A$, and therefore also in $B$, and is therefore element of $B'$, which was to be proved.
+:::
+
+[**23.**]{#par-23} Theorem. The transform of $\mathfrak{M}(A, B, C, \ldots)$ is $\mathfrak{M}(A', B', C', \ldots)$.
+
+::: {.proof}
+If we denote the system $\mathfrak{M}(A, B, C, \ldots)$ which by [(10)](2_01_systems-of-elements.qmd#par-10) is likewise part of $S$ by $M$, then is every element of its transform $M'$ the transform $m'$ of an element $m$ of $M$; since therefore by [(8)](2_01_systems-of-elements.qmd#par-8) $m$ is also element of one of the systems $A$, $B$, C, $\ldots$ and consequently $m'$ element of one of the systems $A'$, $B'$, $C'$, $\ldots$, and hence by [(8)](2_01_systems-of-elements.qmd#par-8) also element of $\mathfrak{M}(A', B', C', \ldots)$, we have by [(3)](2_01_systems-of-elements.qmd#par-3)
+
+$$
+M' \partof \mathfrak{M}(A', B', C', \ldots).
+$$
+
+On the other hand, since $A$, $B$, $C$, $\ldots$ are by [(9)](2_01_systems-of-elements.qmd#par-9) parts of $M$, and hence $A'$, $B'$, $C'$, $\ldots$ by [(22)](2_02_transformation-of-a-system.qmd#par-22) parts of $M'$, we have by [(10)](2_01_systems-of-elements.qmd#par-10)
+
+$$
+\mathfrak{M}(A', B', C', \ldots) \partof M'.
+$$
+
+By combination with the above we have by [(5)](2_01_systems-of-elements.qmd#par-5) the theorem to be proved
+$$
+M' = \mathfrak{M}(A', B', C', \ldots).
+$$
+
+:::
+
+[**24.**]{#par-24} Theorem.[^fn-3-chap-9] The transform of every common part of $A$, $B$, $C$, $\ldots$, and therefore that of the community $\mathfrak{G}(A, B, C, \ldots)$ is part of $\mathfrak{G}(A', B', C', \ldots)$.
+
+::: {.proof}
+For by [(22)](2_02_transformation-of-a-system.qmd#par-22) it is common part of $A'$, $B'$, $C'$, \ldots$, whence the theorem follows by [(18)](2_01_systems-of-elements.qmd#par-18).
+:::
+
+[**25.**]{#par-25} Definition and theorem. If $\phi$ is a transformation of a system $S$, and $\psi$ a transformation of the transform $S'=\phi(S)$, there always results a transformation $\theta$ of S, *compounded*[^fn-4-chap-9] out of $\phi$ and $\psi$, which consists of this that to every element $s$ of $S$ there corresponds the transform
+
+$$
+\theta(s)=\psi(s')=\psi(\phi(s)),
+$$
+
+where again we have put $\phi(s)=s'$. This transformation $\theta$ can be denoted briefly by the symbol $\psi\cdot\phi$ or $\psi\phi$, the transform $\theta(s)$ by $\psi\phi(s)$ where the order of the symbols $\phi$, $\psi$ is to be considered, since in general the symbol $\phi\psi$ has no interpretation and actually has meaning only when $\psi(s') \partof s$. If now $\chi$ signifies a transformation of the system $\psi(s')=\psi\phi(s)$ and $\eta$ the transformation $\chi\psi$ of the system $S'$ compounded out of $\psi$ and $\chi$, then is $\chi\theta(s)=\chi\psi(s')=\eta(s')=\eta\phi(s)$; therefore the compound transformations $\chi\theta$ and $\eta\phi$ coincide for every element $s$ of $S$, i.e., $\chi\theta = \eta \phi$. In accordance with the meaning of $\theta$ and $\eta$ this theorem can finally be expressed in the form
+
+$$
+\chi\cdot\psi\phi = \chi\psi\cdot\phi,
+$$
+
+and this transformation compounded out of $\phi$, $\psi$, $\chi$ can be denoted briefly by $\chi\psi\phi$.
+
+[^fn-1-chap-9]: See Dirichlet's *Vorlesungen über Zahlentheorie*, 3d edition, 1879, § 163 [@lejeune_dirichlet_vorlesungen_1879].
+[^fn-2-chap-9]: See theorem [27](2_03_similarity-of-a-transformation.qmd#par-27).
+[^fn-3-chap-9]: See theorem [29](2_03_similarity-of-a-transformation.qmd#par-29).
+[^fn-4-chap-9]: A confusion of this compounding of transformations with that of systems of elements is hardly to be feared.
