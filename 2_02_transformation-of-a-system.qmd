@@ -51,6 +51,9 @@ $$
 and this transformation compounded out of $\phi$, $\psi$, $\chi$ can be denoted briefly by $\chi\psi\phi$.
 
 [^fn-1-chap-9]: See Dirichlet's *Vorlesungen über Zahlentheorie*, 3d edition, 1879, § 163 [@lejeune_dirichlet_vorlesungen_1879].
+
 [^fn-2-chap-9]: See theorem [27](2_03_similarity-of-a-transformation.qmd#par-27).
+
 [^fn-3-chap-9]: See theorem [29](2_03_similarity-of-a-transformation.qmd#par-29).
+
 [^fn-4-chap-9]: A confusion of this compounding of transformations with that of systems of elements is hardly to be feared.

@@ -46,4 +46,5 @@ For if $\phi$ is a similar transformation of $S$, $\phi(S)=R$, and $T \partof S$
 :::
 
 [^fn-1-chap-10]: See theorem [22](2_02_transformation-of-a-system.qmd#par-22).
+
 [^fn-2-chap-10]: See theorem [24](2_02_transformation-of-a-system.qmd#par-24).
