@@ -31,7 +31,7 @@ book:
         - 2_07_greater-and-less-numbers.qmd
         - 2_08_finite-and-infinite-parts.qmd
         - 2_09_definition-by-induction.qmd
-        - 2_10_class-of-simply-infinite-systems.qmd
+        - 2_10_the-class-of-simply-infinite-systems.qmd
         - 2_11_addition-of-numbers.qmd
         - 2_12_multiplication-of-numbers.qmd
         - 2_13_involution-of-numbers.qmd

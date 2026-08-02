@@ -1,1 +1,47 @@
-# Simply infinite systems
+# Simply infinite systems. Series of natural numbers {#sec-simply-infinite-systems}
+
+[**71.**]{#par-71} Definition. A system $N$ is said to be *simply infinite* when there exists a similar transformation $\phi$ of $N$ in itself such that $N$ appears as chain [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) of an element not contained in $\phi(N)$. We call this element, which we shall denote in what follows by the symbol 1, the *base-element* of $N$ and say the simply infinite system $N$ is *set in order* [*geordnet*] by this transformation $\phi$. If we retain the earlier convenient symbols for transforms and chains (@sec-transformation-of-a-system-in-itself) then the essence of a simply infinite system $N$ consists in the existence of a transformation $\phi$ of $N$ and an element 1 which satisfy the following conditions $\alpha$, $\beta$, $\gamma$, $\delta$:
+
+$\alpha$. $N' \partof N$.
+
+$\beta$. $N=1_0$.
+
+$\gamma$. The element 1 is not contained in $N'$.
+
+$\delta$. The transformation $\phi$ is similar.
+
+Obviously it follows from $\alpha$, $\gamma$, $\delta$ that every simply infinite system $N$ is actually an infinite system [(64)](2_05_the-finite-and-infinite.qmd#par-64) because it is similar to a proper part $N'$ of itself.
+
+[**72.**]{#par-72} Theorem. In every infinite system $S$ a simply infinite system $N$ is contained as a part.
+
+::: {.proof}
+By [(64)](2_05_the-finite-and-infinite.qmd#par-64) there exists a similar transformation $\phi$ of $S$ such that $\phi(S)$ or $S'$ is a proper part of $S$; hence there exists an element 1 in $S$ which is not contained in $S'$. The chain $N=1_0$, which corresponds to this transformation $\phi$ of the system $S$ in itself [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44), is a simply infinite system set in order by $\phi$; for the characteristic conditions $\alpha, \beta, \gamma, \delta$ in [(71)](2_06_simply-infinite-systems.qmd#par-71) are obviously all fulfilled.
+:::
+
+[**73.**]{#par-73} Definition. If in the consideration of a simply infinite system $N$ set in order by a transformation $\phi$ we entirely neglect the special character of the elements; simply retaining their distinguishability and taking into account only the relations to one another in which they are placed by the order-setting transformation $\phi$, then are these elements called *natural numbers* or *ordinal numbers* or simply *numbers*, and the base-element 1 is called the *base-number* of the *number-series* $N$. With reference to this freeing the elements from every other content (abstraction) we are justified in calling numbers a free creation of the human mind. The relations or laws which are derived entirely from the conditions $\alpha, \beta, \gamma, \delta$ in [(71)](2_06_simply-infinite-systems.qmd#par-71) and therefore are always the same in all ordered simply infinite systems, whatever names may happen to be given to the individual elements (compare [134](2_10_the-class-of-simply-infinite-systems.qmd#par-134)), form the first object of the *science of numbers* or *arithmetic*. From the general notions and theorems of @sec-transformation-of-a-system-in-itself about the transformation of a system in itself we obtain immediately the following fundamental laws where $a$, $b$, $\ldots$ $m$, $n$, $\ldots$ always denote elements of $N$, therefore numbers, $A$, $B$, $C$, $\ldots$ parts of $N$, $a'$, $b'$, $\ldots$ $m'$, $n'$, $\ldots$ $A'$, $B'$, $C'$ $\ldots$ the corresponding transforms, which are produced by the order-setting transformation $\phi$ and are always elements or parts of $N$; the transform $n'$ of a number $n$ is also called the number *following* $n$.
+
+[**74.**]{#par-74} Theorem.  Every number $n$ by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) is contained in its chain $n_0$ and by [(53)](2_04_transformation-of-a-system-in-itself.qmd#par-53) the condition $n \partof m_0$ is equivalent to $n_0 \partof m_0$.
+
+[**75.**]{#par-75} Theorem. By [(57)](2_04_transformation-of-a-system-in-itself.qmd#par-57) $n'_0=(n_0)'=(n')_0$.
+
+[**76.**]{#par-76} Theorem. By [(46)](2_04_transformation-of-a-system-in-itself.qmd#par-46) $n'_0 \partof n_0$.
+
+[**77.**]{#par-77} Theorem. By [(58)](2_04_transformation-of-a-system-in-itself.qmd#par-58) $n_0 = \mathfrak{M}(n,n'_0)$.
+
+[**78.**]{#par-78} Theorem. $N = \mathfrak{M}(1,N')$, hence every number different from the base-number 1 is element of $N'$, i.e., transform of a number.
+
+The proof follows from [(77)](2_06_simply-infinite-systems.qmd#par-77) and [(71)](2_06_simply-infinite-systems.qmd#par-71).
+
+[**79.**]{#par-79} Theorem. $N$ is the only number-chain containing the base-number 1.
+
+::: {.proof}
+For if 1 is element of a number-chain $K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) the associated chain $N \partof K$, hence $N=K$, because it is self-evident that $K \partof N$.
+:::
+
+[**80.**]{#par-80} Theorem of complete induction (inference from $n$ to $n'$). In order to show that a theorem holds for all numbers $n$ of a chain $m_0$, it is sufficient to show,
+
+$\rho$. that it holds for $n=m$, and
+
+$\sigma$. that from the validity of the theorem for a number $n$ of the chain $m_0$ its validity for the following number $n'$ always follows.
+
+This results immediately from the more general theorem [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) or [(60)](2_04_transformation-of-a-system-in-itself.qmd#par-60). The most frequently occurring case is where $m = 1$ and therefore $m_0$ is the complete number-series $N$.
