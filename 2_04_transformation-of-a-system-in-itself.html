@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -314,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_04_transformation-of-a-system-in-itself.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Transformation of a system in itself</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Transformation of a system in itself</span></h1>
+<h1 class="title"><span id="sec-transformation-of-a-system-in-itself" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Transformation of a system in itself</span></span></h1>
 </div>
 
 
@@ -331,6 +360,129 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-36"><strong>36.</strong></span> Definition. If <span class="math inline">\(\phi\)</span> is a similar or dissimilar transformation of a system <span class="math inline">\(S\)</span>, and <span class="math inline">\(\phi(S)\)</span> part of a system <span class="math inline">\(Z\)</span>, then <span class="math inline">\(\phi\)</span> is said to be a transformation of <span class="math inline">\(S\)</span> <em>in</em> <span class="math inline">\(Z\)</span>, and we say <span class="math inline">\(S\)</span> is transformed by <span class="math inline">\(\phi\)</span> in <span class="math inline">\(Z\)</span>. Hence we call <span class="math inline">\(\phi\)</span> a transformation of the system <span class="math inline">\(S\)</span> <em>in itself</em>, when <span class="math inline">\(\phi(S) \partof S\)</span>, and we propose in this paragraph to investigate the general laws of such a transformation <span class="math inline">\(\phi\)</span>. In doing this we shall use the same notations as in II. and again put <span class="math inline">\(\phi(s)=s'\)</span>, <span class="math inline">\(\phi(T)=T'\)</span>. These transforms <span class="math inline">\(s'\)</span>, <span class="math inline">\(T'\)</span> are by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a> themselves again elements or parts of <span class="math inline">\(S\)</span>, like all things designated by italic letters.</p>
+<p><span id="par-37"><strong>37.</strong></span> Definition. <span class="math inline">\(K\)</span> is called a <em>chain</em> [<em>Kette</em>], when <span class="math inline">\(K' \partof K\)</span>. We remark expressly that this name does not in itself belong to the part <span class="math inline">\(K\)</span> of the system <span class="math inline">\(S\)</span>, but is given only with respect to the particular transformation <span class="math inline">\(\phi\)</span>; with reference to another transformation of the system <span class="math inline">\(S\)</span> in itself <span class="math inline">\(K\)</span> can very well not be a chain.</p>
+<p><span id="par-38"><strong>38.</strong></span> Theorem. <span class="math inline">\(S\)</span> is a chain.</p>
+<p><span id="par-39"><strong>39.</strong></span> Theorem. The transform <span class="math inline">\(K'\)</span> of a chain <span class="math inline">\(K\)</span> is a chain.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For from <span class="math inline">\(K' \partof K\)</span> it follows by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> that <span class="math inline">\((K')' \partof K'\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-40"><strong>40.</strong></span> Theorem. If <span class="math inline">\(A\)</span> is part of a chain <span class="math inline">\(K\)</span>, then is also <span class="math inline">\(A' \partof K\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For from <span class="math inline">\(A \partof K\)</span> it follows by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> that <span class="math inline">\(A' \partof K'\)</span>, and since by <a href="./2_04_transformation-of-a-system-in-itself.html#par-37">(37)</a> <span class="math inline">\(K' \partof K\)</span>, therefore by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> <span class="math inline">\(A' \partof K\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-41"><strong>41.</strong></span> Theorem. If the transform <span class="math inline">\(A'\)</span> is part of a chain <span class="math inline">\(L\)</span>, then is there a chain <span class="math inline">\(K\)</span>, which satisfies the conditions <span class="math inline">\(A \partof K\)</span>, <span class="math inline">\(K' \partof L\)</span>; and <span class="math inline">\(\mathfrak{M}(A,L)\)</span> is just such a chain <span class="math inline">\(K\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If we actually put <span class="math inline">\(K=\mathfrak{M}(A, L)\)</span>, then by <a href="./2_01_systems-of-elements.html#par-9">(9)</a> the one condition <span class="math inline">\(A \partof K\)</span> is fulfilled. Since further by <a href="./2_02_transformation-of-a-system.html#par-23">(23)</a> <span class="math inline">\(K' = \mathfrak{M}(A',L')\)</span> and by hypothesis <span class="math inline">\(A' \partof L\)</span>, <span class="math inline">\(L' \partof L\)</span>, then by <a href="./2_01_systems-of-elements.html#par-10">(10)</a> is the other condition <span class="math inline">\(K' \partof L\)</span> also fulfilled and hence it follows because by <a href="./2_01_systems-of-elements.html#par-9">(9)</a> <span class="math inline">\(L \partof K\)</span>, that also <span class="math inline">\(K' \partof K\)</span>, i.e., <span class="math inline">\(K\)</span> is a chain, which was to be proved.</p>
+</div>
+<p><span id="par-42"><strong>42.</strong></span> Theorem. A system <span class="math inline">\(M\)</span> compounded simply out of chains <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, is a chain.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since by <a href="./2_02_transformation-of-a-system.html#par-23">(23)</a> <span class="math inline">\(M'= \mathfrak{M}(A', B', C', \ldots)\)</span> and by hypothesis <span class="math inline">\(A' \partof A\)</span>, <span class="math inline">\(B' \partof B\)</span>, <span class="math inline">\(C' \partof C\)</span>, therefore by <a href="./2_01_systems-of-elements.html#par-12">(12)</a> <span class="math inline">\(M' \partof M\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-43"><strong>43.</strong></span> Theorem. The community <span class="math inline">\(G\)</span> of chains <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, is a chain.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since by <a href="./2_01_systems-of-elements.html#par-17">(17)</a> <span class="math inline">\(G\)</span> is common part of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, , therefore by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> <span class="math inline">\(G'\)</span> common part of <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span>, , and by hypothesis <span class="math inline">\(A' \partof A\)</span>, <span class="math inline">\(B' \partof B\)</span>, <span class="math inline">\(C' \partof C\)</span>, , then by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> <span class="math inline">\(G'\)</span> is also common part of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, and hence by <a href="./2_01_systems-of-elements.html#par-18">(18)</a> also part of <span class="math inline">\(G\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-44"><strong>44.</strong></span> Definition. If <span class="math inline">\(A\)</span> is any part of <span class="math inline">\(S\)</span>, we will denote by <span class="math inline">\(A_0\)</span> the community of all those chains (e.g., <span class="math inline">\(S\)</span>) of which <span class="math inline">\(A\)</span> is part; this community <span class="math inline">\(A_0\)</span> exists <a href="./2_01_systems-of-elements.html#par-17">(17)</a> because <span class="math inline">\(A\)</span> is itself common part of all these chains. Since further by <a href="./2_04_transformation-of-a-system-in-itself.html#par-43">(43)</a> <span class="math inline">\(A_0\)</span> is a chain, we will call <span class="math inline">\(A_0\)</span> the <em>chain of the system</em> <span class="math inline">\(A\)</span>, or briefly the chain of <span class="math inline">\(A\)</span>. This definition too is strictly related to the fundamental determinate transformation <span class="math inline">\(\phi\)</span> of the system <span class="math inline">\(S\)</span> in itself, and if later, for the sake of clearness, it is necessary we shall at pleasure use the symbol <span class="math inline">\(\phi_0(A)\)</span> instead of <span class="math inline">\(A_0\)</span>, and likewise designate the chain of <span class="math inline">\(A\)</span> corresponding to another transformation <span class="math inline">\(\omega\)</span> by <span class="math inline">\(\omega_0(A)\)</span>. For this very important notion the following theorems hold true.</p>
+<p><span id="par-45"><strong>45.</strong></span> Theorem. <span class="math inline">\(A \partof A_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(A\)</span> is common part of all those chains whose community is <span class="math inline">\(A_0\)</span>, whence the theorem follows by <a href="./2_01_systems-of-elements.html#par-18">(18)</a>.</p>
+</div>
+<p><span id="par-46"><strong>46.</strong></span> Theorem. <span class="math inline">\((A_0)' \partof A_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> <span class="math inline">\(A_0\)</span> is a chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-37">(37)</a>.</p>
+</div>
+<p><span id="par-47"><strong>47.</strong></span> Theorem. If <span class="math inline">\(A\)</span> is part of a chain <span class="math inline">\(K\)</span>, then is also <span class="math inline">\(A_0 \partof K\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(A_0\)</span> is the community and hence also a common part of all the chains <span class="math inline">\(K\)</span>, of which <span class="math inline">\(A\)</span> is part.</p>
+</div>
+<p><span id="par-48"><strong>48.</strong></span> Remark. One can easily convince himself that the notion of the chain <span class="math inline">\(A_0\)</span> defined in <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> is completely characterised by the preceding theorems, <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-46">(46)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a>.</p>
+<p><span id="par-49"><strong>49.</strong></span> Theorem. <span class="math inline">\(A' \partof (A_0)'\)</span>.</p>
+<p>The proof follows from <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>.</p>
+<p><span id="par-50"><strong>50.</strong></span> Theorem. <span class="math inline">\(A' \partof A_0\)</span>.</p>
+<p>The proof follows from <a href="./2_04_transformation-of-a-system-in-itself.html#par-49">(49)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-46">(46)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a>.</p>
+<p><span id="par-51"><strong>51.</strong></span> Theorem. If <span class="math inline">\(A\)</span> is a chain, then <span class="math inline">\(A_0=A\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(A\)</span> is part of the chain <span class="math inline">\(A\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> <span class="math inline">\(A_0 \partof A\)</span>, whence the theorem follows by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-52"><strong>52.</strong></span> Theorem. If <span class="math inline">\(B \partof A\)</span>, then <span class="math inline">\(B \partof A_0\)</span>.</p>
+<p>The proof follows from <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a>.</p>
+<p><span id="par-53"><strong>53.</strong></span> Theorem. If <span class="math inline">\(B \partof A_0\)</span>, then <span class="math inline">\(B_0 \partof A_0\)</span>, and conversely.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Because <span class="math inline">\(A_0\)</span> is a chain, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> from <span class="math inline">\(B \partof A_0\)</span>, we also get <span class="math inline">\(B_0 \partof A_0\)</span>; conversely, if <span class="math inline">\(B_0 \partof A_0\)</span>, then by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> we also get <span class="math inline">\(B \partof A_0\)</span>, because by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> <span class="math inline">\(B \partof B_0\)</span>.</p>
+</div>
+<p><span id="par-54"><strong>54.</strong></span> Theorem. If <span class="math inline">\(B \partof A\)</span>, then is <span class="math inline">\(B_0 \partof A_0\)</span>.</p>
+<p>The proof follows from <a href="./2_04_transformation-of-a-system-in-itself.html#par-52">(52)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-53">(53)</a>.</p>
+<p><span id="par-55"><strong>55.</strong></span> Theorem. If <span class="math inline">\(B \partof A_0\)</span>, then is also <span class="math inline">\(B' \partof A_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by <a href="./2_04_transformation-of-a-system-in-itself.html#par-53">(53)</a> <span class="math inline">\(B_0 \partof A_0\)</span>, and since by <a href="./2_04_transformation-of-a-system-in-itself.html#par-50">(50)</a> <span class="math inline">\(B' \partof B_0\)</span>, the theorem to be proved follows by <a href="./2_01_systems-of-elements.html#par-7">(7)</a>. The same result, as is easily seen, can be obtained from <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-46">(46)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a>, or also from <a href="./2_04_transformation-of-a-system-in-itself.html#par-40">(40)</a>.</p>
+</div>
+<p><span id="par-56"><strong>56.</strong></span> Theorem. If <span class="math inline">\(B \partof A_0\)</span>, then is <span class="math inline">\((B_0)' \partof (A_0)'\)</span>.</p>
+<p>The proof follows from <a href="./2_04_transformation-of-a-system-in-itself.html#par-53">(53)</a>, <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>.</p>
+<p><span id="par-57"><strong>57.</strong></span> Theorem and definition. <span class="math inline">\((A_0)'=(A')_0\)</span>, i.e., the transform of the chain of <span class="math inline">\(A\)</span> is at the same time the chain of the transform of <span class="math inline">\(A\)</span>. Hence we can designate this system in short by <span class="math inline">\(A'_0\)</span> and at pleasure call it the <em>chain-transform</em> or <em>transform-chain</em> of <span class="math inline">\(A\)</span>. With the clearer notation given in <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> the theorem might be expressed by <span class="math inline">\(\phi\bigl(\phi_0(A)\bigr) = \phi_0\bigl(\phi(A)\bigr)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If for brevity we put <span class="math inline">\((A')_0=L\)</span>, <span class="math inline">\(L\)</span> is a chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> and by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> <span class="math inline">\(A' \partof L\)</span>; hence by <a href="./2_04_transformation-of-a-system-in-itself.html#par-41">(41)</a> there exists a chain <span class="math inline">\(K\)</span> satisfying the conditions <span class="math inline">\(A \partof K\)</span>, <span class="math inline">\(K' \partof L\)</span>; hence from <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> we have <span class="math inline">\(A_0 \partof K\)</span>, therefore <span class="math inline">\((A_0)' \partof K'\)</span>, and hence by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> also <span class="math inline">\((A_0)' \partof L\)</span>, i.e.,</p>
+<p><span class="math display">\[
+(A_0)' \partof (A')_0.
+\]</span></p>
+<p>Since further by <a href="./2_04_transformation-of-a-system-in-itself.html#par-49">(49)</a> <span class="math inline">\(A' \partof (A_0)'\)</span>, and by <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a>, <a href="./2_04_transformation-of-a-system-in-itself.html#par-39">(39)</a> <span class="math inline">\((A_0)'\)</span> is a chain, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> also</p>
+<p><span class="math display">\[
+(A')_0 \partof (A_0)',
+\]</span></p>
+<p>whence the theorem follows by combining with the preceding result <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-58"><strong>58.</strong></span> Theorem. <span class="math inline">\(A_0=\mathfrak{M}(A, A'_0)\)</span>, i.e., the chain of <span class="math inline">\(A\)</span> is compounded out of <span class="math inline">\(A\)</span> and the transform-chain of <span class="math inline">\(A\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If for brevity we again put</p>
+<p><span class="math display">\[
+L=A'_0 =(A_0)'=(A')_0 \text{ and } K=\mathfrak{M}(A, L),
+\]</span></p>
+<p>then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> <span class="math inline">\(A' \partof L\)</span>, and since <span class="math inline">\(L\)</span> is a chain, by <a href="./2_04_transformation-of-a-system-in-itself.html#par-41">(41)</a> the same thing is true of <span class="math inline">\(K\)</span>; since further <span class="math inline">\(A \partof K\)</span> <a href="./2_01_systems-of-elements.html#par-9">(9)</a>, therefore by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a></p>
+<p><span class="math display">\[
+A_0 \partof K.
+\]</span></p>
+<p>On the other hand, since by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> <span class="math inline">\(A \partof A_0\)</span>, and by <a href="./2_04_transformation-of-a-system-in-itself.html#par-46">(46)</a> also <span class="math inline">\(L \partof A_0\)</span>, then by <a href="./2_01_systems-of-elements.html#par-10">(10)</a> also</p>
+<p><span class="math display">\[
+K \partof A_0,
+\]</span></p>
+<p>whence the theorem to be proved <span class="math inline">\(A_0=K\)</span> follows by combining with the preceding result <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-59"><strong>59.</strong></span> Theorem of complete induction. In order to show that the chain <span class="math inline">\(A_0\)</span> is part of any system <span class="math inline">\(\Sigma\)</span>—be this latter part of <span class="math inline">\(S\)</span> or not—it is sufficient to show,</p>
+<p><span class="math inline">\(\rho\)</span>. that <span class="math inline">\(A \partof \Sigma\)</span>, and</p>
+<p><span class="math inline">\(\sigma\)</span>. that the transform of every common element of <span class="math inline">\(A_0\)</span> and <span class="math inline">\(\Sigma\)</span> is likewise element of <span class="math inline">\(\Sigma\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(\rho\)</span> is true, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> the community <span class="math inline">\(G=\mathfrak{G}(A_0,\Sigma)\)</span> certainly exists, and by <a href="./2_01_systems-of-elements.html#par-18">(18)</a> <span class="math inline">\(A \partof G\)</span>; since besides by <a href="./2_01_systems-of-elements.html#par-17">(17)</a></p>
+<p><span class="math display">\[
+G \partof A_0,
+\]</span></p>
+<p>then is <span class="math inline">\(G\)</span> also part of our system <span class="math inline">\(S\)</span>, which by <span class="math inline">\(\phi\)</span> is transformed in itself and at once by <a href="./2_04_transformation-of-a-system-in-itself.html#par-55">(55)</a> we have also <span class="math inline">\(G' \partof A_0\)</span>. If then <span class="math inline">\(\sigma\)</span> is likewise true, i.e.&nbsp;if <span class="math inline">\(G' \partof \Sigma\)</span>, then must <span class="math inline">\(G'\)</span> as common part of the systems <span class="math inline">\(A_0\)</span>, <span class="math inline">\(\Sigma\)</span> by <a href="./2_01_systems-of-elements.html#par-18">(18)</a> be part of their community <span class="math inline">\(G\)</span>, i.e.&nbsp;<span class="math inline">\(G\)</span> is a chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-37">(37)</a>, and since, as above noted, <span class="math inline">\(A \partof G\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> is also</p>
+<p><span class="math display">\[
+A_0 \partof G,
+\]</span></p>
+<p>and therefore by combination with the preceding result <span class="math inline">\(G=A_0\)</span>, hence by <a href="./2_01_systems-of-elements.html#par-17">(17)</a> also <span class="math inline">\(A_0 \partof \Sigma\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-60"><strong>60.</strong></span> The preceding theorem, as will be shown later, forms the scientific basis for the form of demonstration known by the name of complete induction (the inference from <span class="math inline">\(n\)</span> to <span class="math inline">\(n+1\)</span>); it can also be stated in the following manner: In order to show that all elements of the chain <span class="math inline">\(A_0\)</span> possess a certain property <span class="math inline">\(\mathfrak{E}\)</span> (or that a theorem <span class="math inline">\(\mathfrak{S}\)</span> dealing with an undetermined thing <span class="math inline">\(n\)</span> actually holds good for all elements <span class="math inline">\(n\)</span> of the chain <span class="math inline">\(A_0\)</span>) it is sufficient to show</p>
+<p><span class="math inline">\(\rho\)</span>. that all elements <span class="math inline">\(a\)</span> of the system <span class="math inline">\(A\)</span> possess the property <span class="math inline">\(\mathfrak{E}\)</span> (or that <span class="math inline">\(\mathfrak{S}\)</span> holds for all <span class="math inline">\(a\)</span>’s) and</p>
+<p><span class="math inline">\(\sigma\)</span>. that to the transform <span class="math inline">\(n'\)</span> of every such element <span class="math inline">\(n\)</span> of <span class="math inline">\(A_0\)</span> possessing the property <span class="math inline">\(\mathfrak{E}\)</span>, belongs the same property <span class="math inline">\(\mathfrak{E}\)</span> (or that the theorem <span class="math inline">\(\mathfrak{S}\)</span>, as soon as it holds for an element <span class="math inline">\(n\)</span> of <span class="math inline">\(A_0\)</span>, certainly must also hold for its transform <span class="math inline">\(n'\)</span>).</p>
+<p>Indeed, if we denote by <span class="math inline">\(\Sigma\)</span> the system of all things possessing the property <span class="math inline">\(\mathfrak{E}\)</span> (or for which the theorem <span class="math inline">\(\mathfrak{S}\)</span> holds) the complete agreement of the present manner of stating the theorem with that employed in <a href="./2_04_transformation-of-a-system-in-itself.html#par-59">(59)</a> is immediately obvious.</p>
+<p><span id="par-61"><strong>61.</strong></span> Theorem. The chain of <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> is <span class="math inline">\(\mathfrak{M}(A_0,B_0,C_0, \ldots)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If we designate by <span class="math inline">\(M\)</span> the former, by <span class="math inline">\(K\)</span> the latter system, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-42">(42)</a> <span class="math inline">\(K\)</span> is a chain. Since then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> each of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, is part of one of the systems <span class="math inline">\(A_0\)</span>, <span class="math inline">\(B_0\)</span>, <span class="math inline">\(C_0\)</span>, , and therefore by <a href="./2_01_systems-of-elements.html#par-12">(12)</a> <span class="math inline">\(M \partof K\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> we also have</p>
+<p><span class="math display">\[
+M_0 \partof K.
+\]</span></p>
+<p>On the other hand, since by <a href="./2_01_systems-of-elements.html#par-9">(9)</a> each of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, is part of <span class="math inline">\(M\)</span>, and hence by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a> also part of the chain <span class="math inline">\(M_0\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> must also each of the systems <span class="math inline">\(A_0\)</span>, <span class="math inline">\(B_0\)</span>, <span class="math inline">\(C_0\)</span>, be part of <span class="math inline">\(M_0\)</span>, therefore by <a href="./2_01_systems-of-elements.html#par-10">(10)</a></p>
+<p><span class="math display">\[
+K \partof M_0
+\]</span></p>
+<p>whence by combination with the preceding result follows the theorem to be proved <span class="math inline">\(M_0=K\)</span> <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-62"><strong>62.</strong></span> Theorem. The chain of <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span> is part of <span class="math inline">\(\mathfrak{G}(A_0, B_0, C_0, \ldots)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If we designate by <span class="math inline">\(G\)</span> the former, by <span class="math inline">\(K\)</span> the latter system, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-43">(43)</a> <span class="math inline">\(K\)</span> is a chain. Since then each of the systems <span class="math inline">\(A_0\)</span>, <span class="math inline">\(B_0\)</span>, <span class="math inline">\(C_0\)</span>, by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> is whole of one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, , and hence by <a href="./2_01_systems-of-elements.html#par-20">(20)</a> <span class="math inline">\(G \partof K\)</span>, therefore by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> we obtain the theorem to be proved <span class="math inline">\(G_0 \partof K\)</span>.</p>
+</div>
+<p><span id="par-63"><strong>63.</strong></span> Theorem. If <span class="math inline">\(K' \partof L \partof K\)</span>, and therefore <span class="math inline">\(K\)</span> is a chain, <span class="math inline">\(L\)</span> is also a chain. If the same is proper part of <span class="math inline">\(K\)</span>, and <span class="math inline">\(U\)</span> the system of all those elements of <span class="math inline">\(K\)</span> which are not contained in <span class="math inline">\(L\)</span>, and if further the chain <span class="math inline">\(U_0\)</span> is proper part of <span class="math inline">\(K\)</span>, and <span class="math inline">\(V\)</span> the system of all those elements of <span class="math inline">\(K\)</span> which are not contained in <span class="math inline">\(U_0\)</span>, then is <span class="math inline">\(K=\mathfrak{M}(U_0, V)\)</span> and <span class="math inline">\(L = \mathfrak{M}(U'_0, V)\)</span>. If finally <span class="math inline">\(L=K'\)</span> then <span class="math inline">\(V \partof V'\)</span>.</p>
+<p>The proof of this theorem of which (as of the two preceding) we shall make no use may be left for the reader.</p>
 
 
 
