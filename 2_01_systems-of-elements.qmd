@@ -43,6 +43,7 @@ For every element of $A$ is by [(8)](2_01_systems-of-elements.qmd#par-8) element
 :::
 
 [**14.**]{#par-14} Theorem. If each of the systems $A$, $B$, $C$, $\ldots$ is compounded out of any of the systems $P$, $Q$, $\ldots$ then is
+
 $$
 \mathfrak{M}(A,B,C, \ldots) \partof \mathfrak{M}(P,Q, \ldots)
 $$
@@ -50,6 +51,7 @@ $$
 The proof follows from [(13)](2_01_systems-of-elements.qmd#par-13), [(10)](2_01_systems-of-elements.qmd#par-10).
 
 [**15.**]{#par-15} Theorem. If each of the systems $P$, $Q$, $\ldots$ is part of one of the systems $A$, $B$, C, $\ldots$, and if each of the latter is compounded out of any of the former, then is
+
 $$
 \mathfrak{M}(P, Q, \ldots) = \mathfrak{M}(A, B, C, \ldots).
 $$
@@ -57,6 +59,7 @@ $$
 The proof follows from [(12)](2_01_systems-of-elements.qmd#par-12), [(14)](2_01_systems-of-elements.qmd#par-14), [(5)](2_01_systems-of-elements.qmd#par-5).
 
 [**16.**]{#par-16} Theorem. If
+
 $$
 \begin{gathered}
 A = \mathfrak{M}(P, Q) \text{ and } B = \mathfrak{M}(Q, R) \\
@@ -82,6 +85,7 @@ The proof follows from [(17)](2_01_systems-of-elements.qmd#par-17).
 The proof follows from [(17)](2_01_systems-of-elements.qmd#par-17), [(7)](2_01_systems-of-elements.qmd#par-7).
 
 [**20.**]{#par-20} Theorem. If each of the systems $A$, $B$, $C$, $\ldots$ is whole [(3)](2_01_systems-of-elements.qmd#par-3) of one of the systems $P$, $Q$, $\ldots$ then is
+
 $$
 \mathfrak{G}(P, Q, \ldots) \partof \mathfrak{G}(A, B, C, \ldots)
 $$
