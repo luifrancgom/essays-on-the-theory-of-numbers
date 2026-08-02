@@ -1,1 +1,49 @@
-# The finite and infinite
+# The finite and infinite {#sec-the-finite-and-infinite}
+
+[**64.**]{#par-64} Definition.[^fn-1-chap-12] A system $S$ is said to be *infinite* when it is similar to a proper part of itself [(32)](2_03_similarity-of-a-transformation.qmd#par-32); in the contrary case $S$ is said to be a *finite* system.
+
+[**65.**]{#par-65} Theorem. Every system consisting of a single element is finite.
+
+::: {.proof}
+For such a system possesses no proper part [(2)](2_01_systems-of-elements.qmd#par-2), [(6)](2_01_systems-of-elements.qmd#par-6).
+:::
+
+[**66.**]{#par-66} Theorem. There exist infinite systems.
+
+::: {.proof}
+[^fn-2-chap-12] My own realm of thoughts, i.e., the totality $S$ of all things, which can be objects of my thought, is infinite. For if $s$ signifies an element of $S$, then is the thought $s'$, that $s$ can be object of my thought, itself an element of $S$. If we regard this as transform $\phi(s)$ of the element $s$ then has the transformation $\phi$ of $S$, thus determined, the property that the transform $S'$ is part of $S$; and $S'$ is certainly proper part of $S$, because there are elements in $S$ (e.g., my own ego) which are different from such thought $s'$ and therefore are not contained in $S'$. Finally it is clear that if $a$, $b$ are different elements of $S$, their transforms $a'$, $b'$ are also different, that therefore the transformation $\phi$ is a distinct (similar) transformation [(26)](2_03_similarity-of-a-transformation.qmd#par-26). Hence $S$ is infinite, which was to be proved.
+:::
+
+[**67.**]{#par-67} Theorem. If $R$, $S$ are similar systems, then is $R$ finite or infinite according as $S$ is finite or infinite.
+
+::: {.proof}
+If $S$ is infinite, therefore similar to a proper part $S'$ of itself, then if $R$ and $S$ are similar, $S'$ by [(33)](2_03_similarity-of-a-transformation.qmd#par-33) must be similar to $R$ and by [(35)](2_03_similarity-of-a-transformation.qmd#par-35) likewise similar to a proper part of $R$, which therefore by [(33)](2_03_similarity-of-a-transformation.qmd#par-33) is itself similar to $R$; therefore $R$ is infinite, which was to be proved.
+:::
+
+[**68.**]{#par-68} Theorem. Every system $S$, which possesses an infinite part is likewise infinite; or, in other words, every part of a finite system is finite.
+
+::: {.proof}
+If $T$ is infinite and there is hence such a similar transformation $\psi$ of $T$, that $\psi(T)$ is a proper part of $T$, then, if $T$ is part of $S$, we can extend this transformation $\psi$ to a transformation $\phi$ of $S$ in which, if $s$ denotes any element of $S$, we put $\phi(s)=\psi(s)$ or $\phi(s)=s$ according as $s$ is element of $T$ or not. This transformation $\phi$ is a similar one; for, if $a$, $b$ denote different elements of $S$, then if both are contained in $T$, the transform $\phi(a)=\psi(a)$ is different from the transform $\phi(b)=\psi(b)$, because $\psi$ is a similar transformation; if further $a$ is contained in $T$, but $b$ not, then is $\phi(a)=\psi(a)$ different from $\phi(b)=b$, because $\psi(a)$ is contained in $T$; if finally neither $a$ nor $b$ is contained in $T$ then also is $\phi(a)=a$ different from $\phi(b)=b$, which was to be shown. Since further $\psi(T)$ is part of $T$, because by [(7)](2_01_systems-of-elements.qmd#par-7) also part of $S$, it is clear that also $\phi(S) \partof S$. Since finally $\psi(T)$ is proper part of $T$ there exists in $T$ and therefore also in $S$, an element $t$, not contained in $\psi(T)=\phi(T)$; since then the transform $\phi(s)$ of every element $s$ not contained in $T$ is equal to $s$, and hence is different from $t$, $t$ cannot be contained in $\phi(S)$; hence $\phi(S)$ is proper part of $S$ and consequently $S$ is infinite, which was to be proved.
+:::
+
+[**69.**]{#par-69} Theorem. Every system which is similar to a part of a finite system, is itself finite.
+
+::: {.proof}
+The proof follows from [(67)](2_05_the-finite-and-infinite.qmd#par-67), [(68)](2_05_the-finite-and-infinite.qmd#par-68).
+:::
+
+[**70.**]{#par-70} Theorem. If $a$ is an element of $S$, and if the aggregate $T$ of all the elements of $S$ different from $a$ is finite, then is also $S$ finite.
+
+::: {.proof}
+We have by [(64)](2_05_the-finite-and-infinite.qmd#par-64) to show that if $\phi$ denotes any similar transformation of $S$ in itself, the transform $\phi(S)$ or $S'$ is never a proper part of $S$ but always $=S$. Obviously $S=\mathfrak{M}(a,T)$ and hence by [(23)](2_02_transformation-of-a-system.qmd#par-23), if the transforms are again denoted by accents, $S'=\mathfrak{M}(a',T')$, and, on account of the similarity of the transformation $\phi$, $a'$ is not contained in $T'$ [(26)](2_03_similarity-of-a-transformation.qmd#par-26). Since further by hypothesis $S' \partof S$, then must $a'$ and likewise every element of $T'$ either $=a$, or be element of $T$. If then---a case which we will treat first---$a$ is not contained in $T'$, then must $T' \partof T$ and hence $T'=T$, because $\phi$ is a similar transformation and because $T$ is a finite system; and since $a'$, as remarked, is not contained in $T'$, i.e., not in $T$, then must $a'=a$, and hence in this case we actually have $S'=S$ as was stated. In the opposite case when $a$ is contained in $T'$ and hence is the transform $b'$ of an element $b$ contained in $T$, we will denote by $U$ the aggregate of all those elements $u$ of $T$, which are different from $b$; then $T=\mathfrak{M}(b,U)$ and by [(15)](2_01_systems-of-elements.qmd#par-15) $S=\mathfrak{M}(a,b,U)$, hence $S'=\mathfrak{M}(a',a,U')$. We now determine a new transformation $\psi$ of $T$ in which we put $\psi(b)=a'$, and generally $\psi(u)=u'$, whence by [(23)](2_02_transformation-of-a-system.qmd#par-23) $\psi(T)=\mathfrak{M}(a',U')$. Obviously $\psi$ is a similar transformation, because $\phi$ was such, and because $a$ is not contained in $U$ and therefore also $a'$ not in $U'$. Since further $a$ and every element $u$ is different from $b$ then (on account of the similarity of $\phi$) must also $a'$ and every element $u'$ be different from $a$ and consequently contained in $T$; hence $\psi(T) \partof T$ and since $T$ is finite, therefore must $\psi(T) =T$, and $\mathfrak{M}(a',U')= T$. From this by [(15)](2_01_systems-of-elements.qmd#par-15) we obtain
+
+$$
+\mathfrak{M}(a', a, U') = \mathfrak{M}(a, T)
+$$
+
+i.e., according to the preceding $S' = S$. Therefore in this case also the proof demanded has been secured.
+:::
+
+[^fn-1-chap-12]: If one does not care to employ the notion of similar systems [(32)](2_03_similarity-of-a-transformation.qmd#par-32) he must say: $S$ is said to be infinite, when there is a proper part of $S$ [(6)](2_01_systems-of-elements.qmd#par-6) in which $S$ can be distinctly (similarly) transformed [(26)](2_03_similarity-of-a-transformation.qmd#par-26), [(36)](2_04_transformation-of-a-system-in-itself.qmd#par-36). In this form I submitted the definition of the infinite which forms the core of my whole investigation in September, 1882, to G. Cantor and several years earlier to Schwarz and Weber. All other attempts that have come to my knowledge to distinguish the infinite from the finite seem to me to have met with so little success that I think I may be permitted to forego any criticism of them.
+
+[^fn-2-chap-12]: A similar consideration is found in § 13 of the *Paradoxien des Unendlichen* by Bolzano (Leipzig, 1851) [@bolzano_paradoxien_1851].

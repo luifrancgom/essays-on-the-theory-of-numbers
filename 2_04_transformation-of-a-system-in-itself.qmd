@@ -1,1 +1,197 @@
-# Transformation of a system in itself
+# Transformation of a system in itself {#sec-transformation-of-a-system-in-itself}
+
+[**36.**]{#par-36} Definition. If $\phi$ is a similar or dissimilar transformation of a system $S$, and $\phi(S)$ part of a system $Z$, then $\phi$ is said to be a transformation of $S$ *in* $Z$, and we say $S$ is transformed by $\phi$ in $Z$. Hence we call $\phi$ a transformation of the system $S$ *in itself*, when $\phi(S) \partof S$, and we propose in this paragraph to investigate the general laws of such a transformation $\phi$. In doing this we shall use the same notations as in II. and again put $\phi(s)=s'$, $\phi(T)=T'$. These transforms $s'$, $T'$ are by [(22)](2_02_transformation-of-a-system.qmd#par-22), [(7)](2_01_systems-of-elements.qmd#par-7) themselves again elements or parts of $S$, like all things designated by italic letters.
+
+[**37.**]{#par-37} Definition. $K$ is called a *chain* [*Kette*], when $K' \partof K$. We remark expressly that this name does not in itself belong to the part $K$ of the system $S$, but is given only with respect to the particular transformation $\phi$; with reference to another transformation of the system $S$ in itself $K$ can very well not be a chain.
+
+[**38.**]{#par-38} Theorem. $S$ is a chain.
+
+[**39.**]{#par-39} Theorem. The transform $K'$ of a chain $K$ is a chain.
+
+::: {.proof}
+For from $K' \partof K$ it follows by [(22)](2_02_transformation-of-a-system.qmd#par-22) that $(K')' \partof K'$, which was to be proved.
+:::
+
+[**40.**]{#par-40} Theorem. If $A$ is part of a chain $K$, then is also $A' \partof K$.
+
+::: {.proof}
+For from $A \partof K$ it follows by [(22)](2_02_transformation-of-a-system.qmd#par-22) that $A' \partof K'$, and since by [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37) $K' \partof K$, therefore by [(7)](2_01_systems-of-elements.qmd#par-7) $A' \partof K$, which was to be proved.
+:::
+
+[**41.**]{#par-41} Theorem. If the transform $A'$ is part of a chain $L$, then is there a chain $K$, which satisfies the conditions $A \partof K$, $K' \partof L$; and $\mathfrak{M}(A,L)$ is just such a chain $K$.
+
+::: {.proof}
+If we actually put $K=\mathfrak{M}(A, L)$, then by [(9)](2_01_systems-of-elements.qmd#par-9) the one condition $A \partof K$ is fulfilled. Since further by [(23)](2_02_transformation-of-a-system.qmd#par-23) $K' = \mathfrak{M}(A',L')$ and by hypothesis $A' \partof L$, $L' \partof L$, then by [(10)](2_01_systems-of-elements.qmd#par-10) is the other condition $K' \partof L$ also fulfilled and hence it follows because by [(9)](2_01_systems-of-elements.qmd#par-9) $L \partof K$, that also $K' \partof K$, i.e., $K$ is a chain, which was to be proved.
+:::
+
+[**42.**]{#par-42} Theorem. A system $M$ compounded simply out of chains $A$, $B$, $C$, \ldots is a chain.
+
+::: {.proof}
+Since by [(23)](2_02_transformation-of-a-system.qmd#par-23) $M'= \mathfrak{M}(A', B', C', \ldots)$ and by hypothesis $A' \partof A$, $B' \partof B$, $C' \partof C$, \ldots therefore by [(12)](2_01_systems-of-elements.qmd#par-12) $M' \partof M$, which was to be proved.
+:::
+
+[**43.**]{#par-43} Theorem. The community $G$ of chains $A$, $B$, $C$, \ldots is a chain.
+
+::: {.proof}
+Since by [(17)](2_01_systems-of-elements.qmd#par-17) $G$ is common part of $A$, $B$, $C$, \ldots, therefore by [(22)](2_02_transformation-of-a-system.qmd#par-22) $G'$ common part of $A'$, $B'$, $C'$, \ldots, and by hypothesis $A' \partof A$, $B' \partof B$, $C' \partof C$, \ldots, then by [(7)](2_01_systems-of-elements.qmd#par-7) $G'$ is also common part of $A$, $B$, $C$, \ldots and hence by [(18)](2_01_systems-of-elements.qmd#par-18) also part of $G$, which was to be proved.
+:::
+
+[**44.**]{#par-44} Definition. If $A$ is any part of $S$, we will denote by $A_0$ the community of all those chains (e.g., $S$) of which $A$ is part; this community $A_0$ exists [(17)](2_01_systems-of-elements.qmd#par-17) because $A$ is itself common part of all these chains. Since further by [(43)](2_04_transformation-of-a-system-in-itself.qmd#par-43) $A_0$ is a chain, we will call $A_0$ the *chain of the system* $A$, or briefly the chain of $A$. This definition too is strictly related to the fundamental determinate transformation $\phi$ of the system $S$ in itself, and if later, for the sake of clearness, it is necessary we shall at pleasure use the symbol $\phi_0(A)$ instead of $A_0$, and likewise designate the chain of $A$ corresponding to another transformation $\omega$ by $\omega_0(A)$. For this very important notion the following theorems hold true.
+
+[**45.**]{#par-45} Theorem. $A \partof A_0$.
+
+::: {.proof}
+For $A$ is common part of all those chains whose community is $A_0$, whence the theorem follows by [(18)](2_01_systems-of-elements.qmd#par-18).
+:::
+
+[**46.**]{#par-46} Theorem. $(A_0)' \partof A_0$.
+
+::: {.proof}
+For by [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) $A_0$ is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37).
+:::
+
+[**47.**]{#par-47} Theorem. If $A$ is part of a chain $K$, then is also $A_0 \partof K$.
+
+::: {.proof}
+For $A_0$ is the community and hence also a common part of all the chains $K$, of which $A$ is part.
+:::
+
+[**48.**]{#par-48} Remark. One can easily convince himself that the notion of the chain $A_0$ defined in [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) is completely characterised by the preceding theorems, [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(46)](2_04_transformation-of-a-system-in-itself.qmd#par-46), [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47).
+
+[**49.**]{#par-49} Theorem. $A' \partof (A_0)'$.
+
+The proof follows from [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(22)](2_02_transformation-of-a-system.qmd#par-22).
+
+[**50.**]{#par-50} Theorem. $A' \partof A_0$.
+
+The proof follows from [(49)](2_04_transformation-of-a-system-in-itself.qmd#par-49), [(46)](2_04_transformation-of-a-system-in-itself.qmd#par-46), [(7)](2_01_systems-of-elements.qmd#par-7).
+
+[**51.**]{#par-51} Theorem. If $A$ is a chain, then $A_0=A$.
+
+::: {.proof}
+Since $A$ is part of the chain $A$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) $A_0 \partof A$, whence the theorem follows by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**52.**]{#par-52} Theorem. If $B \partof A$, then $B \partof A_0$.
+
+The proof follows from [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(7)](2_01_systems-of-elements.qmd#par-7).
+
+[**53.**]{#par-53} Theorem. If $B \partof A_0$, then $B_0 \partof A_0$, and conversely.
+
+::: {.proof}
+Because $A_0$ is a chain, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) from $B \partof A_0$, we also get $B_0 \partof A_0$; conversely, if $B_0 \partof A_0$, then by [(7)](2_01_systems-of-elements.qmd#par-7) we also get $B \partof A_0$, because by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $B \partof B_0$.
+:::
+
+[**54.**]{#par-54} Theorem. If $B \partof A$, then is $B_0 \partof A_0$.
+
+The proof follows from [(52)](2_04_transformation-of-a-system-in-itself.qmd#par-52), [(53)](2_04_transformation-of-a-system-in-itself.qmd#par-53).
+
+[**55.**]{#par-55} Theorem. If $B \partof A_0$, then is also $B' \partof A_0$.
+
+::: {.proof}
+For by [(53)](2_04_transformation-of-a-system-in-itself.qmd#par-53) $B_0 \partof A_0$, and since by [(50)](2_04_transformation-of-a-system-in-itself.qmd#par-50) $B' \partof B_0$, the theorem to be proved follows by [(7)](2_01_systems-of-elements.qmd#par-7). The same result, as is easily seen, can be obtained from [(22)](2_02_transformation-of-a-system.qmd#par-22), [(46)](2_04_transformation-of-a-system-in-itself.qmd#par-46), [(7)](2_01_systems-of-elements.qmd#par-7), or also from [(40)](2_04_transformation-of-a-system-in-itself.qmd#par-40).
+:::
+
+[**56.**]{#par-56} Theorem. If $B \partof A_0$, then is $(B_0)' \partof (A_0)'$.
+
+The proof follows from [(53)](2_04_transformation-of-a-system-in-itself.qmd#par-53), [(22)](2_02_transformation-of-a-system.qmd#par-22).
+
+[**57.**]{#par-57} Theorem and definition. $(A_0)'=(A')_0$, i.e., the transform of the chain of $A$ is at the same time the chain of the transform of $A$. Hence we can designate this system in short by $A'_0$ and at pleasure call it the *chain-transform* or *transform-chain* of $A$. With the clearer notation given in [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) the theorem might be expressed by $\phi\bigl(\phi_0(A)\bigr) = \phi_0\bigl(\phi(A)\bigr)$.
+
+::: {.proof}
+If for brevity we put $(A')_0=L$, $L$ is a chain [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) and by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A' \partof L$; hence by [(41)](2_04_transformation-of-a-system-in-itself.qmd#par-41) there exists a chain $K$ satisfying the conditions $A \partof K$, $K' \partof L$; hence from [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) we have $A_0 \partof K$, therefore $(A_0)' \partof K'$, and hence by [(7)](2_01_systems-of-elements.qmd#par-7) also $(A_0)' \partof L$, i.e.,
+
+$$
+(A_0)' \partof (A')_0.
+$$
+
+Since further by [(49)](2_04_transformation-of-a-system-in-itself.qmd#par-49) $A' \partof (A_0)'$, and by [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44), [(39)](2_04_transformation-of-a-system-in-itself.qmd#par-39) $(A_0)'$ is a chain, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) also
+
+$$
+(A')_0 \partof (A_0)',
+$$
+
+whence the theorem follows by combining with the preceding result [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**58.**]{#par-58} Theorem. $A_0=\mathfrak{M}(A, A'_0)$, i.e., the chain of $A$ is compounded out of $A$ and the transform-chain of $A$.
+
+::: {.proof}
+If for brevity we again put
+
+$$
+L=A'_0 =(A_0)'=(A')_0 \text{ and } K=\mathfrak{M}(A, L),
+$$
+
+then by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A' \partof L$, and since $L$ is a chain, by [(41)](2_04_transformation-of-a-system-in-itself.qmd#par-41) the same thing is true of $K$; since further $A \partof K$ [(9)](2_01_systems-of-elements.qmd#par-9), therefore by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47)
+
+$$
+A_0 \partof K.
+$$
+
+On the other hand, since by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A \partof A_0$, and by [(46)](2_04_transformation-of-a-system-in-itself.qmd#par-46) also $L \partof A_0$, then by [(10)](2_01_systems-of-elements.qmd#par-10) also
+
+$$
+K \partof A_0,
+$$
+
+whence the theorem to be proved $A_0=K$ follows by combining with the preceding result [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**59.**]{#par-59} Theorem of complete induction. In order to show that the chain $A_0$ is part of any system $\Sigma$---be this latter part of $S$ or not---it is sufficient to show,
+
+$\rho$. that $A \partof \Sigma$, and
+
+$\sigma$. that the transform of every common element of $A_0$ and $\Sigma$ is likewise element of $\Sigma$.
+
+::: {.proof}
+For if $\rho$ is true, then by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) the community $G=\mathfrak{G}(A_0,\Sigma)$ certainly exists, and by [(18)](2_01_systems-of-elements.qmd#par-18) $A \partof G$; since besides by [(17)](2_01_systems-of-elements.qmd#par-17)
+
+$$
+G \partof A_0,
+$$
+
+then is $G$ also part of our system $S$, which by $\phi$ is transformed in itself and at once by [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) we have also $G' \partof A_0$. If then $\sigma$ is likewise true, i.e. if $G' \partof \Sigma$, then must $G'$ as common part of the systems $A_0$, $\Sigma$ by [(18)](2_01_systems-of-elements.qmd#par-18) be part of their community $G$, i.e. $G$ is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37), and since, as above noted, $A \partof G$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) is also
+
+$$
+A_0 \partof G,
+$$
+
+and therefore by combination with the preceding result $G=A_0$, hence by [(17)](2_01_systems-of-elements.qmd#par-17) also $A_0 \partof \Sigma$, which was to be proved.
+:::
+
+[**60.**]{#par-60} The preceding theorem, as will be shown later, forms the scientific basis for the form of demonstration known by the name of complete induction (the inference from $n$ to $n+1$); it can also be stated in the following manner: In order to show that all elements of the chain $A_0$ possess a certain property $\mathfrak{E}$ (or that a theorem $\mathfrak{S}$ dealing with an undetermined thing $n$ actually holds good for all elements $n$ of the chain $A_0$) it is sufficient to show
+
+$\rho$. that all elements $a$ of the system $A$ possess the property $\mathfrak{E}$ (or that $\mathfrak{S}$ holds for all $a$'s) and
+
+$\sigma$. that to the transform $n'$ of every such element $n$ of $A_0$ possessing the property $\mathfrak{E}$, belongs the same property $\mathfrak{E}$ (or that the theorem $\mathfrak{S}$, as soon as it holds for an element $n$ of $A_0$, certainly must also hold for its transform $n'$).
+
+Indeed, if we denote by $\Sigma$ the system of all things possessing the property $\mathfrak{E}$ (or for which the theorem $\mathfrak{S}$ holds) the complete agreement of the present manner of stating the theorem with that employed in [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) is immediately obvious.
+
+[**61.**]{#par-61} Theorem. The chain of $\mathfrak{M}(A, B, C, \ldots)$ is $\mathfrak{M}(A_0,B_0,C_0, \ldots)$.
+
+::: {.proof}
+If we designate by $M$ the former, by $K$ the latter system, then by [(42)](2_04_transformation-of-a-system-in-itself.qmd#par-42) $K$ is a chain. Since then by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) each of the systems $A$, $B$, $C$, \ldots is part of one of the systems $A_0$, $B_0$, $C_0$, \ldots, and therefore by [(12)](2_01_systems-of-elements.qmd#par-12) $M \partof K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) we also have
+
+$$
+M_0 \partof K.
+$$
+
+On the other hand, since by [(9)](2_01_systems-of-elements.qmd#par-9) each of the systems $A$, $B$, $C$, \ldots is part of $M$, and hence by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(7)](2_01_systems-of-elements.qmd#par-7) also part of the chain $M_0$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) must also each of the systems $A_0$, $B_0$, $C_0$, \ldots be part of $M_0$, therefore by [(10)](2_01_systems-of-elements.qmd#par-10)
+
+$$
+K \partof M_0
+$$
+
+whence by combination with the preceding result follows the theorem to be proved $M_0=K$ [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**62.**]{#par-62} Theorem. The chain of $\mathfrak{G}(A, B, C, \ldots)$ is part of $\mathfrak{G}(A_0, B_0, C_0, \ldots)$.
+
+::: {.proof}
+If we designate by $G$ the former, by $K$ the latter system, then by [(43)](2_04_transformation-of-a-system-in-itself.qmd#par-43) $K$ is a chain. Since then each of the systems $A_0$, $B_0$, $C_0$, \ldots by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) is whole of one of the systems $A$, $B$, $C$, \ldots, and hence by [(20)](2_01_systems-of-elements.qmd#par-20) $G \partof K$, therefore by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) we obtain the theorem to be proved $G_0 \partof K$.
+:::
+
+[**63.**]{#par-63} Theorem. If $K' \partof L \partof K$, and therefore $K$ is a chain, $L$ is also a chain. If the same is proper part of $K$, and $U$ the system of all those elements of $K$ which are not contained in $L$, and if further the chain $U_0$ is proper part of $K$, and $V$ the system of all those elements of $K$ which are not contained in $U_0$, then is $K=\mathfrak{M}(U_0, V)$ and $L = \mathfrak{M}(U'_0, V)$. If finally $L=K'$ then $V \partof V'$.
+
+The proof of this theorem of which (as of the two preceding) we shall make no use may be left for the reader.
