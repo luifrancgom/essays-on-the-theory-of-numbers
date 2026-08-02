@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Similarity of a transformation – Essays on the theory of numbers</title>
+<title>10&nbsp; Similarity of a transformation. Similar systems – Essays on the theory of numbers</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_03_similarity-of-a-transformation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_03_similarity-of-a-transformation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -218,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_03_similarity-of-a-transformation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -312,9 +341,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_03_similarity-of-a-transformation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_03_similarity-of-a-transformation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></h1>
+<h1 class="title"><span id="sec-similarity-of-a-transformation" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></span></h1>
 </div>
 
 
@@ -331,8 +360,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-26"><strong>26.</strong></span> Definition. A transformation <span class="math inline">\(\phi\)</span> of a system <span class="math inline">\(S\)</span> is said to be <em>similar</em> [<em>ähnlich</em>] or <em>distinct</em>, when to different elements <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> of the system <span class="math inline">\(S\)</span> there always correspond different transforms <span class="math inline">\(a' = \phi(a)\)</span>, <span class="math inline">\(b' = \phi(b)\)</span>. Since in this case conversely from <span class="math inline">\(s' = t'\)</span> we always have <span class="math inline">\(s = t\)</span>, then is every element of the system <span class="math inline">\(S' = \phi(S)\)</span> the transform <span class="math inline">\(s'\)</span> of a single, perfectly determinate element <span class="math inline">\(s\)</span> of the system <span class="math inline">\(S\)</span>, and we can therefore set over against the transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(S\)</span> an <em>inverse</em> transformation of the system <span class="math inline">\(S'\)</span>, to be denoted by <span class="math inline">\(\overline{\phi}\)</span>, which consists in this that to every element <span class="math inline">\(s'\)</span> of <span class="math inline">\(S'\)</span> there corresponds the transform <span class="math inline">\(\overline{\phi}(s') = s\)</span>, and obviously this transformation is also similar. It is clear that <span class="math inline">\(\overline{\phi}(S') = S\)</span>, that further <span class="math inline">\(\phi\)</span> is the inverse transformation belonging to <span class="math inline">\(\overline{\phi}\)</span> and that the transformation <span class="math inline">\(\overline{\phi}\phi\)</span> compounded out of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\overline{\phi}\)</span> by <a href="./2_02_transformation-of-a-system.html#par-25">(25)</a> is the identical transformation of <span class="math inline">\(S\)</span> <a href="./2_02_transformation-of-a-system.html#par-21">(21)</a>. At once we have the following additions to <a href="2_02_transformation-of-a-system.html" class="quarto-xref"><span>Section 9</span></a>, retaining the notation there given.</p>
+<p><span id="par-27"><strong>27.</strong></span> Theorem.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> If <span class="math inline">\(A' \partof B'\)</span>, then <span class="math inline">\(A \partof B\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(a\)</span> is an element of <span class="math inline">\(A\)</span> then is <span class="math inline">\(a'\)</span> an element of <span class="math inline">\(A'\)</span>, therefore also of <span class="math inline">\(B'\)</span>, hence <span class="math inline">\(=b'\)</span>, where <span class="math inline">\(b\)</span> is an element of <span class="math inline">\(B\)</span>; but since from <span class="math inline">\(a' = b'\)</span> we always have <span class="math inline">\(a = b\)</span>, then is every element of <span class="math inline">\(A\)</span> also element of <span class="math inline">\(B\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-28"><strong>28.</strong></span> Theorem. If <span class="math inline">\(A' = B'\)</span>, then <span class="math inline">\(A = B\)</span>.</p>
+<p>The proof follows from <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a>, <a href="./2_01_systems-of-elements.html#par-4">(4)</a>, <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+<p><span id="par-29"><strong>29.</strong></span> Theorem.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> If <span class="math inline">\(G = \mathfrak{G}(A, B, C, \ldots)\)</span>, then <span class="math display">\[
+G' = \mathfrak{G}(A', B', C', \ldots).
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Every element of <span class="math inline">\(\mathfrak{G}(A', B', C', \ldots)\)</span> is certainly contained in <span class="math inline">\(S'\)</span>, and is therefore the transform <span class="math inline">\(g'\)</span> of an element <span class="math inline">\(g\)</span> contained in <span class="math inline">\(S\)</span>; but since <span class="math inline">\(g'\)</span> is common element of <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span>, <span class="math inline">\(\ldots\)</span> then by <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a> must <span class="math inline">\(g\)</span> be common element of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> therefore also element of <span class="math inline">\(G\)</span>; hence every element of <span class="math inline">\(\mathfrak{G}(A', B', C', \ldots)\)</span> is transform of an element <span class="math inline">\(g\)</span> of <span class="math inline">\(G\)</span>, therefore element of <span class="math inline">\(G'\)</span>, i.e., <span class="math inline">\(\mathfrak{G}(A', B', C', \ldots) \partof G'\)</span>, and accordingly our theorem follows from <a href="./2_02_transformation-of-a-system.html#par-24">(24)</a>, <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-30"><strong>30.</strong></span> Theorem. The identical transformation of a system is always a similar transformation.</p>
+<p><span id="par-31"><strong>31.</strong></span> Theorem. If <span class="math inline">\(\phi\)</span> is a similar transformation of <span class="math inline">\(S\)</span> and <span class="math inline">\(\psi\)</span> a similar transformation of <span class="math inline">\(\phi(S)\)</span>, then is the transformation <span class="math inline">\(\psi\phi\)</span> of <span class="math inline">\(S\)</span>, compounded of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span>, a similar transformation, and the associated inverse transformation <span class="math inline">\(\overline{\psi}\overline{\phi} = \overline{\phi}\overline{\psi}\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For to different elements <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> of <span class="math inline">\(S\)</span> correspond different transforms <span class="math inline">\(a' = \phi(a)\)</span>, <span class="math inline">\(b'=\phi(b)\)</span>, and to these again different transforms <span class="math inline">\(\psi(a')=\psi\phi(a)\)</span>, <span class="math inline">\(\psi(b') =\psi\phi(b)\)</span> and therefore <span class="math inline">\(\psi\phi\)</span> is a similar transformation. Besides every element <span class="math inline">\(\psi\phi(s) = \psi(s')\)</span> of the system <span class="math inline">\(\psi\phi(S)\)</span> is transformed by <span class="math inline">\(\overline{\psi}\)</span> into <span class="math inline">\(s' = \phi(s)\)</span> and this by <span class="math inline">\(\overline{\phi}\)</span> into <span class="math inline">\(s\)</span>, therefore <span class="math inline">\(\psi\phi(s)\)</span> is transformed by <span class="math inline">\(\overline{\phi}\overline{\psi}\)</span> into <span class="math inline">\(s\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-32"><strong>32.</strong></span> Definition. The systems <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> are said to be <em>similar</em> when there exists such a similar transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(S\)</span> that <span class="math inline">\(\phi(S)=R\)</span>, and therefore <span class="math inline">\(\overline{\phi}(R) = S\)</span>. Obviously by <a href="./2_03_similarity-of-a-transformation.html#par-30">(30)</a> every system is similar to itself.</p>
+<p><span id="par-33"><strong>33.</strong></span> Theorem. If <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> are similar systems, then every system <span class="math inline">\(Q\)</span> similar to <span class="math inline">\(R\)</span> is also similar to <span class="math inline">\(S\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\psi\)</span> are similar transformations of <span class="math inline">\(S\)</span>, <span class="math inline">\(R\)</span> such that <span class="math inline">\(\phi(S)=R\)</span>, <span class="math inline">\(\psi(R)=Q\)</span>, then by <a href="./2_03_similarity-of-a-transformation.html#par-31">(31)</a> <span class="math inline">\(\psi\phi\)</span> is a similar transformation of <span class="math inline">\(S\)</span> such that <span class="math inline">\(\psi\phi(S) = Q\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-34"><strong>34.</strong></span> Definition. We can therefore separate all systems into <em>classes</em> by putting into a determinate class all systems <span class="math inline">\(Q\)</span>, <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(\ldots\)</span>, and only those, that are similar to a determinate system <span class="math inline">\(R\)</span>, the <em>representative</em> of the class; according to <a href="./2_03_similarity-of-a-transformation.html#par-33">(33)</a> the class is not changed by taking as representative any other system belonging to it.</p>
+<p><span id="par-35"><strong>35.</strong></span> Theorem. If <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> are similar systems, then is every part of <span class="math inline">\(S\)</span> also similar to a part of <span class="math inline">\(R\)</span>, every proper part of <span class="math inline">\(S\)</span> also similar to a proper part of <span class="math inline">\(R\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(\phi\)</span> is a similar transformation of <span class="math inline">\(S\)</span>, <span class="math inline">\(\phi(S)=R\)</span>, and <span class="math inline">\(T \partof S\)</span>, then by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> is the system similar to <span class="math inline">\(T\)</span> <span class="math inline">\(\phi(T) \partof R\)</span>; if further <span class="math inline">\(T\)</span> is proper part of <span class="math inline">\(S\)</span>, and <span class="math inline">\(s\)</span> an element of <span class="math inline">\(S\)</span> not contained in <span class="math inline">\(T\)</span>, then by <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a> the element <span class="math inline">\(\phi(s)\)</span> contained in <span class="math inline">\(R\)</span> cannot be contained in <span class="math inline">\(\phi(T)\)</span>; hence <span class="math inline">\(\phi(T)\)</span> is proper part of <span class="math inline">\(R\)</span>, which was to be proved.</p>
+</div>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>See theorem <a href="./2_02_transformation-of-a-system.html#par-22">22</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See theorem <a href="./2_02_transformation-of-a-system.html#par-24">24</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

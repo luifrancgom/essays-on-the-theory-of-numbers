@@ -26,7 +26,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -89,6 +109,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -218,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_03_similarity-of-a-transformation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -314,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_02_transformation-of-a-system.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Transformation of a system</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Transformation of a system</span></h1>
+<h1 class="title"><span id="sec-transformation-of-a-system" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Transformation of a system</span></span></h1>
 </div>
 
 
@@ -331,8 +380,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-21"><strong>21.</strong></span> Definition.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> By a <em>transformation</em> [<em>Abbildung</em>] <span class="math inline">\(\phi\)</span> of a system <span class="math inline">\(S\)</span> we understand a law according to which to every determinate element <span class="math inline">\(s\)</span> of <span class="math inline">\(S\)</span> there <em>belongs</em> a determinate thing which is called the <em>transform</em> of <span class="math inline">\(s\)</span> and denoted by <span class="math inline">\(\phi(s)\)</span>; we say also that <span class="math inline">\(\phi(s)\)</span> <em>corresponds</em> to the element <span class="math inline">\(s\)</span>, that <span class="math inline">\(\phi(s)\)</span> <em>results</em> or is <em>produced</em> from <span class="math inline">\(s\)</span> by the transformation <span class="math inline">\(\phi\)</span>, that <span class="math inline">\(s\)</span> is <em>transformed</em> into <span class="math inline">\(\phi(s)\)</span> by the transformation <span class="math inline">\(\phi\)</span>. If now <span class="math inline">\(T\)</span> is any part of <span class="math inline">\(S\)</span>, then in the transformation <span class="math inline">\(\phi\)</span> of <span class="math inline">\(S\)</span> is likewise contained a determinate transformation of <span class="math inline">\(T\)</span>, which for the sake of simplicity may be denoted by the same symbol <span class="math inline">\(\phi\)</span> and consists in this that to every element <span class="math inline">\(t\)</span> of the system <span class="math inline">\(T\)</span> there corresponds the same transform <span class="math inline">\(\phi(t)\)</span>, which <span class="math inline">\(t\)</span> possesses as element of <span class="math inline">\(S\)</span>; at the same time the system consisting of all transforms <span class="math inline">\(\phi(t)\)</span> shall be called the transform of <span class="math inline">\(T\)</span> and be denoted by <span class="math inline">\(\phi(T)\)</span>, by which also the significance of <span class="math inline">\(\phi(S)\)</span> is defined. As an example of a transformation of a system we may regard the mere assignment of determinate symbols or names to its elements. The simplest transformation of a system is that by which each of its elements is transformed into itself; it will be called the <em>identical</em> transformation of the system. For convenience, in the following theorems <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>, <a href="./2_02_transformation-of-a-system.html#par-23">(23)</a>, <a href="./2_02_transformation-of-a-system.html#par-24">(24)</a>, which deal with an arbitrary transformation <span class="math inline">\(\phi\)</span> of an arbitrary system <span class="math inline">\(S\)</span>, we shall denote the transforms of elements <span class="math inline">\(s\)</span> and parts <span class="math inline">\(T\)</span> respectively by <span class="math inline">\(s'\)</span> and <span class="math inline">\(T'\)</span>; in addition we agree that small and capital italics without accent shall always signify elements and parts of this system <span class="math inline">\(S\)</span>.</p>
+<p><span id="par-22"><strong>22.</strong></span> Theorem.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> If <span class="math inline">\(A \partof B\)</span> then <span class="math inline">\(A' \partof B'\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every element of <span class="math inline">\(A'\)</span> is the transform of an element contained in <span class="math inline">\(A\)</span>, and therefore also in <span class="math inline">\(B\)</span>, and is therefore element of <span class="math inline">\(B'\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-23"><strong>23.</strong></span> Theorem. The transform of <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> is <span class="math inline">\(\mathfrak{M}(A', B', C', \ldots)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If we denote the system <span class="math inline">\(\mathfrak{M}(A, B, C, \ldots)\)</span> which by <a href="./2_01_systems-of-elements.html#par-10">(10)</a> is likewise part of <span class="math inline">\(S\)</span> by <span class="math inline">\(M\)</span>, then is every element of its transform <span class="math inline">\(M'\)</span> the transform <span class="math inline">\(m'\)</span> of an element <span class="math inline">\(m\)</span> of <span class="math inline">\(M\)</span>; since therefore by <a href="./2_01_systems-of-elements.html#par-8">(8)</a> <span class="math inline">\(m\)</span> is also element of one of the systems <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, C, <span class="math inline">\(\ldots\)</span> and consequently <span class="math inline">\(m'\)</span> element of one of the systems <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span>, <span class="math inline">\(\ldots\)</span>, and hence by <a href="./2_01_systems-of-elements.html#par-8">(8)</a> also element of <span class="math inline">\(\mathfrak{M}(A', B', C', \ldots)\)</span>, we have by <a href="./2_01_systems-of-elements.html#par-3">(3)</a></p>
+<p><span class="math display">\[
+M' \partof \mathfrak{M}(A', B', C', \ldots).
+\]</span></p>
+<p>On the other hand, since <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span> are by <a href="./2_01_systems-of-elements.html#par-9">(9)</a> parts of <span class="math inline">\(M\)</span>, and hence <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span>, <span class="math inline">\(\ldots\)</span> by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> parts of <span class="math inline">\(M'\)</span>, we have by <a href="./2_01_systems-of-elements.html#par-10">(10)</a></p>
+<p><span class="math display">\[
+\mathfrak{M}(A', B', C', \ldots) \partof M'.
+\]</span></p>
+<p>By combination with the above we have by <a href="./2_01_systems-of-elements.html#par-5">(5)</a> the theorem to be proved <span class="math display">\[
+M' = \mathfrak{M}(A', B', C', \ldots).
+\]</span></p>
+</div>
+<p><span id="par-24"><strong>24.</strong></span> Theorem.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The transform of every common part of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, <span class="math inline">\(\ldots\)</span>, and therefore that of the community <span class="math inline">\(\mathfrak{G}(A, B, C, \ldots)\)</span> is part of <span class="math inline">\(\mathfrak{G}(A', B', C', \ldots)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a> it is common part of <span class="math inline">\(A'\)</span>, <span class="math inline">\(B'\)</span>, <span class="math inline">\(C'\)</span>, $, whence the theorem follows by <a href="./2_01_systems-of-elements.html#par-18">(18)</a>.</p>
+</div>
+<p><span id="par-25"><strong>25.</strong></span> Definition and theorem. If <span class="math inline">\(\phi\)</span> is a transformation of a system <span class="math inline">\(S\)</span>, and <span class="math inline">\(\psi\)</span> a transformation of the transform <span class="math inline">\(S'=\phi(S)\)</span>, there always results a transformation <span class="math inline">\(\theta\)</span> of S, <em>compounded</em><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> out of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span>, which consists of this that to every element <span class="math inline">\(s\)</span> of <span class="math inline">\(S\)</span> there corresponds the transform</p>
+<p><span class="math display">\[
+\theta(s)=\psi(s')=\psi(\phi(s)),
+\]</span></p>
+<p>where again we have put <span class="math inline">\(\phi(s)=s'\)</span>. This transformation <span class="math inline">\(\theta\)</span> can be denoted briefly by the symbol <span class="math inline">\(\psi\cdot\phi\)</span> or <span class="math inline">\(\psi\phi\)</span>, the transform <span class="math inline">\(\theta(s)\)</span> by <span class="math inline">\(\psi\phi(s)\)</span> where the order of the symbols <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\psi\)</span> is to be considered, since in general the symbol <span class="math inline">\(\phi\psi\)</span> has no interpretation and actually has meaning only when <span class="math inline">\(\psi(s') \partof s\)</span>. If now <span class="math inline">\(\chi\)</span> signifies a transformation of the system <span class="math inline">\(\psi(s')=\psi\phi(s)\)</span> and <span class="math inline">\(\eta\)</span> the transformation <span class="math inline">\(\chi\psi\)</span> of the system <span class="math inline">\(S'\)</span> compounded out of <span class="math inline">\(\psi\)</span> and <span class="math inline">\(\chi\)</span>, then is <span class="math inline">\(\chi\theta(s)=\chi\psi(s')=\eta(s')=\eta\phi(s)\)</span>; therefore the compound transformations <span class="math inline">\(\chi\theta\)</span> and <span class="math inline">\(\eta\phi\)</span> coincide for every element <span class="math inline">\(s\)</span> of <span class="math inline">\(S\)</span>, i.e., <span class="math inline">\(\chi\theta = \eta \phi\)</span>. In accordance with the meaning of <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\eta\)</span> this theorem can finally be expressed in the form</p>
+<p><span class="math display">\[
+\chi\cdot\psi\phi = \chi\psi\cdot\phi,
+\]</span></p>
+<p>and this transformation compounded out of <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\psi\)</span>, <span class="math inline">\(\chi\)</span> can be denoted briefly by <span class="math inline">\(\chi\psi\phi\)</span>.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-lejeune_dirichlet_vorlesungen_1879" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">P. Lejeune Dirichlet, <em>Vorlesungen über <span>Zahlentheorie</span> / von <span>P</span>. <span>G</span>. <span>Lejeune</span> <span>Dirichlet</span>. <span>Hrsg</span>. Und mit <span>Zusätzen</span> versehen von <span>R</span>. <span>Dedekind</span></em>. Vieweg, 1879. doi: <a href="https://doi.org/10.24355/DBBS.084-200909111325-0">10.24355/DBBS.084-200909111325-0</a>.</div>
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>See Dirichlet’s <em>Vorlesungen über Zahlentheorie</em>, 3d edition, 1879, § 163 <span class="citation" data-cites="lejeune_dirichlet_vorlesungen_1879"><a href="references.html#ref-lejeune_dirichlet_vorlesungen_1879" role="doc-biblioref">[1]</a></span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See theorem <a href="./2_03_similarity-of-a-transformation.html#par-27">27</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>See theorem <a href="./2_03_similarity-of-a-transformation.html#par-29">29</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>A confusion of this compounding of transformations with that of systems of elements is hardly to be feared.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -742,8 +837,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./2_03_similarity-of-a-transformation.html" class="pagination-link" aria-label="Similarity of a transformation">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./2_03_similarity-of-a-transformation.html" class="pagination-link" aria-label="Similarity of a transformation. Similar systems">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Similarity of a transformation. Similar systems</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
