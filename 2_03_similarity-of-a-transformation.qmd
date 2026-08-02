@@ -1,1 +1,49 @@
-# Similarity of a transformation
+# Similarity of a transformation. Similar systems {#sec-similarity-of-a-transformation}
+
+[**26.**]{#par-26} Definition. A transformation $\phi$ of a system $S$ is said to be *similar* [*ähnlich*] or *distinct*, when to different elements $a$, $b$ of the system $S$ there always correspond different transforms $a' = \phi(a)$, $b' = \phi(b)$. Since in this case conversely from $s' = t'$ we always have $s = t$, then is every element of the system $S' = \phi(S)$ the transform $s'$ of a single, perfectly determinate element $s$ of the system $S$, and we can therefore set over against the transformation $\phi$ of $S$ an *inverse* transformation of the system $S'$, to be denoted by $\overline{\phi}$, which consists in this that to every element $s'$ of $S'$ there corresponds the transform $\overline{\phi}(s') = s$, and obviously this transformation is also similar. It is clear that $\overline{\phi}(S') = S$, that further $\phi$ is the inverse transformation belonging to $\overline{\phi}$ and that the transformation $\overline{\phi}\phi$ compounded out of $\phi$ and $\overline{\phi}$ by [(25)](2_02_transformation-of-a-system.qmd#par-25) is the identical transformation of $S$ [(21)](2_02_transformation-of-a-system.qmd#par-21). At once we have the following additions to @sec-transformation-of-a-system, retaining the notation there given.
+
+[**27.**]{#par-27} Theorem.[^fn-1-chap-10] If $A' \partof B'$, then $A \partof B$.
+
+::: {.proof}
+For if $a$ is an element of $A$ then is $a'$ an element of $A'$, therefore also of $B'$, hence $=b'$, where $b$ is an element of $B$; but since from $a' = b'$ we always have $a = b$, then is every element of $A$ also element of $B$, which was to be proved.
+:::
+
+[**28.**]{#par-28} Theorem. If $A' = B'$, then $A = B$.
+
+The proof follows from [(27)](2_03_similarity-of-a-transformation.qmd#par-27), [(4)](2_01_systems-of-elements.qmd#par-4), [(5)](2_01_systems-of-elements.qmd#par-5).
+
+[**29.**]{#par-29} Theorem.[^fn-2-chap-10] If $G = \mathfrak{G}(A, B, C, \ldots)$, then
+$$
+G' = \mathfrak{G}(A', B', C', \ldots).
+$$
+
+::: {.proof}
+Every element of $\mathfrak{G}(A', B', C', \ldots)$ is certainly contained in $S'$, and is therefore the transform $g'$ of an element $g$ contained in $S$; but since $g'$ is common element of $A'$, $B'$, $C'$, $\ldots$ then by [(27)](2_03_similarity-of-a-transformation.qmd#par-27) must $g$ be common element of $A$, $B$, $C$, $\ldots$ therefore also element of $G$; hence every element of $\mathfrak{G}(A', B', C', \ldots)$ is transform of an element $g$ of $G$, therefore element of $G'$, i.e., $\mathfrak{G}(A', B', C', \ldots) \partof G'$, and accordingly our theorem follows from [(24)](2_02_transformation-of-a-system.qmd#par-24), [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**30.**]{#par-30} Theorem. The identical transformation of a system is always a similar transformation.
+
+[**31.**]{#par-31} Theorem. If $\phi$ is a similar transformation of $S$ and $\psi$ a similar transformation of $\phi(S)$, then is the transformation $\psi\phi$ of $S$, compounded of $\phi$ and $\psi$, a similar transformation, and the associated inverse transformation $\overline{\psi}\overline{\phi} = \overline{\phi}\overline{\psi}$.
+
+::: {.proof}
+For to different elements $a$, $b$ of $S$ correspond different transforms $a' = \phi(a)$, $b'=\phi(b)$, and to these again different transforms $\psi(a')=\psi\phi(a)$, $\psi(b') =\psi\phi(b)$ and therefore $\psi\phi$ is a similar transformation. Besides every element $\psi\phi(s) = \psi(s')$ of the system $\psi\phi(S)$ is transformed by $\overline{\psi}$ into $s' = \phi(s)$ and this by $\overline{\phi}$ into $s$, therefore $\psi\phi(s)$ is transformed by $\overline{\phi}\overline{\psi}$ into $s$, which was to be proved.
+:::
+
+[**32.**]{#par-32} Definition. The systems $R$, $S$ are said to be *similar* when there exists such a similar transformation $\phi$ of $S$ that $\phi(S)=R$, and therefore $\overline{\phi}(R) = S$. Obviously by [(30)](2_03_similarity-of-a-transformation.qmd#par-30) every system is similar to itself.
+
+[**33.**]{#par-33} Theorem. If $R$, $S$ are similar systems, then every system $Q$ similar to $R$ is also similar to $S$.
+
+::: {.proof}
+For if $\phi$, $\psi$ are similar transformations of $S$, $R$ such that $\phi(S)=R$, $\psi(R)=Q$, then by [(31)](2_03_similarity-of-a-transformation.qmd#par-31) $\psi\phi$ is a similar transformation of $S$ such that $\psi\phi(S) = Q$, which was to be proved.
+:::
+
+[**34.**]{#par-34} Definition. We can therefore separate all systems into *classes* by putting into a determinate class all systems $Q$, $R$, $S$, $\ldots$, and only those, that are similar to a determinate system $R$, the *representative* of the class; according to [(33)](2_03_similarity-of-a-transformation.qmd#par-33) the class is not changed by taking as representative any other system belonging to it.
+
+[**35.**]{#par-35} Theorem. If $R$, $S$ are similar systems, then is every part of $S$ also similar to a part of $R$, every proper part of $S$ also similar to a proper part of $R$.
+
+::: {.proof}
+For if $\phi$ is a similar transformation of $S$, $\phi(S)=R$, and $T \partof S$, then by [(22)](2_02_transformation-of-a-system.qmd#par-22) is the system similar to $T$ $\phi(T) \partof R$; if further $T$ is proper part of $S$, and $s$ an element of $S$ not contained in $T$, then by [(27)](2_03_similarity-of-a-transformation.qmd#par-27) the element $\phi(s)$ contained in $R$ cannot be contained in $\phi(T)$; hence $\phi(T)$ is proper part of $R$, which was to be proved.
+:::
+
+[^fn-1-chap-10]: See theorem [22](2_02_transformation-of-a-system.qmd#par-22).
+[^fn-2-chap-10]: See theorem [24](2_02_transformation-of-a-system.qmd#par-24).
