@@ -4,6 +4,6 @@ In this edition, the symbol $\partof$ is used as a typographical approximation f
 
 Also the following typographical errors have been corrected:
 
-[(42)](2_04_transformation-of-a-system-in-itself.qmd#par-42) "$A' \partof B$, $B' \partof B$, $C' \partof C$" in original, amended to "$A' \partof A$" etc.
+[@sec-transformation-of-a-system-in-itself, par. 42](2_04_transformation-of-a-system-in-itself.qmd#par-42) "$A' \partof B$, $B' \partof B$, $C' \partof C$" in original, amended to "$A' \partof A$" etc.
 
-[(125)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-125) "the transformation $\psi$, is therefore completely defined" in original, amended to "$\psi_1$".
+[@sec-definition-of-a-transformation-of-the-number-series-by-induction, par. 125](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-125) "the transformation $\psi$, is therefore completely defined" in original, amended to "$\psi_1$".
