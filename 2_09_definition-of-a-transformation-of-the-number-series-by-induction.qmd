@@ -23,19 +23,19 @@ II'\. $\psi_p(1)=\omega$
 III'\. $\psi_p(m')=\theta\psi_p(m)$, when $m<p$, then there is also contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21), because $Z_n \partof Z_p$ [(107)](2_07_greater-and-less-numbers.qmd#par-107) a transformation of $Z_{n}$ which obviously satisfies the same conditions I, II, III as $\psi_n$, and therefore coincides throughout with $\psi_n$; for all numbers contained in $Z_{n}$, and hence [(98)](2_07_greater-and-less-numbers.qmd#par-98) for all numbers $m$ which are $<p$, i.e., $\leqq n$, must therefore
 
 $$
-\psi_p(m)=\psi_n(m) \tag{m}
+\psi_p(m)=\psi_n(m) \tag{$m$}
 $$
 
 whence there follows, as a special case,
 
 $$
-\psi_p(n)=\psi_n(n); \tag{n}
+\psi_p(n)=\psi_n(n); \tag{$n$}
 $$
 
 since further by [(105)](2_07_greater-and-less-numbers.qmd#par-105), [(108)](2_07_greater-and-less-numbers.qmd#par-108) $p$ is the only number of the system $Z_p$ not contained in $Z_n$, and since by III' and $(n)$ we must also have
 
 $$
-\psi_p(p) = \theta\psi_n(n) \tag{p}
+\psi_p(p) = \theta\psi_n(n) \tag{$p$}
 $$
 
 there follows the correctness of our foregoing statement that there can be only one transformation $\psi_p$ of the system $Z_p$ satisfying the conditions I', II', III', because by the conditions $(m)$ and $(p)$ just derived $\psi_p$ is completely reduced to $\psi_n$. We have next to show conversely that this transformation $\psi_p$ of the system $Z_p$ completely determined by $(m)$ and $(p)$ actually satisfies the conditions I', II', III'. Obviously I' follows from $(m)$ and $(p)$ with reference to I, and because $\theta(\Omega) \partof \Omega$. Similarly II' follows from $(m)$ and II, since by [(99)](2_07_greater-and-less-numbers.qmd#par-99) the number 1 is contained in $Z_n$. The correctness of III' follows first for those numbers $m$ which are $<n$ from $(m)$ and III, and for the single number $m=n$ yet remaining it results from $(p)$ and $(n)$. Thus it is completely established that from the validity of our theorem for the number $n$ always follows its validity for the following number $p$, which was to be proved.
@@ -52,7 +52,7 @@ there follows the correctness of our foregoing statement that there can be only 
 Since, if there actually exists such a transformation $\psi$, there is contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21) a transformation $\psi_n$, of the system $Z_n$, which satisfies the conditions I, II, III stated in [(125)](#par-125), then because there exists one and only one such transformation $\psi_n$ must necessarily
 
 $$
-\psi(n) =\psi_n(n). \tag{n}
+\psi(n) =\psi_n(n). \tag{$n$}
 $$
 
 Since thus $\psi$ is completely determined it follows also that there can exist only one such transformation $\psi$ (see the closing remark in [(130)](#par-130)). That conversely the transformation $\psi$ determined by $(n)$ also satisfies our conditions I, II, III, follows easily from $(n)$ with reference to the properties I, II and $(p)$ shown in [(125)](#par-125), which was to be proved.
