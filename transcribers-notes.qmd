@@ -1,6 +1,6 @@
 # Transcriber's notes {.unnumbered}
 
-In this edition, the symbol $\partof$ is used as a typographical approximation for the author's original *part* of relational symbol [(@sec-systems-of-elements, par. 3)](2_01_systems-of-elements.qmd#par-3), which should not be confused with the numerical digit $3$. Correspondingly, the symbol $\wholeof$ serves as its inverse (*whole* of [(@sec-systems-of-elements, par. 3)](2_01_systems-of-elements.qmd#par-3)), representing the converse relationship such that $S \wholeof A$ is logically equivalent to $A \partof S$.
+In this edition, the symbol $\partof$ is used as a typographical approximation for the author's original *part* of relational symbol, defined in [@sec-systems-of-elements, par. 3](2_01_systems-of-elements.qmd#par-3), which should not be confused with the numerical digit $3$. Correspondingly, the symbol $\wholeof$ serves as its inverse (*whole* of, defined in [@sec-systems-of-elements, par. 3](2_01_systems-of-elements.qmd#par-3)), representing the converse relationship such that $S \wholeof A$ is logically equivalent to $A \partof S$.
 
 Also the following typographical errors have been corrected:
 
