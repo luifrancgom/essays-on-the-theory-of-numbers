@@ -1,5 +1,9 @@
 # Transcriber's notes {.unnumbered}
 
-In this edition, the symbol $\partof$ is used as a typographical approximation for the author's original *part* of relational symbol, which should not be confused with the numerical digit $3$. Correspondingly, the symbol $\wholeof$ serves as its inverse (*whole* of), representing the converse relationship such that $S \wholeof A$ is logically equivalent to $A \partof S$.
+In this edition, the symbol $\partof$ is used as a typographical approximation for the author's original *part* of relational symbol [(3)](2_01_systems-of-elements.qmd#par-3), which should not be confused with the numerical digit $3$. Correspondingly, the symbol $\wholeof$ serves as its inverse (*whole* of [(3)](2_01_systems-of-elements.qmd#par-3)), representing the converse relationship such that $S \wholeof A$ is logically equivalent to $A \partof S$.
 
-**Note**: Pending the parts about internal page reference and typographical errors.
+Also the following typographical errors have been corrected:
+
+[(42)](2_04_transformation-of-a-system-in-itself.qmd#par-42) "$A' \partof B$, $B' \partof B$, $C' \partof C$" in original, amended to "$A' \partof A$" etc.
+
+[(125)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-125) "the transformation $\psi$, is therefore completely defined" in original, amended to "$\psi_1$".
