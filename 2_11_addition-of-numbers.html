@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -331,8 +360,88 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-135"><strong>135.</strong></span> Definition. It is natural to apply the definition set forth in theorem <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a> of a transformation <span class="math inline">\(\psi\)</span> of the number-series <span class="math inline">\(N\)</span>, or of the <em>function</em> <span class="math inline">\(\psi(n)\)</span> determined by it to the case, where the system there denoted by <span class="math inline">\(\Omega\)</span> in which the transform <span class="math inline">\(\psi(N)\)</span> is to be contained, is the number-series <span class="math inline">\(N\)</span> itself, because for this system <span class="math inline">\(\Omega\)</span> a transformation <span class="math inline">\(\theta\)</span> of <span class="math inline">\(\Omega\)</span> in itself already exists, viz., that transformation <span class="math inline">\(\phi\)</span> by which <span class="math inline">\(N\)</span> is set in order as a simply infinite system <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a>, <a href="./2_06_simply-infinite-systems.html#par-73">(73)</a>. Then is also <span class="math inline">\(\Omega=N\)</span>, <span class="math inline">\(\theta(n)=\phi(n)=n'\)</span>, hence</p>
+<p><span class="math display">\[
+\mathrm{I.\ }\psi(N) \partof N,
+\]</span></p>
+<p>and it remains in order to determine <span class="math inline">\(\psi\)</span> completely only to select the element <span class="math inline">\(\omega\)</span> from <span class="math inline">\(\Omega\)</span>, i.e., from <span class="math inline">\(N\)</span>, at pleasure. If we take <span class="math inline">\(\omega=1\)</span>, then evidently <span class="math inline">\(\psi\)</span> becomes the identical transformation <a href="./2_02_transformation-of-a-system.html#par-21">(21)</a> of <span class="math inline">\(N\)</span>, because the conditions</p>
+<p><span id="equ-par-135-I"><span class="math display">\[
+\psi(1)=1,\quad \psi(n')=(\psi(n))'
+\]</span></span></p>
+<p>are generally satisfied by <span class="math inline">\(\psi(n)=n\)</span>. If then we are to produce another transformation <span class="math inline">\(\psi\)</span> of <span class="math inline">\(N\)</span>, then for <span class="math inline">\(\omega\)</span> we must select a number <span class="math inline">\(m'\)</span> different from 1, by <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> contained in <span class="math inline">\(N\)</span>, where <span class="math inline">\(m\)</span> itself denotes any number; since the transformation <span class="math inline">\(\psi\)</span> is obviously dependent upon the choice of this number <span class="math inline">\(m\)</span>, we denote the corresponding transform <span class="math inline">\(\psi(n)\)</span> of an arbitrary number <span class="math inline">\(n\)</span> by the symbol <span class="math inline">\(m+n\)</span>, and call this number the <em>sum</em> which arises from the number <span class="math inline">\(m\)</span> by the <em>addition</em> of the number <span class="math inline">\(n\)</span>, or in short the sum of the numbers <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span>. Therefore by <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a> this sum is completely determined by the conditions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><span id="equ-par-135-II"><span class="math display">\[
+\text{II. } m+1=m',
+\]</span></span></p>
+<p><span id="equ-par-135-III"><span class="math display">\[
+\text{III. } m+n'=(m+n)'.
+\]</span></span></p>
+<p><span id="par-136"><strong>136.</strong></span> Theorem. <span class="math inline">\(m'+n=m+n'\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. the theorem is true for <span class="math inline">\(n=1\)</span>, since by (<a href="#equ-par-135-II">(135), II</a>)</p>
+<p><span class="math display">\[
+m'+1=(m')'=(m+1)',
+\]</span></p>
+<p>and by <a href="#equ-par-135-III">(135, III)</a> <span class="math inline">\((m+1)'=m+1'\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, and we put the following number <span class="math inline">\(n'=p\)</span> then is <span class="math inline">\(m'+n=m+p\)</span>, hence also <span class="math inline">\((m'+n)'=(m+p)'\)</span>, whence by <a href="#equ-par-135-III">(135, III)</a> <span class="math inline">\(m'+p=m+p'\)</span>; therefore the theorem is true also for the following number <span class="math inline">\(p\)</span>, which was to be proved.</p>
+<p><span id="par-137"><strong>137.</strong></span> Theorem. <span class="math inline">\(m'+n=(m+n)'\)</span>.</p>
+<p>The proof follows from <a href="#par-136">(136)</a> and <a href="#equ-par-135-III">(135, III)</a>.</p>
+<p><span id="par-138"><strong>138.</strong></span> Theorem. <span class="math inline">\(1+n=n'\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#equ-par-135-II">(135, II)</a> the theorem is true for <span class="math inline">\(n=1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span> and we put <span class="math inline">\(n'=p\)</span>, then <span class="math inline">\(1+n=p\)</span>, therefore also <span class="math inline">\((1+n)'=p'\)</span>, whence by <a href="#equ-par-135-III">(135, III)</a> <span class="math inline">\(1+p=p'\)</span>, i.e., the theorem is true also for the following number <span class="math inline">\(p\)</span>, which was to be proved.</p>
+<p><span id="par-139"><strong>139.</strong></span> Theorem. <span class="math inline">\(1+n=n+1\)</span>.</p>
+<p>The proof follows from <a href="#par-138">(138)</a> and <a href="#equ-par-135-II">(135, II)</a>.</p>
+<p><span id="par-140"><strong>140.</strong></span> Theorem. <span class="math inline">\(m+n=n+m\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#par-139">(139)</a> the theorem is true for <span class="math inline">\(n=1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then there follows also <span class="math inline">\((m+n)'=(n+m)'\)</span>, i.e., by <a href="#equ-par-135-III">(135, III)</a> <span class="math inline">\(m+n'=n+m'\)</span>, hence by <a href="#par-136">(136)</a> <span class="math inline">\(m+n'=n'+m\)</span>; therefore the theorem is also true for the following number <span class="math inline">\(n'\)</span>, which was to be proved.</p>
+<p><span id="par-141"><strong>141.</strong></span> Theorem. <span class="math inline">\((l+m)+n=l+(m+n)\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. the theorem is true for <span class="math inline">\(n=1\)</span>, because by (<a href="#equ-par-135-II">135, II</a>, <a href="#equ-par-135-III">III</a>, <a href="#equ-par-135-II">II</a>) <span class="math inline">\((l+m)+1=(l+m)'=l+m'=l+(m+1)\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then there follows also <span class="math inline">\(\bigl((l+m)+n\bigr)'=\bigl(l+(m+n)\bigr)'\)</span>, i.e., by <a href="#equ-par-135-III">(135, III)</a></p>
+<p><span class="math display">\[
+(l+m)+n'=l+(m+n)'=l+(m+n'),
+\]</span></p>
+<p>therefore the theorem is also true for the following number <span class="math inline">\(n'\)</span>, which was to be proved.</p>
+<p><span id="par-142"><strong>142.</strong></span> Theorem. <span class="math inline">\(m+n&gt;m\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#equ-par-135-II">(135, II)</a> and <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a> the theorem is true for <span class="math inline">\(n = 1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a> it is also true for the following number <span class="math inline">\(n'\)</span>, because by <a href="#equ-par-135-III">(135, III)</a> and <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a></p>
+<p><span class="math display">\[
+m+n'=(m+n)'&gt;m+n,
+\]</span></p>
+<p>which was to be proved.</p>
+<p><span id="par-143"><strong>143.</strong></span> Theorem. The conditions <span class="math inline">\(m&gt;a\)</span> and <span class="math inline">\(m+n&gt;a+n\)</span> are equivalent.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#equ-par-135-II">(135, II)</a> and <a href="./2_07_greater-and-less-numbers.html#par-94">(94)</a> the theorem is true for <span class="math inline">\(n = 1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then is it also true for the following number <span class="math inline">\(n'\)</span>, since by <a href="./2_07_greater-and-less-numbers.html#par-94">(94)</a> the condition <span class="math inline">\(m+n&gt;a+n\)</span> is equivalent to <span class="math inline">\((m+n)'&gt; (a+n)'\)</span>, hence by <a href="#equ-par-135-III">(135, III)</a> also equivalent to</p>
+<p><span class="math display">\[
+m+n'&gt; a+n',
+\]</span></p>
+<p>which was to be proved.</p>
+<p><span id="par-144"><strong>144.</strong></span> Theorem. If <span class="math inline">\(m&gt;a\)</span> and <span class="math inline">\(n&gt;b\)</span>, then is also</p>
+<p><span class="math display">\[
+m+n&gt;a+b.
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For from our hypotheses we have by <a href="#par-143">(143)</a> <span class="math inline">\(m+n&gt;a+n\)</span> and <span class="math inline">\(n+a&gt;b+a\)</span> or, what by <a href="#par-140">(140)</a> is the same, <span class="math inline">\(a+n&gt;a+b\)</span>, whence the theorem follows by <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a>.</p>
+</div>
+<p><span id="par-145"><strong>145.</strong></span> Theorem. If <span class="math inline">\(m+n=a+n\)</span> then <span class="math inline">\(m=a\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(m\)</span> does not <span class="math inline">\(=a\)</span>, hence by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> either <span class="math inline">\(m&gt;a\)</span> or <span class="math inline">\(m&lt;a\)</span>, then by <a href="#par-143">(143)</a> respectively <span class="math inline">\(m+n&gt;a+n\)</span> or <span class="math inline">\(m+n&lt;a+n\)</span>, therefore by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> we surely cannot have <span class="math inline">\(m+n=a+n\)</span> which was to be proved.</p>
+</div>
+<p><span id="par-146"><strong>146.</strong></span> Theorem. If <span class="math inline">\(l&gt;n\)</span>, then there exists one and by <a href="./2_13_involution-of-numbers.html#par-157">(157)</a> only one number <span class="math inline">\(m\)</span> which satisfies the condition <span class="math inline">\(m+n=l\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. the theorem is true for <span class="math inline">\(n = 1\)</span>. In fact, if <span class="math inline">\(l&gt;1\)</span>, i.e., <a href="./2_07_greater-and-less-numbers.html#par-89">(89)</a> if <span class="math inline">\(l\)</span> is contained in <span class="math inline">\(N'\)</span>, and hence is the transform <span class="math inline">\(m'\)</span> of a number <span class="math inline">\(m\)</span>, then by <a href="#equ-par-135-II">(135, II)</a> it follows that <span class="math inline">\(l=m+1\)</span>, which was to be proved.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then we show that it is also true for the following number <span class="math inline">\(n'\)</span>. In fact, if <span class="math inline">\(l&gt;n'\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a>, <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a> also <span class="math inline">\(l&gt;n\)</span>, and hence there exists a number <span class="math inline">\(k\)</span> which satisfies the condition <span class="math inline">\(l=k+n\)</span>; since by <a href="#par-138">(138)</a> this is different from 1 (otherwise <span class="math inline">\(l\)</span> would be <span class="math inline">\(=n'\)</span>) then by <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> is it the transform <span class="math inline">\(m'\)</span> of a number <span class="math inline">\(m\)</span>, consequently <span class="math inline">\(l=m'+n\)</span>, therefore also by <a href="#par-136">(136)</a> <span class="math inline">\(l=m+n'\)</span>, which was to be proved.</p>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The above definition of addition based immediately upon theorem <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a> seems to me to be the simplest. By the aid of the notion developed in <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-131">(131)</a> we can, however, define the sum <span class="math inline">\(m+n\)</span> by <span class="math inline">\(\phi^n(m)\)</span> or also by <span class="math inline">\(\phi^m(n)\)</span>, where <span class="math inline">\(\phi\)</span> has again the foregoing meaning. In order to show the complete agreement of these definitions with the foregoing, we need by <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a> only to show that if <span class="math inline">\(\phi^n(m)\)</span> or <span class="math inline">\(\phi^m(n)\)</span> is denoted by <span class="math inline">\(\psi(n)\)</span>, the conditions <span class="math inline">\(\psi(1)=m'\)</span>, <span class="math inline">\(\psi(n')=\phi\psi(n)\)</span> are fulfilled which is easily done with the aid of complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a> by the help of <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-131">(131)</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
