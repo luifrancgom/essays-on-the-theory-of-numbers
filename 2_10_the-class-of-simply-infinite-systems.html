@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -331,8 +360,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-132"><strong>132.</strong></span> Theorem. All simply infinite systems are similar to the number-series <span class="math inline">\(N\)</span> and consequently by <a href="./2_03_similarity-of-a-transformation.html#par-33">(33)</a> also to one another.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let the simply infinite system <span class="math inline">\(\Omega\)</span> be set in order <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> by the transformation <span class="math inline">\(\theta\)</span>, and let <span class="math inline">\(\omega\)</span> be the base-element of <span class="math inline">\(\Omega\)</span> thus resulting; if we again denote by <span class="math inline">\(\theta_0\)</span> the chains corresponding to the transformation <span class="math inline">\(\theta\)</span> <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a>, then by <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> is the following true:</p>
+<p><span class="math inline">\(\alpha\)</span>. <span class="math inline">\(\theta(\Omega) \partof \Omega\)</span>.</p>
+<p><span class="math inline">\(\beta\)</span>. <span class="math inline">\(\Omega = \theta_0(\omega)\)</span>.</p>
+<p><span class="math inline">\(\gamma\)</span>. <span class="math inline">\(\omega\)</span> is not contained in <span class="math inline">\(\theta(\Omega)\)</span>.</p>
+<p><span class="math inline">\(\delta\)</span>. The transformation <span class="math inline">\(\theta\)</span> is similar.</p>
+<p>If then <span class="math inline">\(\psi\)</span> denotes the transformation of the number-series <span class="math inline">\(N\)</span> defined in <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a>, then from <span class="math inline">\(\beta\)</span> and <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-128">(128)</a> we get first</p>
+<p><span class="math display">\[
+\psi(N)=\Omega,
+\]</span></p>
+<p>and hence we have only yet to show that <span class="math inline">\(\psi\)</span> is a similar transformation, i.e., <a href="./2_03_similarity-of-a-transformation.html#par-26">(26)</a> that to different numbers <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> correspond different transforms <span class="math inline">\(\psi(m)\)</span>, <span class="math inline">\(\psi(n)\)</span>. On account of the symmetry we may by (<a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a>) assume that <span class="math inline">\(m&gt;n\)</span>, hence <span class="math inline">\(m \partof n'_0\)</span>, and the theorem to prove comes to this that <span class="math inline">\(\psi(n)\)</span> is not contained in <span class="math inline">\(\psi(n'_0)\)</span>, and hence by <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-127">(127)</a> is not contained in <span class="math inline">\(\theta\psi(n_0)\)</span>. This we establish for every number <span class="math inline">\(n\)</span> by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. In fact,</p>
+<p><span class="math inline">\(\rho\)</span>. this theorem is true by <span class="math inline">\(\gamma\)</span> for <span class="math inline">\(n = 1\)</span>, since <span class="math inline">\(\psi(1)=\omega\)</span> and <span class="math inline">\(\psi(1_0)= \psi(N)=\Omega\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then is it also true for the following number <span class="math inline">\(n'\)</span>; for if <span class="math inline">\(\psi(n')\)</span>, i.e., <span class="math inline">\(\theta \psi(n)\)</span>, were contained in <span class="math inline">\(\theta\psi(n'_0)\)</span>, then by <span class="math inline">\(\delta\)</span> and <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a>, <span class="math inline">\(\psi(n)\)</span> would also be contained in <span class="math inline">\(\psi(n'_0)\)</span> while our hypothesis states just the opposite; which was to be proved.</p>
+</div>
+<p><span id="par-133"><strong>133.</strong></span> Theorem. Every system which is similar to a simply infinite system and therefore by <a href="#par-132">(132)</a>, <a href="./2_03_similarity-of-a-transformation.html#par-33">(33)</a> to the number-series <span class="math inline">\(N\)</span> is simply infinite.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\Omega\)</span> is a system similar to the number-series <span class="math inline">\(N\)</span>, then by <a href="./2_03_similarity-of-a-transformation.html#par-32">(32)</a> there exists a similar transformation <span class="math inline">\(\psi\)</span> of <span class="math inline">\(N\)</span> such that</p>
+<p><span id="equ-par-133-I"><span class="math display">\[
+\text{I. } \psi(N) = \Omega;
+\]</span></span></p>
+<p>then we put</p>
+<p><span id="equ-par-133-II"><span class="math display">\[
+\text{II. } \psi(1) = \omega.
+\]</span></span></p>
+<p>If we denote, as in <a href="./2_03_similarity-of-a-transformation.html#par-26">(26)</a>, by <span class="math inline">\(\overline{\psi}\)</span> the inverse, likewise similar transformation of <span class="math inline">\(\Omega\)</span>, then to every element <span class="math inline">\(\nu\)</span> of <span class="math inline">\(\Omega\)</span> there corresponds a determinate number <span class="math inline">\(\overline{\psi}(\nu)=n\)</span>, viz., that number whose transform <span class="math inline">\(\psi(n) = \nu\)</span>. Since to this number <span class="math inline">\(n\)</span> there corresponds a determinate following number <span class="math inline">\(\phi(n)=n'\)</span>, and to this again a determinate element <span class="math inline">\(\psi(n')\)</span> in <span class="math inline">\(\Omega\)</span> there belongs to every element <span class="math inline">\(\nu\)</span> of the system <span class="math inline">\(\Omega\)</span> a determinate element <span class="math inline">\(\psi(n')\)</span> of that system which as transform of <span class="math inline">\(\nu\)</span> we shall designate by <span class="math inline">\(\theta(\nu)\)</span>. Thus a transformation <span class="math inline">\(\theta\)</span> of <span class="math inline">\(\Omega\)</span> in itself is completely determined,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and in order to prove our theorem we will show that by <span class="math inline">\(\theta \Omega\)</span> is set in order <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> as a simply infinite system, i.e., that the conditions <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> stated in the proof of <a href="#par-132">(132)</a> are all fulfilled. First <span class="math inline">\(\alpha\)</span> is immediately obvious from the definition of <span class="math inline">\(\theta\)</span>. Since further to every number <span class="math inline">\(n\)</span> corresponds an element <span class="math inline">\(\nu = \phi(n)\)</span>, for which <span class="math inline">\(\theta(\nu) = \psi(n')\)</span>, we have generally,</p>
+<p><span class="math display">\[
+\mathrm{III.\ }\psi(n') = \theta\psi(n),
+\]</span></p>
+<p>and thence in connection with <a href="#equ-par-133-I">I</a>, <a href="#equ-par-133-II">II</a>, <span class="math inline">\(\alpha\)</span> it results that the transformations <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\psi\)</span> fulfill all the conditions of theorem <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a>; therefore <span class="math inline">\(\beta\)</span> follows from <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-128">(128)</a> and <a href="#equ-par-133-I">I</a>. Further by <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-127">(127)</a> and <a href="#equ-par-133-I">I</a></p>
+<p><span class="math display">\[
+\psi(N') = \theta \psi(N) = \theta(\Omega),
+\]</span></p>
+<p>and thence in combination with <a href="#equ-par-133-II">II</a> and the similarity of the transformation <span class="math inline">\(\psi\)</span> follows <span class="math inline">\(\gamma\)</span>, because otherwise <span class="math inline">\(\psi(1)\)</span> must be contained in <span class="math inline">\(\psi(N')\)</span>, hence by <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a> the number 1 in <span class="math inline">\(N'\)</span>, which by <a href="./2_06_simply-infinite-systems.html#par-71-gamma">(71, <span class="math inline">\(\gamma\)</span>)</a> is not the case. If finally <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\nu\)</span> denote elements of <span class="math inline">\(\Omega\)</span> and <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> the corresponding numbers whose transforms are <span class="math inline">\(\psi(m) = \mu\)</span>, <span class="math inline">\(\psi(n) = \nu\)</span>, then from the hypothesis <span class="math inline">\(\theta(\mu) = \theta(\nu)\)</span> it follows by the foregoing that <span class="math inline">\(\psi(m') = \psi(n')\)</span>, thence on account of the similarity of <span class="math inline">\(\psi\)</span>, <span class="math inline">\(\phi\)</span> that <span class="math inline">\(m' = n'\)</span>, <span class="math inline">\(m = n\)</span>, therefore also <span class="math inline">\(\mu = \nu\)</span>; hence also <span class="math inline">\(\delta\)</span> is true, which was to be proved.</p>
+</div>
+<p><span id="par-134"><strong>134.</strong></span> Remark. By the two preceding theorems <a href="#par-132">(132)</a>, <a href="#par-133">(133)</a> all simply infinite systems form a class in the sense of <a href="./2_03_similarity-of-a-transformation.html#par-34">(34)</a>. At the same time, with reference to <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a>, <a href="./2_06_simply-infinite-systems.html#par-73">(73)</a> it is clear that every theorem regarding numbers, i.e., regarding the elements <span class="math inline">\(n\)</span> of the simply infinite system <span class="math inline">\(N\)</span> set in order by the transformation <span class="math inline">\(\phi\)</span>, and indeed every theorem in which we leave entirely out of consideration the special character of the elements <span class="math inline">\(n\)</span> and discuss only such notions as arise from the arrangement <span class="math inline">\(\phi\)</span>, possesses perfectly general validity for every other simply infinite system <span class="math inline">\(\Omega\)</span> set in order by a transformation <span class="math inline">\(\theta\)</span> and its elements <span class="math inline">\(\nu\)</span>, and that the passage from <span class="math inline">\(N\)</span> to <span class="math inline">\(\Omega\)</span> (e.g., also the translation of an arithmetic theorem from one language into another) is effected by the transformation <span class="math inline">\(\psi\)</span> considered in <a href="#par-132">(132)</a>, <a href="#par-133">(133)</a>, which changes every element <span class="math inline">\(n\)</span> of <span class="math inline">\(N\)</span> into an element <span class="math inline">\(\nu\)</span> of <span class="math inline">\(\Omega\)</span>, i.e., into <span class="math inline">\(\psi(n)\)</span>. This element <span class="math inline">\(\nu\)</span> can be called the <span class="math inline">\(n\)</span>th element of <span class="math inline">\(\Omega\)</span> and accordingly the number <span class="math inline">\(n\)</span> is itself the <span class="math inline">\(n\)</span>th number of the number-series <span class="math inline">\(N\)</span>. The same significance which the transformation <span class="math inline">\(\phi\)</span> possesses for the laws in the domain <span class="math inline">\(N\)</span>, in so far as every element <span class="math inline">\(n\)</span> is followed by a determinate element <span class="math inline">\(\phi(n)=n'\)</span>, is found, after the change effected by <span class="math inline">\(\psi\)</span>, to belong to the transformation <span class="math inline">\(\theta\)</span> for the same laws in the domain <span class="math inline">\(\Omega\)</span>, in so far as the element <span class="math inline">\(\nu=\psi(n)\)</span> arising from the change of <span class="math inline">\(n\)</span> is followed by the element <span class="math inline">\(\theta(\nu)=\psi(n')\)</span> arising from the change of <span class="math inline">\(n'\)</span>; we are therefore justified in saying that by <span class="math inline">\(\psi \phi\)</span> is changed into <span class="math inline">\(\theta\)</span>, which is symbolically expressed by <span class="math inline">\(\theta=\psi\phi\overline{\psi}\)</span>, <span class="math inline">\(\phi=\overline{\psi}\theta\psi\)</span>. By these remarks, as I believe, the definition of the notion of numbers given in <a href="./2_06_simply-infinite-systems.html#par-73">(73)</a> is fully justified. We now proceed to further applications of theorem <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a>.</p>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Evidently <span class="math inline">\(\theta\)</span> is the transformation <span class="math inline">\(\psi\phi\overline{\psi}\)</span> compounded by <a href="./2_02_transformation-of-a-system.html#par-25">(25)</a> out of <span class="math inline">\(\overline{\psi}\)</span>, <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\psi\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
