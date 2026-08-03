@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>21&nbsp; Number of elements of a finite system – Essays on the theory of numbers</title>
+<title>15&nbsp; Finite and infinite parts of the number-series – Essays on the theory of numbers</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,8 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./_license.html" rel="next">
-<link href="./2_13_involution-of-numbers.html" rel="prev">
+<link href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html" rel="next">
+<link href="./2_07_greater-and-less-numbers.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_14_number-of-elements-of-a-finite-system.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_08_finite-and-infinite-parts-of-the-number-series.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -247,14 +276,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_08_finite-and-infinite-parts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts</span></span></a>
+  <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_09_definition-by-induction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition by induction</span></span></a>
+  <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition of a transformation of the number-series by induction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_14_number-of-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></span></a>
+  <a href="./2_14_number-of-the-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of the elements of a finite system</span></span></a>
   </div>
 </li>
       </ul>
@@ -312,9 +341,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_14_number-of-elements-of-a-finite-system.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_08_finite-and-infinite-parts-of-the-number-series.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></h1>
+<h1 class="title"><span id="sec-finite-and-infinite-parts-of-the-number-series" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></span></h1>
 </div>
 
 
@@ -331,6 +360,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-119"><strong>119.</strong></span> Theorem. Every system <span class="math inline">\(Z_n\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> is finite.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>.</p>
+<p><span class="math inline">\(\rho\)</span>. By <a href="./2_05_the-finite-and-infinite.html#par-65">(65)</a>, <a href="./2_07_greater-and-less-numbers.html#par-102">(102)</a> the theorem is true for <span class="math inline">\(n=1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(Z_n\)</span> is finite, then from <a href="./2_07_greater-and-less-numbers.html#par-108">(108)</a> and <a href="./2_05_the-finite-and-infinite.html#par-70">(70)</a> it follows that <span class="math inline">\(Z_{n'}\)</span> is also finite, which was to be proved.</p>
+<p><span id="par-120"><strong>120.</strong></span> Theorem. If <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> are different numbers, then are <span class="math inline">\(Z_m\)</span>, <span class="math inline">\(Z_n\)</span> dissimilar systems.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By reason of the symmetry we may by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> assume that <span class="math inline">\(m&lt;n\)</span>; then by <a href="./2_07_greater-and-less-numbers.html#par-106">(106)</a> <span class="math inline">\(Z_m\)</span> is proper part of <span class="math inline">\(Z_n\)</span>, and since by <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html#par-119">(119)</a> <span class="math inline">\(Z_n\)</span> is finite, then by <a href="./2_05_the-finite-and-infinite.html#par-64">(64)</a> <span class="math inline">\(Z_m\)</span> and <span class="math inline">\(Z_n\)</span> cannot be similar, which was to be proved.</p>
+</div>
+<p><span id="par-121"><strong>121.</strong></span> Theorem. Every part <span class="math inline">\(E\)</span> of the number-series <span class="math inline">\(N\)</span>, which possesses a greatest number <a href="./2_07_greater-and-less-numbers.html#par-111">(111)</a>, is finite.</p>
+<p>The proof follows from <a href="./2_07_greater-and-less-numbers.html#par-113">(113)</a>, <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html#par-119">(119)</a>, <a href="./2_05_the-finite-and-infinite.html#par-68">(68)</a>.</p>
+<p><span id="par-122"><strong>122.</strong></span> Theorem. Every part <span class="math inline">\(U\)</span> of the number-series <span class="math inline">\(N\)</span>, which possesses no greatest number, is simply infinite <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(u\)</span> is any number in <span class="math inline">\(U\)</span>, there exists in <span class="math inline">\(U\)</span> by <a href="./2_07_greater-and-less-numbers.html#par-117">(117)</a> one and only one next greater number than <span class="math inline">\(u\)</span>, which we will denote by <span class="math inline">\(\psi(u)\)</span> and regard as transform of <span class="math inline">\(u\)</span>. The thus perfectly determined transformation <span class="math inline">\(\psi\)</span> of the system <span class="math inline">\(U\)</span> has obviously the property</p>
+<p><span class="math inline">\(\alpha.\quad \psi(U) \partof U\)</span>,</p>
+<p>i.e., <span class="math inline">\(U\)</span> transformed in itself by <span class="math inline">\(\psi\)</span>. If further <span class="math inline">\(u\)</span>, <span class="math inline">\(v\)</span> are different numbers in <span class="math inline">\(U\)</span>, then by symmetry we may by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> assume that <span class="math inline">\(u&lt;v\)</span>; thus by <a href="./2_07_greater-and-less-numbers.html#par-117">(117)</a> it follows from the definition of <span class="math inline">\(\psi\)</span> that <span class="math inline">\(\psi(u) \leqq v\)</span> and <span class="math inline">\(v &lt; \psi(v)\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a> <span class="math inline">\(\psi(u) &lt; \psi(v)\)</span>; therefore by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> the transforms <span class="math inline">\(\psi(u)\)</span>, <span class="math inline">\(\psi(v)\)</span> are different, i.e.,</p>
+<p><span class="math inline">\(\delta\)</span>. the transformation <span class="math inline">\(\psi\)</span> is similar.</p>
+<p>Further, if <span class="math inline">\(u_1\)</span> denotes the least number <a href="./2_07_greater-and-less-numbers.html#par-96">(96)</a> of the system <span class="math inline">\(U\)</span>, then every number <span class="math inline">\(u\)</span> contained in <span class="math inline">\(U\)</span> is <span class="math inline">\(\geqq u_1\)</span>, and since generally <span class="math inline">\(u &lt; \psi(u)\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a> <span class="math inline">\(u_1&lt;\psi(u)\)</span>, and therefore by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> <span class="math inline">\(u_1\)</span> is different from <span class="math inline">\(\psi(u)\)</span>, i.e.,</p>
+<p><span class="math inline">\(\gamma\)</span>. the element <span class="math inline">\(u_1\)</span> of <span class="math inline">\(U\)</span> is not contained in <span class="math inline">\(\psi(U)\)</span>.</p>
+<p>Therefore <span class="math inline">\(\psi(U)\)</span> is proper part of <span class="math inline">\(U\)</span> and hence by <a href="./2_05_the-finite-and-infinite.html#par-64">(64)</a> <span class="math inline">\(U\)</span> is an infinite system. If then in agreement with <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> we denote by <span class="math inline">\(\psi_0(V)\)</span>, when <span class="math inline">\(V\)</span> is any part of <span class="math inline">\(U\)</span>, the chain of <span class="math inline">\(V\)</span> corresponding to the transformation <span class="math inline">\(\psi\)</span>, we wish to show finally that</p>
+<p><span class="math inline">\(\beta\)</span>. <span class="math inline">\(U=\psi_0(u_1)\)</span>.</p>
+<p>In fact, since every such chain <span class="math inline">\(\psi_0(V)\)</span> by reason of its definition <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a> is a part of the system <span class="math inline">\(U\)</span> transformed in itself by <span class="math inline">\(\psi\)</span>, then evidently is <span class="math inline">\(\psi_0(u_1) \partof U\)</span>; conversely it is first of all obvious from <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a> that the element <span class="math inline">\(u_1\)</span> contained in <span class="math inline">\(U\)</span> is certainly contained in <span class="math inline">\(\psi_0(u_1)\)</span>; but if we assume that there exist elements of <span class="math inline">\(U\)</span>, that are not contained in <span class="math inline">\(\psi_0(u_1)\)</span>, then must there be among them by <a href="./2_07_greater-and-less-numbers.html#par-96">(96)</a> a least number <span class="math inline">\(w\)</span>, and since by what precedes this is different from the least number <span class="math inline">\(u_1\)</span> of the system <span class="math inline">\(U\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-117">(117)</a> must there exist in <span class="math inline">\(U\)</span> also a number <span class="math inline">\(v\)</span> which is next less than <span class="math inline">\(w\)</span>, whence it follows at once that <span class="math inline">\(w = \psi(v)\)</span>; since therefore <span class="math inline">\(v&lt;w\)</span>, then must <span class="math inline">\(v\)</span> by reason of the definition of <span class="math inline">\(w\)</span> certainly be contained in <span class="math inline">\(\psi_0(u_1)\)</span>; but from this by <a href="./2_04_transformation-of-a-system-in-itself.html#par-55">(55)</a> it follows that also <span class="math inline">\(\psi(v)\)</span>, and hence <span class="math inline">\(w\)</span> must be contained in <span class="math inline">\(\psi_0(u_1)\)</span>, and since this is contrary to the definition of <span class="math inline">\(w\)</span>, our foregoing hypothesis is inadmissible; therefore <span class="math inline">\(U \partof \psi_0(u_1)\)</span> and hence also <span class="math inline">\(U=\psi_0(u_1)\)</span> as stated. From <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span> it then follows by <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> that <span class="math inline">\(U\)</span> is a simply infinite system set in order by <span class="math inline">\(\psi\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-123"><strong>123.</strong></span> Theorem. In consequence of <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html#par-121">(121)</a>, <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html#par-122">(122)</a> any part <span class="math inline">\(T\)</span> of the number-series <span class="math inline">\(N\)</span> is finite or simply infinite, according as a greatest number exists or does not exist in <span class="math inline">\(T\)</span>.</p>
 
 
 
@@ -737,13 +789,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./2_13_involution-of-numbers.html" class="pagination-link" aria-label="Involution of numbers">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Involution of numbers</span></span>
+      <a href="./2_07_greater-and-less-numbers.html" class="pagination-link" aria-label="Greater and less numbers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Greater and less numbers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./_license.html" class="pagination-link" aria-label="License">
-        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">License</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html" class="pagination-link" aria-label="Definition of a transformation of the number-series by induction">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition of a transformation of the number-series by induction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

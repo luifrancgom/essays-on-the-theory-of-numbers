@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./2_08_finite-and-infinite-parts.html" rel="next">
+<link href="./2_08_finite-and-infinite-parts-of-the-number-series.html" rel="next">
 <link href="./2_06_simply-infinite-systems.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -247,14 +276,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_08_finite-and-infinite-parts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts</span></span></a>
+  <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_09_definition-by-induction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition by induction</span></span></a>
+  <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Definition of a transformation of the number-series by induction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_14_number-of-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of elements of a finite system</span></span></a>
+  <a href="./2_14_number-of-the-elements-of-a-finite-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Number of the elements of a finite system</span></span></a>
   </div>
 </li>
       </ul>
@@ -314,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2_00_the-nature-and-meaning-of-numbers.html">The nature and meaning of numbers</a></li><li class="breadcrumb-item"><a href="./2_07_greater-and-less-numbers.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Greater and less numbers</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Greater and less numbers</span></h1>
+<h1 class="title"><span id="sec-greater-and-less-numbers" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Greater and less numbers</span></span></h1>
 </div>
 
 
@@ -331,6 +360,183 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-81"><strong>81.</strong></span> Theorem. Every number <span class="math inline">\(n\)</span> is different from the following number <span class="math inline">\(n'\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>:</p>
+<p><span class="math inline">\(\rho\)</span>. The theorem is true for the number <span class="math inline">\(n = 1\)</span>, because it is not contained in <span class="math inline">\(N'\)</span> <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a>, while the following number <span class="math inline">\(1'\)</span> as transform of the number 1 contained in <span class="math inline">\(N\)</span> is element of <span class="math inline">\(N'\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span> and we put the following number <span class="math inline">\(n' = p\)</span>, then is <span class="math inline">\(n\)</span> different from <span class="math inline">\(p\)</span>, whence by <a href="./2_03_similarity-of-a-transformation.html#par-26">(26)</a> on account of the similarity <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> of the order-setting transformation <span class="math inline">\(\phi\)</span> it follows that <span class="math inline">\(n'\)</span>, and therefore <span class="math inline">\(p\)</span>, is different from <span class="math inline">\(p'\)</span>. Hence the theorem holds also for the number <span class="math inline">\(p\)</span> following <span class="math inline">\(n\)</span>, which was to be proved.</p>
+<p><span id="par-82"><strong>82.</strong></span> Theorem. In the transform-chain <span class="math inline">\(n'_0\)</span> of a number <span class="math inline">\(n\)</span> by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a>, <a href="./2_06_simply-infinite-systems.html#par-75">(75)</a> is contained its transform <span class="math inline">\(n'\)</span>, but not the number <span class="math inline">\(n\)</span> itself.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>:</p>
+<p><span class="math inline">\(\rho\)</span>. The theorem is true for <span class="math inline">\(n = 1\)</span>, because <span class="math inline">\(1'_0 = N'\)</span>, and because by <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> the base-number 1 is not contained in <span class="math inline">\(N'\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, and we again put <span class="math inline">\(n' =p\)</span>, then is <span class="math inline">\(n\)</span> not contained in <span class="math inline">\(p_0\)</span>, therefore is it different from every number <span class="math inline">\(q\)</span> contained in <span class="math inline">\(p_0\)</span>, whence by reason of the similarity of <span class="math inline">\(\phi\)</span> it follows that <span class="math inline">\(n'\)</span>, and therefore <span class="math inline">\(p\)</span>, is different from every number <span class="math inline">\(q'\)</span> contained in <span class="math inline">\(p'_0\)</span>, and is hence not contained in <span class="math inline">\(p'_0\)</span>. Therefore the theorem holds also for the number <span class="math inline">\(p\)</span> following <span class="math inline">\(n\)</span>, which was to be proved.</p>
+<p><span id="par-83"><strong>83.</strong></span> Theorem. The transform-chain <span class="math inline">\(n'_0\)</span> is proper part of the chain <span class="math inline">\(n_0\)</span>.</p>
+<p>The proof follows from <a href="./2_06_simply-infinite-systems.html#par-76">(76)</a>, <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a>, <a href="./2_07_greater-and-less-numbers.html#par-82">(82)</a>.</p>
+<p><span id="par-84"><strong>84.</strong></span> Theorem. From <span class="math inline">\(m_0= n_0\)</span> it follows that <span class="math inline">\(m=n\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> <span class="math inline">\(m\)</span> is contained in <span class="math inline">\(m_0\)</span>, and</p>
+<p><span class="math display">\[
+m_0= n_0 = \mathfrak{M}(n, n'_0)
+\]</span></p>
+<p>by <a href="./2_06_simply-infinite-systems.html#par-77">(77)</a>, then if the theorem were false and hence <span class="math inline">\(m\)</span> different from <span class="math inline">\(n\)</span>, <span class="math inline">\(m\)</span> would be contained in the chain <span class="math inline">\(n'_0\)</span>, hence by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> also <span class="math inline">\(m_0 \partof n'_0\)</span>, i.e., <span class="math inline">\(n_0 \partof n'_0\)</span>; but this contradicts theorem <a href="./2_07_greater-and-less-numbers.html#par-83">(83)</a>. Hence our theorem is established.</p>
+</div>
+<p><span id="par-85"><strong>85.</strong></span> Theorem. If the number <span class="math inline">\(n\)</span> is not contained in the number-chain <span class="math inline">\(K\)</span>, then is <span class="math inline">\(K \partof n'_0\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>:</p>
+<p><span class="math inline">\(\rho\)</span>. By <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> the theorem is true for <span class="math inline">\(n=1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then is it also true for the following number, <span class="math inline">\(p= n'\)</span>; for if <span class="math inline">\(p\)</span> is not contained in the number-chain <span class="math inline">\(K\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-40">(40)</a> <span class="math inline">\(n\)</span> also cannot be contained in <span class="math inline">\(K\)</span> and hence by our hypothesis <span class="math inline">\(K \partof n'_0\)</span>; now since by <a href="./2_06_simply-infinite-systems.html#par-77">(77)</a> <span class="math inline">\(n'_0 = p_0 = \mathfrak{M}(p,p'_0)\)</span>, hence <span class="math inline">\(K \partof \mathfrak{M}(p,p'_0)\)</span> and <span class="math inline">\(p\)</span> is not contained in <span class="math inline">\(K\)</span>, then must <span class="math inline">\(K \partof p'_0\)</span>, which was to be proved.</p>
+<p><span id="par-86"><strong>86.</strong></span> Theorem. If the number <span class="math inline">\(n\)</span> is not contained in the number-chain <span class="math inline">\(K\)</span>, but its transform <span class="math inline">\(n'\)</span> is, then <span class="math inline">\(K=n'_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(n\)</span> is not contained in <span class="math inline">\(K\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-85">(85)</a> <span class="math inline">\(K \partof n'_0\)</span>, and since <span class="math inline">\(n' \partof K\)</span>, then by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> is also <span class="math inline">\(n'_0 \partof K\)</span>, and hence <span class="math inline">\(K=n'_0\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-87"><strong>87.</strong></span> Theorem. In every number-chain <span class="math inline">\(K\)</span> there exists one, and by <a href="./2_07_greater-and-less-numbers.html#par-84">(84)</a> only one, number <span class="math inline">\(k\)</span>, whose chain <span class="math inline">\(k_0 = K\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If the base-number 1 is contained in <span class="math inline">\(K\)</span>, then by <a href="./2_06_simply-infinite-systems.html#par-79">(79)</a> <span class="math inline">\(K=N=1_0\)</span>. In the opposite case let <span class="math inline">\(Z\)</span> be the system of all numbers not contained in <span class="math inline">\(K\)</span>; since the base-number 1 is contained in <span class="math inline">\(Z\)</span>, but <span class="math inline">\(Z\)</span> is only a proper part of the number-series <span class="math inline">\(N\)</span>, then by <a href="./2_06_simply-infinite-systems.html#par-79">(79)</a> <span class="math inline">\(Z\)</span> cannot be a chain, i.e., <span class="math inline">\(Z'\)</span> cannot be part of <span class="math inline">\(Z\)</span>; hence there exists in <span class="math inline">\(Z\)</span> a number <span class="math inline">\(n\)</span>, whose transform <span class="math inline">\(n'\)</span> is not contained in <span class="math inline">\(Z\)</span>, and is therefore certainly contained in <span class="math inline">\(K\)</span>; since further <span class="math inline">\(n\)</span> is contained in <span class="math inline">\(Z\)</span>, and therefore not in <span class="math inline">\(K\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-86">(86)</a> <span class="math inline">\(K=n'_0\)</span>, and hence <span class="math inline">\(k = n'\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-88"><strong>88.</strong></span> Theorem. If <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> are different numbers then by <a href="./2_07_greater-and-less-numbers.html#par-83">(83)</a>, <a href="./2_07_greater-and-less-numbers.html#par-84">(84)</a> one and only one of the chains <span class="math inline">\(m_0\)</span>, <span class="math inline">\(n_0\)</span> is proper part of the other and either <span class="math inline">\(n_0 \partof m'_0\)</span> or <span class="math inline">\(m_0 \partof n'_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(n\)</span> is contained in <span class="math inline">\(m_0\)</span>, and hence by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> also <span class="math inline">\(n_0 \partof m_0\)</span>, then <span class="math inline">\(m\)</span> can not be contained in the chain <span class="math inline">\(n_0\)</span> (because otherwise by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> we should have <span class="math inline">\(m_0 \partof n_0\)</span>, therefore <span class="math inline">\(m_0 = n_0\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-84">(84)</a> also <span class="math inline">\(m = n\)</span>) and thence it follows by <a href="./2_07_greater-and-less-numbers.html#par-85">(85)</a> that <span class="math inline">\(n_0 \partof m'_0\)</span>. In the contrary case, when <span class="math inline">\(n\)</span> is not contained in the chain <span class="math inline">\(m_0\)</span>, we must have by <a href="./2_07_greater-and-less-numbers.html#par-85">(85)</a> <span class="math inline">\(m_0 \partof n'_0\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-89"><strong>89.</strong></span> Definition. The number <span class="math inline">\(m\)</span> is said to be <em>less</em> than the number <span class="math inline">\(n\)</span> and at the same time <span class="math inline">\(n\)</span> <em>greater</em> than <span class="math inline">\(m\)</span>, in symbols</p>
+<p><span class="math display">\[
+m &lt; n, \quad n &gt;m,
+\]</span></p>
+<p>when the condition</p>
+<p><span class="math display">\[
+n_0 \partof m'_0
+\]</span></p>
+<p>is fulfilled, which by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> may also be expressed</p>
+<p><span class="math display">\[
+n \partof m'_0.
+\]</span></p>
+<p><span id="par-90"><strong>90.</strong></span> Theorem. If <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> are any numbers, then always one and only one of the following cases <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\nu\)</span> occurs:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda.\quad &amp; m = n,\ n = m,\ \mathrm{i.e.}, &amp; m_0 = n_0\\
+\mu.\quad    &amp; m &lt; n,\ n &gt; m,\ \mathrm{i.e.}, &amp; n_0 \partof m'_0\\
+\nu.\quad    &amp; m &gt; n,\ n &lt; m,\ \mathrm{i.e.}, &amp; m_0 \partof n'_0.
+\end{aligned}
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(\lambda\)</span> occurs <a href="./2_07_greater-and-less-numbers.html#par-84">(84)</a> then can neither <span class="math inline">\(\mu\)</span> nor <span class="math inline">\(\nu\)</span> occur because by <a href="./2_07_greater-and-less-numbers.html#par-83">(83)</a> we never have <span class="math inline">\(n_0 \partof n'_0\)</span>. But if <span class="math inline">\(\lambda\)</span> does not occur then by <a href="./2_07_greater-and-less-numbers.html#par-88">(88)</a> one and only one of the cases <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\nu\)</span> occurs, which was to be proved.</p>
+</div>
+<p><span id="par-91"><strong>91.</strong></span> Theorem. <span class="math inline">\(n&lt;n'\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For the condition for the case <span class="math inline">\(\nu\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> is fulfilled by <span class="math inline">\(m = n'\)</span>.</p>
+</div>
+<p><span id="par-92"><strong>92.</strong></span> Definition. To express that <span class="math inline">\(m\)</span> is either <span class="math inline">\(=n\)</span> or <span class="math inline">\(&lt; n\)</span>, hence not <span class="math inline">\(&gt; n\)</span> <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> we use the symbols</p>
+<p><span class="math display">\[
+m\leqq n \mathrm{\ or\ also\ } n\geqq m
+\]</span></p>
+<p>and we say <span class="math inline">\(m\)</span> is <em>at most equal</em> to <span class="math inline">\(n\)</span>, and <span class="math inline">\(n\)</span> is <em>at least equal</em> to <span class="math inline">\(m\)</span>.</p>
+<p><span id="par-93"><strong>93.</strong></span> Theorem. Each of the conditions</p>
+<p><span class="math display">\[
+m \leqq n,\quad m&lt;n',\quad n_0 \partof m_0
+\]</span></p>
+<p>is equivalent to each of the others.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(m \leqq n\)</span>, then from <span class="math inline">\(\lambda, \mu\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> we always have <span class="math inline">\(n_0 \partof m_0\)</span>, because by <a href="./2_06_simply-infinite-systems.html#par-76">(76)</a> <span class="math inline">\(m'_0 \partof m_0\)</span>. Conversely, if <span class="math inline">\(n_0 \partof m_0\)</span>, and therefore by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> also <span class="math inline">\(n \partof m_0\)</span>, it follows from <span class="math inline">\(m_0 = \mathfrak{M}(m, m'_0)\)</span> that either <span class="math inline">\(n = m\)</span>, or <span class="math inline">\(n \partof m'_0\)</span>, i.e., <span class="math inline">\(n&gt;m\)</span>. Hence the condition <span class="math inline">\(m \leqq n\)</span> is equivalent to <span class="math inline">\(n_0 \partof m_0\)</span>. Besides it follows from <a href="./2_02_transformation-of-a-system.html#par-22">(22)</a>, <a href="./2_03_similarity-of-a-transformation.html#par-27">(27)</a>, <a href="./2_06_simply-infinite-systems.html#par-75">(75)</a> that this condition <span class="math inline">\(n_0 \partof m_0\)</span> is again equivalent to <span class="math inline">\(n'_0 \partof m'_0\)</span>, i.e., by <span class="math inline">\(\mu\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> to <span class="math inline">\(m&lt;n'\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-94"><strong>94.</strong></span> Theorem. Each of the conditions <span class="math display">\[
+m' \leqq n,\quad m'&lt;n',\quad m&lt;n
+\]</span> is equivalent to each of the others.</p>
+<p>The proof follows immediately from <a href="./2_07_greater-and-less-numbers.html#par-93">(93)</a>, if we replace in it <span class="math inline">\(m\)</span> by <span class="math inline">\(m'\)</span>, and from <span class="math inline">\(\mu\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a>.</p>
+<p><span id="par-95"><strong>95.</strong></span> Theorem. If <span class="math inline">\(l&lt;m\)</span> and <span class="math inline">\(m\leqq n\)</span> or if <span class="math inline">\(l \leqq m\)</span>, and <span class="math inline">\(m&lt;n\)</span>, then is <span class="math inline">\(l&lt;n\)</span>. But if <span class="math inline">\(l \leqq m\)</span> and <span class="math inline">\(m \leqq n\)</span>, then is <span class="math inline">\(l \leqq n\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For from the corresponding conditions <a href="./2_07_greater-and-less-numbers.html#par-89">(89)</a>, <a href="./2_07_greater-and-less-numbers.html#par-93">(93)</a> <span class="math inline">\(m_0 \partof l'_0\)</span> and <span class="math inline">\(n_0 \partof m_0\)</span>, we have by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> <span class="math inline">\(n_0 \partof l'_0\)</span> and the same thing comes also from the conditions <span class="math inline">\(m_0 \partof l_0\)</span> and <span class="math inline">\(n_0 \partof m'_0\)</span>, because in consequence of the former we have also <span class="math inline">\(m'_0 \partof l'_0\)</span>. Finally from <span class="math inline">\(m_0 \partof l_0\)</span> and <span class="math inline">\(n_0 \partof m_0\)</span> we have also <span class="math inline">\(n_0 \partof l_0\)</span> which was to be proved.</p>
+</div>
+<p><span id="par-96"><strong>96.</strong></span> Theorem. In every part <span class="math inline">\(T\)</span> of <span class="math inline">\(N\)</span> there exists one and only one <em>least</em> number <span class="math inline">\(k\)</span>, i.e., a number <span class="math inline">\(k\)</span> which is less than every other number contained in <span class="math inline">\(T\)</span>. If <span class="math inline">\(T\)</span> consists of a single number, then is it also the least number in <span class="math inline">\(T\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(T_0\)</span> is a chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a>, then by <a href="./2_07_greater-and-less-numbers.html#par-87">(87)</a> there exists one number <span class="math inline">\(k\)</span> whose chain <span class="math inline">\(k_0=T_0\)</span>. Since from this it follows by <a href="./2_04_transformation-of-a-system-in-itself.html#par-45">(45)</a>, <a href="./2_06_simply-infinite-systems.html#par-77">(77)</a> that <span class="math inline">\(T\partof\mathfrak{M}(k, k'_0)\)</span>, then first must <span class="math inline">\(k\)</span> itself be contained in <span class="math inline">\(T\)</span> (because otherwise <span class="math inline">\(T\partof k'_0\)</span>, hence by <a href="./2_04_transformation-of-a-system-in-itself.html#par-47">(47)</a> also <span class="math inline">\(T_0\partof k'_0\)</span>, i.e., <span class="math inline">\(k_0\partof k'_0\)</span>, which by <a href="./2_07_greater-and-less-numbers.html#par-83">(83)</a> is impossible), and besides every number of the system <span class="math inline">\(T\)</span>, different from <span class="math inline">\(k\)</span>, must be contained in <span class="math inline">\(k'_0\)</span>, i.e., be <span class="math inline">\(&gt;k\)</span> <a href="./2_07_greater-and-less-numbers.html#par-89">(89)</a>, whence at once from <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> it follows that there exists in <span class="math inline">\(T\)</span> one and only one least number, which was to be proved.</p>
+</div>
+<p><span id="par-97"><strong>97.</strong></span> Theorem. The least number of the chain <span class="math inline">\(n_0\)</span> is <span class="math inline">\(n\)</span>, and the base-number 1 is the least of all numbers.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a>, <a href="./2_07_greater-and-less-numbers.html#par-93">(93)</a> the condition <span class="math inline">\(m\partof n_0\)</span> is equivalent to <span class="math inline">\(m\geqq n\)</span>. Or our theorem also follows immediately from the proof of the preceding theorem, because if in that we assume <span class="math inline">\(T=n_0\)</span>, evidently <span class="math inline">\(k=n\)</span> <a href="./2_04_transformation-of-a-system-in-itself.html#par-51">(51)</a>.</p>
+</div>
+<p><span id="par-98"><strong>98.</strong></span> Definition. If <span class="math inline">\(n\)</span> is any number, then will we denote by <span class="math inline">\(Z_n\)</span> the system of all numbers that are <em>not greater</em> than <span class="math inline">\(n\)</span>, and hence <em>not</em> contained in <span class="math inline">\(n'_0\)</span>. The condition</p>
+<p><span class="math display">\[
+m\partof Z_n
+\]</span></p>
+<p>by <a href="./2_07_greater-and-less-numbers.html#par-92">(92)</a>, <a href="./2_07_greater-and-less-numbers.html#par-93">(93)</a> is obviously equivalent to each of the following conditions:</p>
+<p><span class="math display">\[
+m\leqq n,\quad m&lt;n',\quad n_0\partof m_0.
+\]</span></p>
+<p><span id="par-99"><strong>99.</strong></span> Theorem. <span class="math inline">\(1\partof Z_n\)</span> and <span class="math inline">\(n\partof Z_n\)</span>.</p>
+<p>The proof follows from <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> or from <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> and <a href="./2_07_greater-and-less-numbers.html#par-82">(82)</a>.</p>
+<p><span id="par-100"><strong>100.</strong></span> Theorem. Each of the conditions equivalent by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a></p>
+<p><span class="math display">\[
+m\partof Z_n,\ m\leqq n,\ m&lt;n',\ n_0\partof m_0
+\]</span></p>
+<p>is also equivalent to the condition</p>
+<p><span class="math display">\[
+Z_m\partof Z_n.
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For if <span class="math inline">\(m\partof Z_n\)</span>, and hence <span class="math inline">\(m\leqq n\)</span>, and if <span class="math inline">\(l\partof Z_m\)</span>, and hence <span class="math inline">\(l\leqq m\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-95">(95)</a> also <span class="math inline">\(l\leqq n\)</span>, i.e., <span class="math inline">\(l\partof Z_n\)</span>; if therefore <span class="math inline">\(m\partof Z_n\)</span>, then is every element <span class="math inline">\(l\)</span> of the system <span class="math inline">\(Z_m\)</span> also element of <span class="math inline">\(Z_n\)</span>, i.e., <span class="math inline">\(Z_m\partof Z_n\)</span>. Conversely, if <span class="math inline">\(Z_m\partof Z_n\)</span>, then by <a href="./2_01_systems-of-elements.html#par-7">(7)</a> must also <span class="math inline">\(m\partof Z_n\)</span>, because by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> <span class="math inline">\(m\partof Z_m\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-101"><strong>101.</strong></span> Theorem. The conditions for the cases <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\nu\)</span> in <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> may also be put in the following form:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda. &amp; \quad m=n,\quad n=m,\quad Z_m=Z_n\\
+\mu. &amp; \quad m&lt;n,\quad n&gt;m,\quad Z_{m'}\partof Z_n\\
+\nu. &amp; \quad m&gt;n,\quad n&lt;m,\quad Z_{n'}\partof Z_m
+\end{aligned}
+\]</span></p>
+<p>The proof follows immediately from <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> if we observe that by <a href="./2_07_greater-and-less-numbers.html#par-100">(100)</a> the conditions <span class="math inline">\(n_0\partof m_0\)</span> and <span class="math inline">\(Z_m\partof Z_n\)</span> are equivalent.</p>
+<p><span id="par-102"><strong>102.</strong></span> Theorem. <span class="math inline">\(Z_1=1\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> the base-number 1 is contained in <span class="math inline">\(Z_1\)</span>, while by <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> every number different from <span class="math inline">\(1\)</span> is contained in <span class="math inline">\(1'_0\)</span>, hence by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> not in <span class="math inline">\(Z_1\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-103"><strong>103.</strong></span> Theorem. By <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> <span class="math inline">\(N=\mathfrak{M}(Z_n, n'_0)\)</span>.</p>
+<p><span id="par-104"><strong>104.</strong></span> Theorem. <span class="math inline">\(n=\mathfrak{G}(Z_n, n_0)\)</span>, i.e., <span class="math inline">\(n\)</span> is the only common element of the system <span class="math inline">\(Z_n\)</span> and <span class="math inline">\(n_0\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>From <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> and <a href="./2_06_simply-infinite-systems.html#par-74">(74)</a> it follows that <span class="math inline">\(n\)</span> is contained in <span class="math inline">\(Z_n\)</span> and <span class="math inline">\(n_0\)</span>; but every element of the chain <span class="math inline">\(n_0\)</span>, different from <span class="math inline">\(n\)</span> by <a href="./2_06_simply-infinite-systems.html#par-77">(77)</a> is contained in <span class="math inline">\(n'_0\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> not in <span class="math inline">\(Z_n\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-105"><strong>105.</strong></span> Theorem. By <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a>, <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> the number <span class="math inline">\(n'\)</span> is not contained in <span class="math inline">\(Z_n\)</span>.</p>
+<p><span id="par-106"><strong>106.</strong></span> Theorem. If <span class="math inline">\(m&lt;n\)</span>, then is <span class="math inline">\(Z_m\)</span> proper part of <span class="math inline">\(Z_n\)</span> and conversely.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(m&lt;n\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-100">(100)</a> <span class="math inline">\(Z_m \partof Z_n\)</span>, and since the number <span class="math inline">\(n\)</span>, by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> contained in <span class="math inline">\(Z_n\)</span>, can by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> not be contained in <span class="math inline">\(Z_m\)</span> because <span class="math inline">\(n&gt;m\)</span>, therefore <span class="math inline">\(Z_m\)</span> is proper part of <span class="math inline">\(Z_n\)</span>. Conversely if <span class="math inline">\(Z_m\)</span> is proper part of <span class="math inline">\(Z_n\)</span> then by <a href="./2_07_greater-and-less-numbers.html#par-100">(100)</a> <span class="math inline">\(m\leqq n\)</span>, and since <span class="math inline">\(m\)</span> cannot be <span class="math inline">\(=n\)</span>, because otherwise <span class="math inline">\(Z_m=Z_n\)</span>, we must have <span class="math inline">\(m&lt;n\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-107"><strong>107.</strong></span> Theorem. <span class="math inline">\(Z_n\)</span> is proper part of <span class="math inline">\(Z_{n'}\)</span>.</p>
+<p>The proof follows from <a href="./2_07_greater-and-less-numbers.html#par-106">(106)</a>, because by <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a> <span class="math inline">\(n&lt;n'\)</span>.</p>
+<p><span id="par-108"><strong>108.</strong></span> Theorem. <span class="math inline">\(Z_{n'}= \mathfrak{M}(Z_n,n')\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every number contained in <span class="math inline">\(Z_{n'}\)</span>, by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> is <span class="math inline">\(\leqq n'\)</span>, hence either <span class="math inline">\(=n'\)</span> or <span class="math inline">\(&lt;n'\)</span>, and therefore by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> element of <span class="math inline">\(Z_n\)</span>. Therefore certainly <span class="math inline">\(Z_{n'} \partof \mathfrak{M}(Z_n,n')\)</span>. Since conversely by <a href="./2_07_greater-and-less-numbers.html#par-107">(107)</a> <span class="math inline">\(Z_n \partof Z_{n'}\)</span> and by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> <span class="math inline">\(n' \partof Z_{n'}\)</span>, then by <a href="./2_01_systems-of-elements.html#par-10">(10)</a> we have</p>
+<p><span class="math display">\[
+\mathfrak{M}(Z_n,n') \partof Z_{n'},
+\]</span></p>
+<p>whence our theorem follows by <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-109"><strong>109.</strong></span> Theorem. The transform <span class="math inline">\(Z'_n\)</span> of the system <span class="math inline">\(Z_n\)</span> is proper part of the system <span class="math inline">\(Z_{n'}\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every number contained in <span class="math inline">\(Z'_n\)</span> is the transform <span class="math inline">\(m'\)</span> of a number <span class="math inline">\(m\)</span> contained in <span class="math inline">\(Z_n\)</span>, and since <span class="math inline">\(m \leqq n\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-94">(94)</a> <span class="math inline">\(m' \leqq n'\)</span>, we have by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> <span class="math inline">\(Z'_n \partof Z_{n'}\)</span>. Since further the number 1 by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> is contained in <span class="math inline">\(Z_{n'}\)</span>, but by <a href="./2_06_simply-infinite-systems.html#par-71">(71)</a> is not contained in the transform <span class="math inline">\(Z'_n\)</span>, then is <span class="math inline">\(Z'_n\)</span> proper part of <span class="math inline">\(Z_{n'}\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-110"><strong>110.</strong></span> Theorem. <span class="math inline">\(Z_{n'} = \mathfrak{M}(1, Z'_n)\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Every number of the system <span class="math inline">\(Z_{n'}\)</span> different from 1 by <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> is the transform <span class="math inline">\(m'\)</span> of a number <span class="math inline">\(m\)</span> and this must be <span class="math inline">\(\leqq n\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> contained in <span class="math inline">\(Z_n\)</span> (because otherwise <span class="math inline">\(m&gt;n\)</span>, hence by <a href="./2_07_greater-and-less-numbers.html#par-94">(94)</a> also <span class="math inline">\(m'&gt;n'\)</span> and consequently by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> <span class="math inline">\(m'\)</span> would not be contained in <span class="math inline">\(Z_{n'}\)</span>); but from <span class="math inline">\(m \partof Z_n\)</span> we have <span class="math inline">\(m' \partof Z'_n\)</span>, and hence certainly</p>
+<p><span class="math display">\[
+Z_{n'} \partof \mathfrak{M}(1, Z'_n).
+\]</span></p>
+<p>Since conversely by <a href="./2_07_greater-and-less-numbers.html#par-99">(99)</a> <span class="math inline">\(1 \partof Z_{n'}\)</span>, and by <a href="./2_07_greater-and-less-numbers.html#par-109">(109)</a> <span class="math inline">\(Z'_n \partof Z_{n'}\)</span>, then by <a href="./2_01_systems-of-elements.html#par-10">(10)</a> we have <span class="math inline">\(\mathfrak{M}(1, Z'_n) \partof Z_{n'}\)</span> and hence our theorem follows by <a href="./2_01_systems-of-elements.html#par-5">(5)</a>.</p>
+</div>
+<p><span id="par-111"><strong>111.</strong></span> Definition. If in a system <span class="math inline">\(E\)</span> of numbers there exists an element <span class="math inline">\(g\)</span>, which is greater than every other number contained in <span class="math inline">\(E\)</span>, then <span class="math inline">\(g\)</span> is said to be the <em>greatest</em> number of the system <span class="math inline">\(E\)</span>, and by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> there can evidently be only one such greatest number in <span class="math inline">\(E\)</span>. If a system consists of a single number, then is this number itself the greatest number of the system.</p>
+<p><span id="par-112"><strong>112.</strong></span> Theorem. By <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> <span class="math inline">\(n\)</span> is the greatest number of the system <span class="math inline">\(Z_n\)</span>.</p>
+<p><span id="par-113"><strong>113.</strong></span> Theorem. If there exists in <span class="math inline">\(E\)</span> a greatest number <span class="math inline">\(g\)</span>, then is <span class="math inline">\(E \partof Z_g\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For every number contained in <span class="math inline">\(E\)</span> is <span class="math inline">\(\leqq g\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> contained in <span class="math inline">\(Z_g\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-114"><strong>114.</strong></span> Theorem. If <span class="math inline">\(E\)</span> is part of a system <span class="math inline">\(Z_n\)</span>, or what amounts to the same thing, there exists a number <span class="math inline">\(n\)</span> such that all numbers contained in <span class="math inline">\(E\)</span> are <span class="math inline">\(\leqq n\)</span>, then <span class="math inline">\(E\)</span> possesses a greatest number <span class="math inline">\(g\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The system of all numbers <span class="math inline">\(p\)</span> satisfying the condition <span class="math inline">\(E \partof Z_p\)</span>—and by our hypothesis such numbers exist—is a chain <a href="./2_04_transformation-of-a-system-in-itself.html#par-37">(37)</a>, because by <a href="./2_07_greater-and-less-numbers.html#par-107">(107)</a>, <a href="./2_01_systems-of-elements.html#par-7">(7)</a> it follows also that <span class="math inline">\(E \partof Z_{p'}\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-87">(87)</a> <span class="math inline">\(=g_0\)</span>, where <span class="math inline">\(g\)</span> signifies the least of these numbers <a href="./2_07_greater-and-less-numbers.html#par-96">(96)</a>, <a href="./2_07_greater-and-less-numbers.html#par-97">(97)</a>. Hence also <span class="math inline">\(E \partof Z_g\)</span>, therefore by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> every number contained in <span class="math inline">\(E\)</span> is <span class="math inline">\(\leqq g\)</span>, and we have only to show that the number <span class="math inline">\(g\)</span> is itself contained in <span class="math inline">\(E\)</span>. This is immediately obvious if <span class="math inline">\(g=1\)</span>, for then by <a href="./2_07_greater-and-less-numbers.html#par-102">(102)</a> <span class="math inline">\(Z_g\)</span>, and consequently also <span class="math inline">\(E\)</span> consists of the single number 1. But if <span class="math inline">\(g\)</span> is different from 1 and consequently by <a href="./2_06_simply-infinite-systems.html#par-78">(78)</a> the transform <span class="math inline">\(f'\)</span> of a number <span class="math inline">\(f\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-108">(108)</a> is <span class="math inline">\(E \partof \mathfrak{M}(Z_f,g)\)</span>; if therefore <span class="math inline">\(g\)</span> were not contained in <span class="math inline">\(E\)</span>, then would <span class="math inline">\(E \partof Z_f\)</span>, and there would consequently be among the numbers <span class="math inline">\(p\)</span> a number <span class="math inline">\(f\)</span> by <a href="./2_07_greater-and-less-numbers.html#par-91">(91)</a> <span class="math inline">\(&lt;g\)</span>, which is contrary to what precedes; hence <span class="math inline">\(g\)</span> is contained in <span class="math inline">\(E\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-115"><strong>115.</strong></span> Definition. If <span class="math inline">\(l&lt;m\)</span> and <span class="math inline">\(m&lt;n\)</span> we say the number <span class="math inline">\(m\)</span> <em>lies between</em> <span class="math inline">\(l\)</span> and <span class="math inline">\(n\)</span> (also between <span class="math inline">\(n\)</span> and <span class="math inline">\(l\)</span>).</p>
+<p><span id="par-116"><strong>116.</strong></span> Theorem. There exists no number lying between <span class="math inline">\(n\)</span> and <span class="math inline">\(n'\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For as soon as <span class="math inline">\(m &lt; n'\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-93">(93)</a> <span class="math inline">\(m\leqq n\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-90">(90)</a> we cannot have <span class="math inline">\(n&lt;m\)</span>, which was to be proved.</p>
+</div>
+<p><span id="par-117"><strong>117.</strong></span> Theorem. If <span class="math inline">\(t\)</span> is a number in <span class="math inline">\(T\)</span>, but not the least <a href="./2_07_greater-and-less-numbers.html#par-96">(96)</a>, then there exists in <span class="math inline">\(T\)</span> one and only one <em>next less</em> number <span class="math inline">\(s\)</span>, i.e., a number <span class="math inline">\(s\)</span> such that <span class="math inline">\(s&lt;t\)</span>, and that there exists in <span class="math inline">\(T\)</span> no number lying between <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span>. Similarly, if <span class="math inline">\(t\)</span> is not the greatest number in <span class="math inline">\(T\)</span> <a href="./2_07_greater-and-less-numbers.html#par-111">(111)</a> there always exists in <span class="math inline">\(T\)</span> one and only one <em>next greater</em> number <span class="math inline">\(u\)</span>, i.e., a number <span class="math inline">\(u\)</span> such that <span class="math inline">\(t&lt;u\)</span>, and that there exists in <span class="math inline">\(T\)</span> no number lying between <span class="math inline">\(t\)</span> and <span class="math inline">\(u\)</span>. At the same time in <span class="math inline">\(T\)</span> <span class="math inline">\(t\)</span> is next greater than <span class="math inline">\(s\)</span> and next less than <span class="math inline">\(u\)</span>.</p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(t\)</span> is not the least number in <span class="math inline">\(T\)</span>, then let <span class="math inline">\(E\)</span> be the system of all those numbers of <span class="math inline">\(T\)</span> that are <span class="math inline">\(&lt;t\)</span>; then by <a href="./2_07_greater-and-less-numbers.html#par-98">(98)</a> <span class="math inline">\(E \partof Z_t\)</span>, and hence by <a href="./2_07_greater-and-less-numbers.html#par-114">(114)</a> there exists in <span class="math inline">\(E\)</span> a greatest number <span class="math inline">\(s\)</span> obviously possessing the properties stated in the theorem, and also it is the only such number. If further <span class="math inline">\(t\)</span> is not the greatest number in <span class="math inline">\(T\)</span>, then by <a href="./2_07_greater-and-less-numbers.html#par-96">(96)</a> there certainly exists among all the numbers of <span class="math inline">\(T\)</span>, that are <span class="math inline">\(&gt;t\)</span>, a least number <span class="math inline">\(u\)</span>, which and which alone possesses the properties stated in the theorem. In like manner the correctness of the last part of the theorem is obvious.</p>
+</div>
+<p><span id="par-118"><strong>118.</strong></span> Theorem. In <span class="math inline">\(N\)</span> the number <span class="math inline">\(n'\)</span> is next greater than <span class="math inline">\(n\)</span>, and <span class="math inline">\(n\)</span> next less than <span class="math inline">\(n'\)</span>.</p>
+<p>The proof follows from <a href="./2_07_greater-and-less-numbers.html#par-116">(116)</a>, <a href="./2_07_greater-and-less-numbers.html#par-117">(117)</a>.</p>
 
 
 
@@ -742,8 +948,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./2_08_finite-and-infinite-parts.html" class="pagination-link" aria-label="Finite and infinite parts">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./2_08_finite-and-infinite-parts-of-the-number-series.html" class="pagination-link" aria-label="Finite and infinite parts of the number-series">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Finite and infinite parts of the number-series</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
