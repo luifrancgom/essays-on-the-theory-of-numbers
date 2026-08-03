@@ -1,1 +1,1 @@
-# Multiplication of numbers
+# Multiplication of numbers {#sec-multiplication-of-numbers}
