@@ -1,1 +1,277 @@
-# Greater and less numbers
+# Greater and less numbers {#sec-greater-and-less-numbers}
+
+[**81.**]{#par-81} Theorem. Every number $n$ is different from the following number $n'$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80):
+
+$\rho$. The theorem is true for the number $n = 1$, because it is not contained in $N'$ [(71)](2_06_simply-infinite-systems.qmd#par-71), while the following number $1'$ as transform of the number 1 contained in $N$ is element of $N'$.
+
+$\sigma$. If the theorem is true for a number $n$ and we put the following number $n' = p$, then is $n$ different from $p$, whence by [(26)](2_03_similarity-of-a-transformation.qmd#par-26) on account of the similarity [(71)](2_06_simply-infinite-systems.qmd#par-71) of the order-setting transformation $\phi$ it follows that $n'$, and therefore $p$, is different from $p'$. Hence the theorem holds also for the number $p$ following $n$, which was to be proved.
+
+[**82.**]{#par-82} Theorem. In the transform-chain $n'_0$ of a number $n$ by [(74)](2_06_simply-infinite-systems.qmd#par-74), [(75)](2_06_simply-infinite-systems.qmd#par-75) is contained its transform $n'$, but not the number $n$ itself.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80):
+
+$\rho$. The theorem is true for $n = 1$, because $1'_0 = N'$, and because by [(71)](2_06_simply-infinite-systems.qmd#par-71) the base-number 1 is not contained in $N'$.
+
+$\sigma$. If the theorem is true for a number $n$, and we again put $n' =p$, then is $n$ not contained in $p_0$, therefore is it different from every number $q$ contained in $p_0$, whence by reason of the similarity of $\phi$ it follows that $n'$, and therefore $p$, is different from every number $q'$ contained in $p'_0$, and is hence not contained in $p'_0$. Therefore the theorem holds also for the number $p$ following $n$, which was to be proved.
+
+[**83.**]{#par-83} Theorem. The transform-chain $n'_0$ is proper part of the chain $n_0$.
+
+The proof follows from [(76)](2_06_simply-infinite-systems.qmd#par-76), [(74)](2_06_simply-infinite-systems.qmd#par-74), [(82)](2_07_greater-and-less-numbers.qmd#par-82).
+
+[**84.**]{#par-84} Theorem. From $m_0= n_0$ it follows that $m=n$.
+
+::: {.proof}
+Since by [(74)](2_06_simply-infinite-systems.qmd#par-74) $m$ is contained in $m_0$, and
+
+$$
+m_0= n_0 = \mathfrak{M}(n, n'_0)
+$$
+
+by [(77)](2_06_simply-infinite-systems.qmd#par-77), then if the theorem were false and hence $m$ different from $n$, $m$ would be contained in the chain $n'_0$, hence by [(74)](2_06_simply-infinite-systems.qmd#par-74) also $m_0 \partof n'_0$, i.e., $n_0 \partof n'_0$; but this contradicts theorem [(83)](2_07_greater-and-less-numbers.qmd#par-83). Hence our theorem is established.
+:::
+
+[**85.**]{#par-85} Theorem. If the number $n$ is not contained in the number-chain $K$, then is $K \partof n'_0$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80):
+
+$\rho$. By [(78)](2_06_simply-infinite-systems.qmd#par-78) the theorem is true for $n=1$.
+
+$\sigma$. If the theorem is true for a number $n$, then is it also true for the following number, $p= n'$; for if $p$ is not contained in the number-chain $K$, then by [(40)](2_04_transformation-of-a-system-in-itself.qmd#par-40) $n$ also cannot be contained in $K$ and hence by our hypothesis $K \partof n'_0$; now since by [(77)](2_06_simply-infinite-systems.qmd#par-77) $n'_0 = p_0 = \mathfrak{M}(p,p'_0)$, hence $K \partof \mathfrak{M}(p,p'_0)$ and $p$ is not contained in $K$, then must $K \partof p'_0$, which was to be proved.
+
+[**86.**]{#par-86} Theorem. If the number $n$ is not contained in the number-chain $K$, but its transform $n'$ is, then $K=n'_0$.
+
+::: {.proof}
+Since $n$ is not contained in $K$, then by [(85)](2_07_greater-and-less-numbers.qmd#par-85) $K \partof n'_0$, and since $n' \partof K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) is also $n'_0 \partof K$, and hence $K=n'_0$, which was to be proved.
+:::
+
+[**87.**]{#par-87} Theorem. In every number-chain $K$ there exists one, and by [(84)](2_07_greater-and-less-numbers.qmd#par-84) only one, number $k$, whose chain $k_0 = K$.
+
+::: {.proof}
+If the base-number 1 is contained in $K$, then by [(79)](2_06_simply-infinite-systems.qmd#par-79) $K=N=1_0$. In the opposite case let $Z$ be the system of all numbers not contained in $K$; since the base-number 1 is contained in $Z$, but $Z$ is only a proper part of the number-series $N$, then by [(79)](2_06_simply-infinite-systems.qmd#par-79) $Z$ cannot be a chain, i.e., $Z'$ cannot be part of $Z$; hence there exists in $Z$ a number $n$, whose transform $n'$ is not contained in $Z$, and is therefore certainly contained in $K$; since further $n$ is contained in $Z$, and therefore not in $K$, then by [(86)](2_07_greater-and-less-numbers.qmd#par-86) $K=n'_0$, and hence $k = n'$, which was to be proved.
+:::
+
+[**88.**]{#par-88} Theorem. If $m$, $n$ are different numbers then by [(83)](2_07_greater-and-less-numbers.qmd#par-83), [(84)](2_07_greater-and-less-numbers.qmd#par-84) one and only one of the chains $m_0$, $n_0$ is proper part of the other and either $n_0 \partof m'_0$ or $m_0 \partof n'_0$.
+
+::: {.proof}
+If $n$ is contained in $m_0$, and hence by [(74)](2_06_simply-infinite-systems.qmd#par-74) also $n_0 \partof m_0$, then $m$ can not be contained in the chain $n_0$ (because otherwise by [(74)](2_06_simply-infinite-systems.qmd#par-74) we should have $m_0 \partof n_0$, therefore $m_0 = n_0$, and hence by [(84)](2_07_greater-and-less-numbers.qmd#par-84) also $m = n$) and thence it follows by [(85)](2_07_greater-and-less-numbers.qmd#par-85) that $n_0 \partof m'_0$. In the contrary case, when $n$ is not contained in the chain $m_0$, we must have by [(85)](2_07_greater-and-less-numbers.qmd#par-85) $m_0 \partof n'_0$, which was to be proved.
+:::
+
+[**89.**]{#par-89} Definition. The number $m$ is said to be *less* than the number $n$ and at the same time $n$ *greater* than $m$, in symbols
+
+$$
+m < n, \quad n >m,
+$$
+
+when the condition
+
+$$
+n_0 \partof m'_0
+$$
+
+is fulfilled, which by [(74)](2_06_simply-infinite-systems.qmd#par-74) may also be expressed
+
+$$
+n \partof m'_0.
+$$
+
+[**90.**]{#par-90} Theorem. If $m$, $n$ are any numbers, then always one and only one of the following cases $\lambda$, $\mu$, $\nu$ occurs:
+
+$$
+\begin{aligned}
+\lambda.\quad & m = n,\ n = m,\ \mathrm{i.e.}, & m_0 = n_0\\
+\mu.\quad    & m < n,\ n > m,\ \mathrm{i.e.}, & n_0 \partof m'_0\\
+\nu.\quad    & m > n,\ n < m,\ \mathrm{i.e.}, & m_0 \partof n'_0.
+\end{aligned}
+$$
+
+::: {.proof}
+For if $\lambda$ occurs [(84)](2_07_greater-and-less-numbers.qmd#par-84) then can neither $\mu$ nor $\nu$ occur because by [(83)](2_07_greater-and-less-numbers.qmd#par-83) we never have $n_0 \partof n'_0$. But if $\lambda$ does not occur then by [(88)](2_07_greater-and-less-numbers.qmd#par-88) one and only one of the cases $\mu$, $\nu$ occurs, which was to be proved.
+:::
+
+[**91.**]{#par-91} Theorem. $n<n'$.
+
+::: {.proof}
+For the condition for the case $\nu$ in [(90)](2_07_greater-and-less-numbers.qmd#par-90) is fulfilled by $m = n'$.
+:::
+
+[**92.**]{#par-92} Definition. To express that $m$ is either $=n$ or $< n$, hence not $> n$ [(90)](2_07_greater-and-less-numbers.qmd#par-90) we use the symbols
+
+$$
+m\leqq n \mathrm{\ or\ also\ } n\geqq m
+$$
+
+and we say $m$ is *at most equal* to $n$, and $n$ is *at least equal* to $m$.
+
+[**93.**]{#par-93} Theorem. Each of the conditions
+
+$$
+m \leqq n,\quad m<n',\quad n_0 \partof m_0
+$$
+
+is equivalent to each of the others.
+
+::: {.proof}
+For if $m \leqq n$, then from $\lambda, \mu$ in [(90)](2_07_greater-and-less-numbers.qmd#par-90) we always have $n_0 \partof m_0$, because by [(76)](2_06_simply-infinite-systems.qmd#par-76) $m'_0 \partof m_0$. Conversely, if $n_0 \partof m_0$, and therefore by [(74)](2_06_simply-infinite-systems.qmd#par-74) also $n \partof m_0$, it follows from $m_0 = \mathfrak{M}(m, m'_0)$ that either $n = m$, or $n \partof m'_0$, i.e., $n>m$. Hence the condition $m \leqq n$ is equivalent to $n_0 \partof m_0$. Besides it follows from [(22)](2_02_transformation-of-a-system.qmd#par-22), [(27)](2_03_similarity-of-a-transformation.qmd#par-27), [(75)](2_06_simply-infinite-systems.qmd#par-75) that this condition $n_0 \partof m_0$ is again equivalent to $n'_0 \partof m'_0$, i.e., by $\mu$ in [(90)](2_07_greater-and-less-numbers.qmd#par-90) to $m<n'$, which was to be proved.
+:::
+
+[**94.**]{#par-94} Theorem. Each of the conditions
+$$
+m' \leqq n,\quad m'<n',\quad m<n
+$$
+is equivalent to each of the others.
+
+The proof follows immediately from [(93)](2_07_greater-and-less-numbers.qmd#par-93), if we replace in it $m$ by $m'$, and from $\mu$ in [(90)](2_07_greater-and-less-numbers.qmd#par-90).
+
+[**95.**]{#par-95} Theorem. If $l<m$ and $m\leqq n$ or if $l \leqq m$, and $m<n$, then is $l<n$. But if $l \leqq m$ and $m \leqq n$, then is $l \leqq n$.
+
+::: {.proof}
+For from the corresponding conditions [(89)](2_07_greater-and-less-numbers.qmd#par-89), [(93)](2_07_greater-and-less-numbers.qmd#par-93) $m_0 \partof l'_0$ and $n_0 \partof m_0$, we have by [(7)](2_01_systems-of-elements.qmd#par-7) $n_0 \partof l'_0$ and the same thing comes also from the conditions $m_0 \partof l_0$ and $n_0 \partof m'_0$, because in consequence of the former we have also $m'_0 \partof l'_0$. Finally from $m_0 \partof l_0$ and $n_0 \partof m_0$ we have also $n_0 \partof l_0$ which was to be proved.
+:::
+
+[**96.**]{#par-96} Theorem. In every part $T$ of $N$ there exists one and only one *least* number $k$, i.e., a number $k$ which is less than every other number contained in $T$. If $T$ consists of a single number, then is it also the least number in $T$.
+
+::: {.proof}
+Since $T_0$ is a chain [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44), then by [(87)](2_07_greater-and-less-numbers.qmd#par-87) there exists one number $k$ whose chain $k_0=T_0$. Since from this it follows by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45), [(77)](2_06_simply-infinite-systems.qmd#par-77) that $T\partof\mathfrak{M}(k, k'_0)$, then first must $k$ itself be contained in $T$ (because otherwise $T\partof k'_0$, hence by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) also $T_0\partof k'_0$, i.e., $k_0\partof k'_0$, which by [(83)](2_07_greater-and-less-numbers.qmd#par-83) is impossible), and besides every number of the system $T$, different from $k$, must be contained in $k'_0$, i.e., be $>k$ [(89)](2_07_greater-and-less-numbers.qmd#par-89), whence at once from [(90)](2_07_greater-and-less-numbers.qmd#par-90) it follows that there exists in $T$ one and only one least number, which was to be proved.
+:::
+
+[**97.**]{#par-97} Theorem. The least number of the chain $n_0$ is $n$, and the base-number 1 is the least of all numbers.
+
+::: {.proof}
+For by [(74)](2_06_simply-infinite-systems.qmd#par-74), [(93)](2_07_greater-and-less-numbers.qmd#par-93) the condition $m\partof n_0$ is equivalent to $m\geqq n$. Or our theorem also follows immediately from the proof of the preceding theorem, because if in that we assume $T=n_0$, evidently $k=n$ [(51)](2_04_transformation-of-a-system-in-itself.qmd#par-51).
+:::
+
+[**98.**]{#par-98} Definition. If $n$ is any number, then will we denote by $Z_n$ the system of all numbers that are *not greater* than $n$, and hence *not* contained in $n'_0$. The condition
+
+$$
+m\partof Z_n
+$$
+
+by [(92)](2_07_greater-and-less-numbers.qmd#par-92), [(93)](2_07_greater-and-less-numbers.qmd#par-93) is obviously equivalent to each of the following conditions:
+
+$$
+m\leqq n,\quad m<n',\quad n_0\partof m_0.
+$$
+
+[**99.**]{#par-99} Theorem. $1\partof Z_n$ and $n\partof Z_n$.
+
+The proof follows from [(98)](2_07_greater-and-less-numbers.qmd#par-98) or from [(71)](2_06_simply-infinite-systems.qmd#par-71) and [(82)](2_07_greater-and-less-numbers.qmd#par-82).
+
+[**100.**]{#par-100} Theorem. Each of the conditions equivalent by [(98)](2_07_greater-and-less-numbers.qmd#par-98)
+
+$$
+m\partof Z_n,\ m\leqq n,\ m<n',\ n_0\partof m_0
+$$
+
+is also equivalent to the condition
+
+$$
+Z_m\partof Z_n.
+$$
+
+::: {.proof}
+For if $m\partof Z_n$, and hence $m\leqq n$, and if $l\partof Z_m$, and hence $l\leqq m$, then by [(95)](2_07_greater-and-less-numbers.qmd#par-95) also $l\leqq n$, i.e., $l\partof Z_n$; if therefore $m\partof Z_n$, then is every element $l$ of the system $Z_m$ also element of $Z_n$, i.e., $Z_m\partof Z_n$. Conversely, if $Z_m\partof Z_n$, then by [(7)](2_01_systems-of-elements.qmd#par-7) must also $m\partof Z_n$, because by [(99)](2_07_greater-and-less-numbers.qmd#par-99) $m\partof Z_m$, which was to be proved.
+:::
+
+[**101.**]{#par-101} Theorem. The conditions for the cases $\lambda$, $\mu$, $\nu$ in [(90)](2_07_greater-and-less-numbers.qmd#par-90) may also be put in the following form:
+
+$$
+\begin{aligned}
+\lambda. & \quad m=n,\quad n=m,\quad Z_m=Z_n\\
+\mu. & \quad m<n,\quad n>m,\quad Z_{m'}\partof Z_n\\
+\nu. & \quad m>n,\quad n<m,\quad Z_{n'}\partof Z_m
+\end{aligned}
+$$
+
+The proof follows immediately from [(90)](2_07_greater-and-less-numbers.qmd#par-90) if we observe that by [(100)](2_07_greater-and-less-numbers.qmd#par-100) the conditions $n_0\partof m_0$ and $Z_m\partof Z_n$ are equivalent.
+
+[**102.**]{#par-102} Theorem. $Z_1=1$.
+
+::: {.proof}
+For by [(99)](2_07_greater-and-less-numbers.qmd#par-99) the base-number 1 is contained in $Z_1$, while by [(78)](2_06_simply-infinite-systems.qmd#par-78) every number different from $1$ is contained in $1'_0$, hence by [(98)](2_07_greater-and-less-numbers.qmd#par-98) not in $Z_1$, which was to be proved.
+:::
+
+[**103.**]{#par-103} Theorem. By [(98)](2_07_greater-and-less-numbers.qmd#par-98) $N=\mathfrak{M}(Z_n, n'_0)$.
+
+[**104.**]{#par-104} Theorem. $n=\mathfrak{G}(Z_n, n_0)$, i.e., $n$ is the only common element of the system $Z_n$ and $n_0$.
+
+::: {.proof}
+From [(99)](2_07_greater-and-less-numbers.qmd#par-99) and [(74)](2_06_simply-infinite-systems.qmd#par-74) it follows that $n$ is contained in $Z_n$ and $n_0$; but every element of the chain $n_0$, different from $n$ by [(77)](2_06_simply-infinite-systems.qmd#par-77) is contained in $n'_0$, and hence by [(98)](2_07_greater-and-less-numbers.qmd#par-98) not in $Z_n$, which was to be proved.
+:::
+
+[**105.**]{#par-105} Theorem. By [(91)](2_07_greater-and-less-numbers.qmd#par-91), [(98)](2_07_greater-and-less-numbers.qmd#par-98) the number $n'$ is not contained in $Z_n$.
+
+[**106.**]{#par-106} Theorem. If $m<n$, then is $Z_m$ proper part of $Z_n$ and conversely.
+
+::: {.proof}
+If $m<n$, then by [(100)](2_07_greater-and-less-numbers.qmd#par-100) $Z_m \partof Z_n$, and since the number $n$, by [(99)](2_07_greater-and-less-numbers.qmd#par-99) contained in $Z_n$, can by [(98)](2_07_greater-and-less-numbers.qmd#par-98) not be contained in $Z_m$ because $n>m$, therefore $Z_m$ is proper part of $Z_n$. Conversely if $Z_m$ is proper part of $Z_n$ then by [(100)](2_07_greater-and-less-numbers.qmd#par-100) $m\leqq n$, and since $m$ cannot be $=n$, because otherwise $Z_m=Z_n$, we must have $m<n$, which was to be proved.
+:::
+
+[**107.**]{#par-107} Theorem. $Z_n$ is proper part of $Z_{n'}$.
+
+The proof follows from [(106)](2_07_greater-and-less-numbers.qmd#par-106), because by [(91)](2_07_greater-and-less-numbers.qmd#par-91) $n<n'$.
+
+[**108.**]{#par-108} Theorem. $Z_{n'}= \mathfrak{M}(Z_n,n')$.
+
+::: {.proof}
+For every number contained in $Z_{n'}$, by [(98)](2_07_greater-and-less-numbers.qmd#par-98) is $\leqq n'$, hence either $=n'$ or $<n'$, and therefore by [(98)](2_07_greater-and-less-numbers.qmd#par-98) element of $Z_n$. Therefore certainly $Z_{n'} \partof \mathfrak{M}(Z_n,n')$. Since conversely by [(107)](2_07_greater-and-less-numbers.qmd#par-107) $Z_n \partof Z_{n'}$ and by [(99)](2_07_greater-and-less-numbers.qmd#par-99) $n' \partof Z_{n'}$, then by [(10)](2_01_systems-of-elements.qmd#par-10) we have
+
+$$
+\mathfrak{M}(Z_n,n') \partof Z_{n'},
+$$
+
+whence our theorem follows by [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**109.**]{#par-109} Theorem. The transform $Z'_n$ of the system $Z_n$ is proper part of the system $Z_{n'}$.
+
+::: {.proof}
+For every number contained in $Z'_n$ is the transform $m'$ of a number $m$ contained in $Z_n$, and since $m \leqq n$, and hence by [(94)](2_07_greater-and-less-numbers.qmd#par-94) $m' \leqq n'$, we have by [(98)](2_07_greater-and-less-numbers.qmd#par-98) $Z'_n \partof Z_{n'}$. Since further the number 1 by [(99)](2_07_greater-and-less-numbers.qmd#par-99) is contained in $Z_{n'}$, but by [(71)](2_06_simply-infinite-systems.qmd#par-71) is not contained in the transform $Z'_n$, then is $Z'_n$ proper part of $Z_{n'}$, which was to be proved.
+:::
+
+[**110.**]{#par-110} Theorem. $Z_{n'} = \mathfrak{M}(1, Z'_n)$.
+
+::: {.proof}
+Every number of the system $Z_{n'}$ different from 1 by [(78)](2_06_simply-infinite-systems.qmd#par-78) is the transform $m'$ of a number $m$ and this must be $\leqq n$, and hence by [(98)](2_07_greater-and-less-numbers.qmd#par-98) contained in $Z_n$ (because otherwise $m>n$, hence by [(94)](2_07_greater-and-less-numbers.qmd#par-94) also $m'>n'$ and consequently by [(98)](2_07_greater-and-less-numbers.qmd#par-98) $m'$ would not be contained in $Z_{n'}$); but from $m \partof Z_n$ we have $m' \partof Z'_n$, and hence certainly
+
+$$
+Z_{n'} \partof \mathfrak{M}(1, Z'_n).
+$$
+
+Since conversely by [(99)](2_07_greater-and-less-numbers.qmd#par-99) $1 \partof Z_{n'}$, and by [(109)](2_07_greater-and-less-numbers.qmd#par-109) $Z'_n \partof Z_{n'}$, then by [(10)](2_01_systems-of-elements.qmd#par-10) we have $\mathfrak{M}(1, Z'_n) \partof Z_{n'}$ and hence our theorem follows by [(5)](2_01_systems-of-elements.qmd#par-5).
+:::
+
+[**111.**]{#par-111} Definition. If in a system $E$ of numbers there exists an element $g$, which is greater than every other number contained in $E$, then $g$ is said to be the *greatest* number of the system $E$, and by [(90)](2_07_greater-and-less-numbers.qmd#par-90) there can evidently be only one such greatest number in $E$. If a system consists of a single number, then is this number itself the greatest number of the system.
+
+[**112.**]{#par-112} Theorem. By [(98)](2_07_greater-and-less-numbers.qmd#par-98) $n$ is the greatest number of the system $Z_n$.
+
+[**113.**]{#par-113} Theorem. If there exists in $E$ a greatest number $g$, then is $E \partof Z_g$.
+
+::: {.proof}
+For every number contained in $E$ is $\leqq g$, and hence by [(98)](2_07_greater-and-less-numbers.qmd#par-98) contained in $Z_g$, which was to be proved.
+:::
+
+[**114.**]{#par-114} Theorem. If $E$ is part of a system $Z_n$, or what amounts to the same thing, there exists a number $n$ such that all numbers contained in $E$ are $\leqq n$, then $E$ possesses a greatest number $g$.
+
+::: {.proof}
+The system of all numbers $p$ satisfying the condition $E \partof Z_p$---and by our hypothesis such numbers exist---is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37), because by [(107)](2_07_greater-and-less-numbers.qmd#par-107), [(7)](2_01_systems-of-elements.qmd#par-7) it follows also that $E \partof Z_{p'}$, and hence by [(87)](2_07_greater-and-less-numbers.qmd#par-87) $=g_0$, where $g$ signifies the least of these numbers [(96)](2_07_greater-and-less-numbers.qmd#par-96), [(97)](2_07_greater-and-less-numbers.qmd#par-97). Hence also $E \partof Z_g$, therefore by [(98)](2_07_greater-and-less-numbers.qmd#par-98) every number contained in $E$ is $\leqq g$, and we have only to show that the number $g$ is itself contained in $E$. This is immediately obvious if $g=1$, for then by [(102)](2_07_greater-and-less-numbers.qmd#par-102) $Z_g$, and consequently also $E$ consists of the single number 1. But if $g$ is different from 1 and consequently by [(78)](2_06_simply-infinite-systems.qmd#par-78) the transform $f'$ of a number $f$, then by [(108)](2_07_greater-and-less-numbers.qmd#par-108) is $E \partof \mathfrak{M}(Z_f,g)$; if therefore $g$ were not contained in $E$, then would $E \partof Z_f$, and there would consequently be among the numbers $p$ a number $f$ by [(91)](2_07_greater-and-less-numbers.qmd#par-91) $<g$, which is contrary to what precedes; hence $g$ is contained in $E$, which was to be proved.
+:::
+
+[**115.**]{#par-115} Definition. If $l<m$ and $m<n$ we say the number $m$ *lies between* $l$ and $n$ (also between $n$ and $l$).
+
+[**116.**]{#par-116} Theorem. There exists no number lying between $n$ and $n'$.
+
+::: {.proof}
+For as soon as $m < n'$, and hence by [(93)](2_07_greater-and-less-numbers.qmd#par-93) $m\leqq n$, then by [(90)](2_07_greater-and-less-numbers.qmd#par-90) we cannot have $n<m$, which was to be proved.
+:::
+
+[**117.**]{#par-117} Theorem. If $t$ is a number in $T$, but not the least [(96)](2_07_greater-and-less-numbers.qmd#par-96), then there exists in $T$ one and only one *next less* number $s$, i.e., a number $s$ such that $s<t$, and that there exists in $T$ no number lying between $s$ and $t$. Similarly, if $t$ is not the greatest number in $T$ [(111)](2_07_greater-and-less-numbers.qmd#par-111) there always exists in $T$ one and only one *next greater* number $u$, i.e., a number $u$ such that $t<u$, and that there exists in $T$ no number lying between $t$ and $u$. At the same time in $T$ $t$ is next greater than $s$ and next less than $u$.
+
+::: {.proof}
+If $t$ is not the least number in $T$, then let $E$ be the system of all those numbers of $T$ that are $<t$; then by [(98)](2_07_greater-and-less-numbers.qmd#par-98) $E \partof Z_t$, and hence by [(114)](2_07_greater-and-less-numbers.qmd#par-114) there exists in $E$ a greatest number $s$ obviously possessing the properties stated in the theorem, and also it is the only such number. If further $t$ is not the greatest number in $T$, then by [(96)](2_07_greater-and-less-numbers.qmd#par-96) there certainly exists among all the numbers of $T$, that are $>t$, a least number $u$, which and which alone possesses the properties stated in the theorem. In like manner the correctness of the last part of the theorem is obvious.
+:::
+
+[**118.**]{#par-118} Theorem. In $N$ the number $n'$ is next greater than $n$, and $n$ next less than $n'$.
+
+The proof follows from [(116)](2_07_greater-and-less-numbers.qmd#par-116), [(117)](2_07_greater-and-less-numbers.qmd#par-117).

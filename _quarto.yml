@@ -29,13 +29,13 @@ book:
         - 2_05_the-finite-and-infinite.qmd
         - 2_06_simply-infinite-systems.qmd
         - 2_07_greater-and-less-numbers.qmd
-        - 2_08_finite-and-infinite-parts.qmd
-        - 2_09_definition-by-induction.qmd
+        - 2_08_finite-and-infinite-parts-of-the-number-series.qmd
+        - 2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd
         - 2_10_the-class-of-simply-infinite-systems.qmd
         - 2_11_addition-of-numbers.qmd
         - 2_12_multiplication-of-numbers.qmd
         - 2_13_involution-of-numbers.qmd
-        - 2_14_number-of-elements-of-a-finite-system.qmd
+        - 2_14_number-of-the-elements-of-a-finite-system.qmd
     - _license.qmd
     - references.qmd
 

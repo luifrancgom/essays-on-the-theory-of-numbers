@@ -1,0 +1,182 @@
+# Definition of a transformation of the number-series by induction {#sec-definition-of-a-transformation-of-the-number-series-by-induction}
+
+[**124.**]{#par-124} In what follows we denote numbers by small Italics and retain throughout all symbols of the previous sections VI. to VIII., while $\Omega$ designates an arbitrary system whose elements are not necessarily contained in $N$.
+
+[**125.**]{#par-125} Theorem. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then to every number $n$ corresponds one transformation $\psi_n$ and one only of the associated number-system $Z_n$ explained in [(98)](2_07_greater-and-less-numbers.qmd#par-98), which satisfies the conditions:[^fn-1-chap-2_09]
+
+I\. $\psi_n{Z_n} \partof \Omega$
+
+II\. $\psi_n(1)=\omega$
+
+III\. $\psi_n(t')=\theta\psi_n(t)$, if $t<n$, where the symbol $\theta\psi_n$ has the meaning given in [(25)](2_02_transformation-of-a-system.qmd#par-25).
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80).
+
+$\rho$. The theorem is true for $n = 1$. In this case indeed by [(102)](2_07_greater-and-less-numbers.qmd#par-102) the system $Z_{n}$ consists of the single number 1, and the transformation $\psi_1$ is therefore completely defined by II alone so that I is fulfilled while III drops out entirely.
+
+$\sigma$. If the theorem is true for a number $n$ then we show that it is also true for the following number $p=n'$, and we begin by proving that there can be only a single corresponding transformation $\psi_p$ of the system $Z_p$. In fact, if a transformation $\psi_p$ satisfies the conditions
+
+I'\. $\psi_p(Z_p) \partof \Omega$
+
+II'\. $\psi_p(1)=\omega$
+
+III'\. $\psi_p(m')=\theta\psi_p(m)$, when $m<p$, then there is also contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21), because $Z_n \partof Z_p$ [(107)](2_07_greater-and-less-numbers.qmd#par-107) a transformation of $Z_{n}$ which obviously satisfies the same conditions I, II, III as $\psi_n$, and therefore coincides throughout with $\psi_n$; for all numbers contained in $Z_{n}$, and hence [(98)](2_07_greater-and-less-numbers.qmd#par-98) for all numbers $m$ which are $<p$, i.e., $\leqq n$, must therefore
+
+$$
+\psi_p(m)=\psi_n(m) \tag{m}
+$$
+
+whence there follows, as a special case,
+
+$$
+\psi_p(n)=\psi_n(n); \tag{n}
+$$
+
+since further by [(105)](2_07_greater-and-less-numbers.qmd#par-105), [(108)](2_07_greater-and-less-numbers.qmd#par-108) $p$ is the only number of the system $Z_p$ not contained in $Z_n$, and since by III' and $(n)$ we must also have
+
+$$
+\psi_p(p) = \theta\psi_n(n) \tag{p}
+$$
+
+there follows the correctness of our foregoing statement that there can be only one transformation $\psi_p$ of the system $Z_p$ satisfying the conditions I', II', III', because by the conditions $(m)$ and $(p)$ just derived $\psi_p$ is completely reduced to $\psi_n$. We have next to show conversely that this transformation $\psi_p$ of the system $Z_p$ completely determined by $(m)$ and $(p)$ actually satisfies the conditions I', II', III'. Obviously I' follows from $(m)$ and $(p)$ with reference to I, and because $\theta(\Omega) \partof \Omega$. Similarly II' follows from $(m)$ and II, since by [(99)](2_07_greater-and-less-numbers.qmd#par-99) the number 1 is contained in $Z_n$. The correctness of III' follows first for those numbers $m$ which are $<n$ from $(m)$ and III, and for the single number $m=n$ yet remaining it results from $(p)$ and $(n)$. Thus it is completely established that from the validity of our theorem for the number $n$ always follows its validity for the following number $p$, which was to be proved.
+
+[**126.**]{#par-126} Theorem of the definition by induction. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then there exists one and only one transformation $\psi$ of the number-series $N$, which satisfies the conditions
+
+[I\.]{#par-126-I} $\psi(N) \partof \Omega$
+
+[II\.]{#par-126-II} $\psi(1)=\omega$
+
+[III\.]{#par-126-III} $\psi(n') = \theta\psi(n)$, where $n$ represents every number.
+
+::: {.proof}
+Since, if there actually exists such a transformation $\psi$, there is contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21) a transformation $\psi_n$, of the system $Z_n$, which satisfies the conditions I, II, III stated in [(125)](#par-125), then because there exists one and only one such transformation $\psi_n$ must necessarily
+
+$$
+\psi(n) =\psi_n(n). \tag{n}
+$$
+
+Since thus $\psi$ is completely determined it follows also that there can exist only one such transformation $\psi$ (see the closing remark in [(130)](#par-130)). That conversely the transformation $\psi$ determined by $(n)$ also satisfies our conditions I, II, III, follows easily from $(n)$ with reference to the properties I, II and $(p)$ shown in [(125)](#par-125), which was to be proved.
+:::
+
+[**127.**]{#par-127} Theorem. Under the hypotheses made in the foregoing theorem,
+
+$$
+\psi(T') = \theta\psi(T),
+$$
+
+where $T$ denotes any part of the number-series $N$.
+
+::: {.proof}
+For if $t$ denotes every number of the system $T$, then $\psi(T')$ consists of all elements $\psi(t')$, and $\theta\psi(T)$ of all elements $\theta\psi(t)$; hence our theorem follows because by III in [(126)](#par-126) $\psi(t') = \theta\psi(t)$.
+:::
+
+[**128.**]{#par-128} Theorem. If we maintain the same hypotheses and denote by $\theta_{0}$ the chains [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) which correspond to the transformation $\theta$ of the system $\Omega$ in itself, then is
+
+$$
+\psi(N) = \theta_0(\omega).
+$$
+
+::: {.proof}
+We show first by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80) that
+
+$$
+\psi(N) \partof \theta_0(\omega),
+$$
+
+i.e., that every transform $\psi(n)$ is also element of $\theta_0(\omega)$. In fact,
+
+$\rho$. this theorem is true for $n = 1$, because by [(126, II)](#par-126-II) $\psi(1)=\omega$, and because by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $\omega \partof \theta_0(\omega)$.
+
+$\sigma$. If the theorem is true for a number $n$, and hence $\psi(n) \partof \theta_0(\omega)$, then by [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) also $\theta\bigl(\psi(n)\bigr) \partof \theta_0(\omega)$, i.e., by [(126, III)](#par-126-III) $\psi(n') \partof \theta_0(\omega)$, hence the theorem is true for the following number $n'$, which was to be proved.
+
+In order further to show that every element $\nu$ of the chain $\theta_0(\omega)$ is contained in $\psi(N)$, therefore that
+
+$$
+\theta_0(\omega) \partof \psi(N)
+$$
+
+we likewise apply complete induction, i.e., theorem [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) transferred to $\Omega$ and the transformation $\theta$. In fact,
+
+$\rho$. the element $\omega=\psi(1)$, and hence is contained in $\psi(N)$.
+
+$\sigma$. If $\nu$ is a common element of the chain $\theta_0(\omega)$ and the system $\psi(N)$, then $\nu=\psi(n)$, where $n$ denotes a number, and by [(126, III)](#par-126-III) we get $\theta(\nu) = \theta\psi(n) = \psi(n')$, and therefore $\theta(\nu)$ is contained in $\psi(N)$, which was to be proved.
+
+From the theorems just established, $\psi(N) \partof \theta_0(\omega)$ and $\theta_0(\omega) \partof \psi(N)$, we get by [(5)](2_01_systems-of-elements.qmd#par-5) $\psi(N) = \theta_0(\omega)$, which was to be proved.
+:::
+
+[**129.**]{#par-129} Theorem. Under the same hypotheses we have generally:
+
+$$
+\psi(n_0) = \theta_0\bigl(\psi(n)\bigr).
+$$
+
+By complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. By [(128)](#par-128) the theorem holds for $n = 1$, since $1_0=N$ and $\psi(1)=\omega$.
+
+$\sigma$. If the theorem is true for a number $n$, then
+
+$$
+  \theta\bigl(\psi(n_0)\bigr)
+= \theta\bigl(\theta_0\bigl(\psi(n)\bigr)\bigr);
+$$
+
+since by [(127)](#par-127), [(75)](2_06_simply-infinite-systems.qmd#par-75)
+
+$$
+\theta\bigl(\psi(n_0)\bigr) = \psi(n'_0),
+$$
+
+and by [(57)](2_04_transformation-of-a-system-in-itself.qmd#par-57), [(126, III)](#par-126-III)
+
+$$
+\theta\bigl(\theta_0\bigl(\psi(n)\bigr)\bigr)
+= \theta_0\bigl(\theta\bigl(\psi(n)\bigr)\bigr)
+= \theta_0\bigl(\psi(n')\bigr),
+$$
+
+we get
+
+$$
+\psi(n'_0) = \theta_0\bigl(\psi(n')\bigr),
+$$
+
+i.e., the theorem is true for the number $n'$ following $n$, which was to be proved.
+
+[**130.**]{#par-130} Remark. Before we pass to the most important applications of the theorem of definition by induction proved in [(126)](#par-126), (@sec-the-class-of-simply-infinite-systems --- @sec-number-of-the-elements-of-a-finite-system), it is worth while to call attention to a circumstance by which it is essentially distinguished from the theorem of demonstration by induction proved in [(80)](2_06_simply-infinite-systems.qmd#par-80) or rather in [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59), [(60)](2_04_transformation-of-a-system-in-itself.qmd#par-60), however close may seem the relation between the former and the latter. For while the theorem [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) is true quite generally for every chain $A_0$ where $A$ is any part of a system $S$ transformed in itself by any transformation $\phi$ (IV), the case is quite different with the theorem [(126)](#par-126), which declares only the existence of a consistent (or one-to-one) transformation $\psi$ of the simply infinite system $1_0$. If in the latter theorem (still maintaining the hypotheses regarding $\Omega$ and $\theta$) we replace the number-series $1_0$ by an arbitrary chain $A_0$ out of such a system $S$, and define a transformation $\psi$ of $A_0$ in $\Omega$ in a manner analogous to that in ([126, II](#par-126-II), [III](#par-126-III)) by assuming that
+
+$\rho$. to every element $a$ of $A$ there is to correspond a determinate element $\psi(a)$ selected from $\Omega$, and
+
+$\sigma$. for every element $n$ contained in $A_0$ and its transform $n'=\phi(n)$, the condition $\psi(n')=\theta \psi(n)$ is to hold, then would the case very frequently occur that such a transformation $\psi$ does not exist, since these conditions $\rho$, $\sigma$ may prove incompatible, even though the freedom of choice contained in $\rho$ be restricted at the outset to conform to the condition $\sigma$. An example will be sufficient to convince one of this. If the system $S$ consisting of the different elements $a$ and $b$ is so transformed in itself by $\phi$ that $a'=b$, $b'=a$, then obviously $a_0=b_0=S$; suppose further the system $\Omega$ consisting of the different elements $\alpha$, $\beta$, and $\gamma$ be so transformed in itself by $\theta$ that $\theta(\alpha)=\beta$, $\theta(\beta)=\gamma$, $\theta(\gamma)=\alpha$; if we now demand a transformation $\psi$ of $a_0$ in $\Omega$ such that $\psi(a)=\alpha$, and that besides for every element $n$ contained in $a_0$ always $\psi(n')=\theta\psi(n)$, we meet a contradiction; since for $n=a$, we get $\psi(b)=\theta(\alpha)=\beta$, and hence for $n=b$, we must have $\psi(a)=\theta(\beta)=\gamma$, while we had assumed $\psi(a)=\alpha$.
+
+But if there exists a transformation $\psi$ of $A_0$ in $\Omega$, which satisfies the foregoing conditions $\rho$, $\sigma$ without contradiction, then from [(60)](2_04_transformation-of-a-system-in-itself.qmd#par-60) it follows easily that it is completely determined; for if the transformation $\chi$ satisfies the same conditions, then we have, generally, $\chi(n) = \psi(n)$, since by $\rho$ this theorem is true for all elements $n=a$ contained in $A$, and since if it is true for an element $n$ of $A_0$ it must by $\sigma$ be true also for its transform $n'$.
+
+[**131.**]{#par-131} In order to bring out clearly the import of our theorem [(126)](#par-126), we will here insert a consideration which is useful for other investigations also, e.g., for the so-called group-theory.
+
+We consider a system $\Omega$, whose elements allow a certain combination such that from an element $\nu$ by the effect of an element $\omega$, there always results again a determinate element of the same system $\Omega$, which may be denoted by $\omega\centerdot \nu$  or $\omega\nu$, and in general is to be distinguished from $\nu\omega$. We can also consider this in such a way that to every determinate element $\omega$, there corresponds a determinate transformation of the system $\Omega$ in itself (to be denoted by $\dot{\omega}$), in so far as every element $\nu$ furnishes the determinate transform $\dot{\omega}(\nu)= \omega \nu$.  If to this system $\Omega$ and its element $\omega$ we apply theorem [(126)](#par-126), designating by $\dot{\omega}$ the transformation there denoted by $\theta$, then there corresponds to every number $n$ a determinate element $\psi(n)$ contained in $\Omega$, which may now be denoted by the symbol $\omega^n$ and sometimes called the $n$th power of $\omega$; this notion is completely defined by the conditions imposed upon it
+
+$$
+\begin{align*}
+\text{II. }& \omega^1 = \omega\\
+\text{III. }& \omega^{n'}\! = \omega\, \omega^n,
+\end{align*}
+$$
+
+and its existence is established by the proof of theorem [(126)](#par-126).
+
+If the foregoing combination of the elements is further so qualified that for arbitrary elements $\mu$, $\nu$, $\omega$, we always have $\omega(\nu\,\mu)$ = $\omega\,\nu(\mu)$, then are true also the theorems
+
+$$
+  \omega^{n'}\! = \omega^n\, \omega, \quad
+  \omega^m\, \omega^n = \omega^n\, \omega^m,
+$$
+
+whose proofs can easily be effected by complete induction and may be left to the reader.
+
+The foregoing general consideration may be immediately applied to the following example. If $S$ is a system of arbitrary elements, and $\Omega$ the associated system whose elements are all the transformations $\nu$ of $S$ in itself [(36)](2_04_transformation-of-a-system-in-itself.qmd#par-36), then by [(25)](2_02_transformation-of-a-system.qmd#par-25) can these elements be continually compounded, since $\nu(S) \partof S$, and the transformation $\omega\nu$ compounded out of such transformations $\nu$ and $\omega$ is itself again an element of $\Omega$. Then are also all elements $\omega^n$ transformations of $S$ in itself, and we say they arise by repetition of the transformation $\omega$. We will now call attention to a simple connection existing between this notion and the notion of the chain $\omega_0(A)$ defined in [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44), where $A$ again denotes any part of $S$. If for brevity we denote by $A_n$ the transform $\omega^n(A)$ produced by the transformation $\omega^n$, then from III and [(25)](2_02_transformation-of-a-system.qmd#par-25) it follows that $\omega(A_n)=A_{n'}$. Hence it is easily shown by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80) that all these systems $A_n$ are parts of the chain $\omega_0(A)$; for
+
+$\rho$. by [(50)](2_04_transformation-of-a-system-in-itself.qmd#par-50) this statement is true for $n = 1$, and
+
+$\sigma$. if it is true for a number $n$, then from [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) and from $A_{n'}=\omega(A_n)$ it follows that it is also true for the following number $n'$, which was to be proved. Since further by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A \partof \omega_0(A)$, then from [(10)](2_01_systems-of-elements.qmd#par-10) it results that the system $K$ compounded out of $A$ and all transforms $A_n$ is part of $\omega_0(A)$. Conversely, since by [(23)](2_02_transformation-of-a-system.qmd#par-23) $\omega(K)$ is compounded out of $\omega(A)=A_1$ and all systems $\omega(A_n)=A_{n'}$, therefore by [(78)](2_06_simply-infinite-systems.qmd#par-78) out of all systems $A_n$, which by [(9)](2_01_systems-of-elements.qmd#par-9) are parts of $K$, then by [(10)](2_01_systems-of-elements.qmd#par-10) is $\omega(K) \partof K$, i.e., $K$ is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37), and since by [(9)](2_01_systems-of-elements.qmd#par-9) $A \partof K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) it follows also that that $\omega_0(A) \partof K$. Therefore $\omega_0(A)=K$, i.e., the following theorem holds: If $\omega$ is a transformation of a system $S$ in itself, and $A$ any part of $S$, then is the chain of $A$ corresponding to the transformation $\omega$ compounded out of $A$ and all the transforms $\omega^n(A)$ resulting from repetitions of $\omega$. We advise the reader with this conception of a chain to return to the earlier theorems [(57)](2_04_transformation-of-a-system-in-itself.qmd#par-57), [(58)](2_04_transformation-of-a-system-in-itself.qmd#par-58).
+
+[^fn-1-chap-2_09]: For clearness here and in the following theorem [(126)](#par-126) I have especially mentioned condition [I.](#par-126-I), although properly it is a consequence of [II.](#par-126-II) and [III.](#par-126-III)

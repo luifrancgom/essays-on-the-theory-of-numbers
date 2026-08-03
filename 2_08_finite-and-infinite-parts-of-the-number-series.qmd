@@ -1,0 +1,43 @@
+# Finite and infinite parts of the number-series {#sec-finite-and-infinite-parts-of-the-number-series}
+
+[**119.**]{#par-119} Theorem. Every system $Z_n$ in [(98)](2_07_greater-and-less-numbers.qmd#par-98) is finite.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80).
+
+$\rho$. By [(65)](2_05_the-finite-and-infinite.qmd#par-65), [(102)](2_07_greater-and-less-numbers.qmd#par-102) the theorem is true for $n=1$.
+
+$\sigma$. If $Z_n$ is finite, then from [(108)](2_07_greater-and-less-numbers.qmd#par-108) and [(70)](2_05_the-finite-and-infinite.qmd#par-70) it follows that $Z_{n'}$ is also finite, which was to be proved.
+
+[**120.**]{#par-120} Theorem. If $m$, $n$ are different numbers, then are $Z_m$, $Z_n$ dissimilar systems.
+
+::: {.proof}
+By reason of the symmetry we may by [(90)](2_07_greater-and-less-numbers.qmd#par-90) assume that $m<n$; then by [(106)](2_07_greater-and-less-numbers.qmd#par-106) $Z_m$ is proper part of $Z_n$, and since by [(119)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-119) $Z_n$ is finite, then by [(64)](2_05_the-finite-and-infinite.qmd#par-64) $Z_m$ and $Z_n$ cannot be similar, which was to be proved.
+:::
+
+[**121.**]{#par-121} Theorem. Every part $E$ of the number-series $N$, which possesses a greatest number [(111)](2_07_greater-and-less-numbers.qmd#par-111), is finite.
+
+The proof follows from [(113)](2_07_greater-and-less-numbers.qmd#par-113), [(119)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-119), [(68)](2_05_the-finite-and-infinite.qmd#par-68).
+
+[**122.**]{#par-122} Theorem. Every part $U$ of the number-series $N$, which possesses no greatest number, is simply infinite [(71)](2_06_simply-infinite-systems.qmd#par-71).
+
+::: {.proof}
+If $u$ is any number in $U$, there exists in $U$ by [(117)](2_07_greater-and-less-numbers.qmd#par-117) one and only one next greater number than $u$, which we will denote by $\psi(u)$ and regard as transform of $u$. The thus perfectly determined transformation $\psi$ of the system $U$ has obviously the property
+
+$\alpha.\quad \psi(U) \partof U$,
+
+i.e., $U$ transformed in itself by $\psi$. If further $u$, $v$ are different numbers in $U$, then by symmetry we may by [(90)](2_07_greater-and-less-numbers.qmd#par-90) assume that $u<v$; thus by [(117)](2_07_greater-and-less-numbers.qmd#par-117) it follows from the definition of $\psi$ that $\psi(u) \leqq v$ and $v < \psi(v)$, and hence by [(95)](2_07_greater-and-less-numbers.qmd#par-95) $\psi(u) < \psi(v)$; therefore by [(90)](2_07_greater-and-less-numbers.qmd#par-90) the transforms $\psi(u)$, $\psi(v)$ are different, i.e.,
+
+$\delta$. the transformation $\psi$ is similar.
+
+Further, if $u_1$ denotes the least number [(96)](2_07_greater-and-less-numbers.qmd#par-96) of the system $U$, then every number $u$ contained in $U$ is $\geqq u_1$, and since generally $u < \psi(u)$, then by [(95)](2_07_greater-and-less-numbers.qmd#par-95) $u_1<\psi(u)$, and therefore by [(90)](2_07_greater-and-less-numbers.qmd#par-90) $u_1$ is different from $\psi(u)$, i.e.,
+
+$\gamma$. the element $u_1$ of $U$ is not contained in $\psi(U)$.
+
+Therefore $\psi(U)$ is proper part of $U$ and hence by [(64)](2_05_the-finite-and-infinite.qmd#par-64) $U$ is an infinite system. If then in agreement with [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) we denote by $\psi_0(V)$, when $V$ is any part of $U$, the chain of $V$ corresponding to the transformation $\psi$, we wish to show finally that
+
+$\beta$. $U=\psi_0(u_1)$.
+
+In fact, since every such chain $\psi_0(V)$ by reason of its definition [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44) is a part of the system $U$ transformed in itself by $\psi$, then evidently is $\psi_0(u_1) \partof U$; conversely it is first of all obvious from [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) that the element $u_1$ contained in $U$ is certainly contained in $\psi_0(u_1)$; but if we assume that there exist elements of $U$, that are not contained in $\psi_0(u_1)$, then must there be among them by [(96)](2_07_greater-and-less-numbers.qmd#par-96) a least number $w$, and since by what precedes this is different from the least number $u_1$ of the system $U$, then by [(117)](2_07_greater-and-less-numbers.qmd#par-117) must there exist in $U$ also a number $v$ which is next less than $w$, whence it follows at once that $w = \psi(v)$; since therefore $v<w$, then must $v$ by reason of the definition of $w$ certainly be contained in $\psi_0(u_1)$; but from this by [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) it follows that also $\psi(v)$, and hence $w$ must be contained in $\psi_0(u_1)$, and since this is contrary to the definition of $w$, our foregoing hypothesis is inadmissible; therefore $U \partof \psi_0(u_1)$ and hence also $U=\psi_0(u_1)$ as stated. From $\alpha$, $\beta$, $\gamma$, $\delta$ it then follows by [(71)](2_06_simply-infinite-systems.qmd#par-71) that $U$ is a simply infinite system set in order by $\psi$, which was to be proved.
+:::
+
+[**123.**]{#par-123} Theorem. In consequence of [(121)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-121), [(122)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-122) any part $T$ of the number-series $N$ is finite or simply infinite, according as a greatest number exists or does not exist in $T$.
