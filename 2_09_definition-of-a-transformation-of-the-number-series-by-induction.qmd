@@ -4,11 +4,11 @@
 
 [**125.**]{#par-125} Theorem. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then to every number $n$ corresponds one transformation $\psi_n$ and one only of the associated number-system $Z_n$ explained in [(98)](2_07_greater-and-less-numbers.qmd#par-98), which satisfies the conditions:[^fn-1-chap-2_09]
 
-I\. $\psi_n{Z_n} \partof \Omega$
+[I\.]{#par-125-I} $\psi_n{Z_n} \partof \Omega$
 
-II\. $\psi_n(1)=\omega$
+[II\.]{#par-125-II} $\psi_n(1)=\omega$
 
-III\. $\psi_n(t')=\theta\psi_n(t)$, if $t<n$, where the symbol $\theta\psi_n$ has the meaning given in [(25)](2_02_transformation-of-a-system.qmd#par-25).
+[III\.]{#par-125-III} $\psi_n(t')=\theta\psi_n(t)$, if $t<n$, where the symbol $\theta\psi_n$ has the meaning given in [(25)](2_02_transformation-of-a-system.qmd#par-25).
 
 Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80).
 
@@ -179,4 +179,4 @@ $\rho$. by [(50)](2_04_transformation-of-a-system-in-itself.qmd#par-50) this sta
 
 $\sigma$. if it is true for a number $n$, then from [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) and from $A_{n'}=\omega(A_n)$ it follows that it is also true for the following number $n'$, which was to be proved. Since further by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A \partof \omega_0(A)$, then from [(10)](2_01_systems-of-elements.qmd#par-10) it results that the system $K$ compounded out of $A$ and all transforms $A_n$ is part of $\omega_0(A)$. Conversely, since by [(23)](2_02_transformation-of-a-system.qmd#par-23) $\omega(K)$ is compounded out of $\omega(A)=A_1$ and all systems $\omega(A_n)=A_{n'}$, therefore by [(78)](2_06_simply-infinite-systems.qmd#par-78) out of all systems $A_n$, which by [(9)](2_01_systems-of-elements.qmd#par-9) are parts of $K$, then by [(10)](2_01_systems-of-elements.qmd#par-10) is $\omega(K) \partof K$, i.e., $K$ is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37), and since by [(9)](2_01_systems-of-elements.qmd#par-9) $A \partof K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) it follows also that that $\omega_0(A) \partof K$. Therefore $\omega_0(A)=K$, i.e., the following theorem holds: If $\omega$ is a transformation of a system $S$ in itself, and $A$ any part of $S$, then is the chain of $A$ corresponding to the transformation $\omega$ compounded out of $A$ and all the transforms $\omega^n(A)$ resulting from repetitions of $\omega$. We advise the reader with this conception of a chain to return to the earlier theorems [(57)](2_04_transformation-of-a-system-in-itself.qmd#par-57), [(58)](2_04_transformation-of-a-system-in-itself.qmd#par-58).
 
-[^fn-1-chap-2_09]: For clearness here and in the following theorem [(126)](#par-126) I have especially mentioned condition [I.](#par-126-I), although properly it is a consequence of [II.](#par-126-II) and [III.](#par-126-III)
+[^fn-1-chap-2_09]: For clearness here and in the following theorem [(126)](#par-126) I have especially mentioned condition [I.](#par-125-I), although properly it is a consequence of [II.](#par-125-II) and [III.](#par-125-III)
