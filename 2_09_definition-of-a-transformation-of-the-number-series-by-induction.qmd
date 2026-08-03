@@ -1,8 +1,8 @@
 # Definition of a transformation of the number-series by induction {#sec-definition-of-a-transformation-of-the-number-series-by-induction}
 
-[**124.**]{#par-124} In what follows we denote numbers by small Italics and retain throughout all symbols of the previous sections VI. to VIII., while $\Omega$ designates an arbitrary system whose elements are not necessarily contained in $N$.
+[**124.**]{#par-124} In what follows we denote numbers by small Italics and retain throughout all symbols of the previous @sec-simply-infinite-systems to @sec-finite-and-infinite-parts-of-the-number-series, while $\Omega$ designates an arbitrary system whose elements are not necessarily contained in $N$.
 
-[**125.**]{#par-125} Theorem. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then to every number $n$ corresponds one transformation $\psi_n$ and one only of the associated number-system $Z_n$ explained in [(98)](2_07_greater-and-less-numbers.qmd#par-98), which satisfies the conditions:[^fn-1-chap-2_09]
+[**125.**]{#par-125} Theorem. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then to every number $n$ corresponds one transformation $\psi_n$ and one only of the associated number-system $Z_n$ explained in [(98)](2_07_greater-and-less-numbers.qmd#par-98), which satisfies the conditions:[^fn-1-chap-16]
 
 [I\.]{#par-125-I} $\psi_n{Z_n} \partof \Omega$
 
@@ -12,15 +12,15 @@
 
 Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80).
 
-$\rho$. The theorem is true for $n = 1$. In this case indeed by [(102)](2_07_greater-and-less-numbers.qmd#par-102) the system $Z_{n}$ consists of the single number 1, and the transformation $\psi_1$ is therefore completely defined by II alone so that I is fulfilled while III drops out entirely.
+$\rho$. The theorem is true for $n = 1$. In this case indeed by [(102)](2_07_greater-and-less-numbers.qmd#par-102) the system $Z_{n}$ consists of the single number 1, and the transformation $\psi_1$ is therefore completely defined by [II](#par-125-II) alone so that [I](#par-125-I) is fulfilled while [III](#par-125-III) drops out entirely.
 
 $\sigma$. If the theorem is true for a number $n$ then we show that it is also true for the following number $p=n'$, and we begin by proving that there can be only a single corresponding transformation $\psi_p$ of the system $Z_p$. In fact, if a transformation $\psi_p$ satisfies the conditions
 
-I'\. $\psi_p(Z_p) \partof \Omega$
+[I'\.]{#par-125-I-1} $\psi_p(Z_p) \partof \Omega$
 
-II'\. $\psi_p(1)=\omega$
+[II'\.]{#par-125-II-1} $\psi_p(1)=\omega$
 
-III'\. $\psi_p(m')=\theta\psi_p(m)$, when $m<p$, then there is also contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21), because $Z_n \partof Z_p$ [(107)](2_07_greater-and-less-numbers.qmd#par-107) a transformation of $Z_{n}$ which obviously satisfies the same conditions I, II, III as $\psi_n$, and therefore coincides throughout with $\psi_n$; for all numbers contained in $Z_{n}$, and hence [(98)](2_07_greater-and-less-numbers.qmd#par-98) for all numbers $m$ which are $<p$, i.e., $\leqq n$, must therefore
+[III'\.]{#par-125-III-1} $\psi_p(m')=\theta\psi_p(m)$, when $m<p$, then there is also contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21), because $Z_n \partof Z_p$ [(107)](2_07_greater-and-less-numbers.qmd#par-107) a transformation of $Z_{n}$ which obviously satisfies the same conditions [I](#par-125-I), [II](#par-125-II), [III](#par-125-III) as $\psi_n$, and therefore coincides throughout with $\psi_n$; for all numbers contained in $Z_{n}$, and hence [(98)](2_07_greater-and-less-numbers.qmd#par-98) for all numbers $m$ which are $<p$, i.e., $\leqq n$, must therefore
 
 $$
 \psi_p(m)=\psi_n(m) \tag{$m$}
@@ -32,13 +32,13 @@ $$
 \psi_p(n)=\psi_n(n); \tag{$n$}
 $$
 
-since further by [(105)](2_07_greater-and-less-numbers.qmd#par-105), [(108)](2_07_greater-and-less-numbers.qmd#par-108) $p$ is the only number of the system $Z_p$ not contained in $Z_n$, and since by III' and $(n)$ we must also have
+since further by [(105)](2_07_greater-and-less-numbers.qmd#par-105), [(108)](2_07_greater-and-less-numbers.qmd#par-108) $p$ is the only number of the system $Z_p$ not contained in $Z_n$, and since by [III'](#par-125-III-1) and $(n)$ we must also have
 
 $$
 \psi_p(p) = \theta\psi_n(n) \tag{$p$}
 $$
 
-there follows the correctness of our foregoing statement that there can be only one transformation $\psi_p$ of the system $Z_p$ satisfying the conditions I', II', III', because by the conditions $(m)$ and $(p)$ just derived $\psi_p$ is completely reduced to $\psi_n$. We have next to show conversely that this transformation $\psi_p$ of the system $Z_p$ completely determined by $(m)$ and $(p)$ actually satisfies the conditions I', II', III'. Obviously I' follows from $(m)$ and $(p)$ with reference to I, and because $\theta(\Omega) \partof \Omega$. Similarly II' follows from $(m)$ and II, since by [(99)](2_07_greater-and-less-numbers.qmd#par-99) the number 1 is contained in $Z_n$. The correctness of III' follows first for those numbers $m$ which are $<n$ from $(m)$ and III, and for the single number $m=n$ yet remaining it results from $(p)$ and $(n)$. Thus it is completely established that from the validity of our theorem for the number $n$ always follows its validity for the following number $p$, which was to be proved.
+there follows the correctness of our foregoing statement that there can be only one transformation $\psi_p$ of the system $Z_p$ satisfying the conditions [I'](#par-125-I-1), [II'](#par-125-II-1), [III'](#par-125-III-1), because by the conditions $(m)$ and $(p)$ just derived $\psi_p$ is completely reduced to $\psi_n$. We have next to show conversely that this transformation $\psi_p$ of the system $Z_p$ completely determined by $(m)$ and $(p)$ actually satisfies the conditions [I'](#par-125-I-1), [II'](#par-125-II-1), [III'](#par-125-III-1). Obviously [I'](#par-125-I-1) follows from $(m)$ and $(p)$ with reference to [I](#par-125-I), and because $\theta(\Omega) \partof \Omega$. Similarly [II'](#par-125-II-1) follows from $(m)$ and II, since by [(99)](2_07_greater-and-less-numbers.qmd#par-99) the number 1 is contained in $Z_n$. The correctness of [III'](#par-125-III-1) follows first for those numbers $m$ which are $<n$ from $(m)$ and [III](#par-125-III), and for the single number $m=n$ yet remaining it results from $(p)$ and $(n)$. Thus it is completely established that from the validity of our theorem for the number $n$ always follows its validity for the following number $p$, which was to be proved.
 
 [**126.**]{#par-126} Theorem of the definition by induction. If there is given an arbitrary (similar or dissimilar) transformation $\theta$ of a system $\Omega$ in itself, and besides a determinate element $\omega$ in $\Omega$, then there exists one and only one transformation $\psi$ of the number-series $N$, which satisfies the conditions
 
@@ -49,13 +49,13 @@ there follows the correctness of our foregoing statement that there can be only 
 [III\.]{#par-126-III} $\psi(n') = \theta\psi(n)$, where $n$ represents every number.
 
 ::: {.proof}
-Since, if there actually exists such a transformation $\psi$, there is contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21) a transformation $\psi_n$, of the system $Z_n$, which satisfies the conditions I, II, III stated in [(125)](#par-125), then because there exists one and only one such transformation $\psi_n$ must necessarily
+Since, if there actually exists such a transformation $\psi$, there is contained in it by [(21)](2_02_transformation-of-a-system.qmd#par-21) a transformation $\psi_n$, of the system $Z_n$, which satisfies the conditions [I](#par-125-I), [II](#par-125-II), [III](#par-125-III) stated in [(125)](#par-125), then because there exists one and only one such transformation $\psi_n$ must necessarily
 
 $$
 \psi(n) =\psi_n(n). \tag{$n$}
 $$
 
-Since thus $\psi$ is completely determined it follows also that there can exist only one such transformation $\psi$ (see the closing remark in [(130)](#par-130)). That conversely the transformation $\psi$ determined by $(n)$ also satisfies our conditions I, II, III, follows easily from $(n)$ with reference to the properties I, II and $(p)$ shown in [(125)](#par-125), which was to be proved.
+Since thus $\psi$ is completely determined it follows also that there can exist only one such transformation $\psi$ (see the closing remark in [(130)](#par-130)). That conversely the transformation $\psi$ determined by $(n)$ also satisfies our conditions [I](#par-126-I), [II](#par-126-II), [III](#par-126-III), follows easily from $(n)$ with reference to the properties [I](#par-125-I), [II](#par-125-II) and $(p)$ shown in [(125)](#par-125), which was to be proved.
 :::
 
 [**127.**]{#par-127} Theorem. Under the hypotheses made in the foregoing theorem,
@@ -143,7 +143,7 @@ $$
 
 i.e., the theorem is true for the number $n'$ following $n$, which was to be proved.
 
-[**130.**]{#par-130} Remark. Before we pass to the most important applications of the theorem of definition by induction proved in [(126)](#par-126), (@sec-the-class-of-simply-infinite-systems --- @sec-number-of-the-elements-of-a-finite-system), it is worth while to call attention to a circumstance by which it is essentially distinguished from the theorem of demonstration by induction proved in [(80)](2_06_simply-infinite-systems.qmd#par-80) or rather in [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59), [(60)](2_04_transformation-of-a-system-in-itself.qmd#par-60), however close may seem the relation between the former and the latter. For while the theorem [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) is true quite generally for every chain $A_0$ where $A$ is any part of a system $S$ transformed in itself by any transformation $\phi$ (IV), the case is quite different with the theorem [(126)](#par-126), which declares only the existence of a consistent (or one-to-one) transformation $\psi$ of the simply infinite system $1_0$. If in the latter theorem (still maintaining the hypotheses regarding $\Omega$ and $\theta$) we replace the number-series $1_0$ by an arbitrary chain $A_0$ out of such a system $S$, and define a transformation $\psi$ of $A_0$ in $\Omega$ in a manner analogous to that in ([126, II](#par-126-II), [III](#par-126-III)) by assuming that
+[**130.**]{#par-130} Remark. Before we pass to the most important applications of the theorem of definition by induction proved in [(126)](#par-126), (@sec-the-class-of-simply-infinite-systems --- @sec-number-of-the-elements-of-a-finite-system), it is worth while to call attention to a circumstance by which it is essentially distinguished from the theorem of demonstration by induction proved in [(80)](2_06_simply-infinite-systems.qmd#par-80) or rather in [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59), [(60)](2_04_transformation-of-a-system-in-itself.qmd#par-60), however close may seem the relation between the former and the latter. For while the theorem [(59)](2_04_transformation-of-a-system-in-itself.qmd#par-59) is true quite generally for every chain $A_0$ where $A$ is any part of a system $S$ transformed in itself by any transformation $\phi$ (@sec-transformation-of-a-system-in-itself), the case is quite different with the theorem [(126)](#par-126), which declares only the existence of a consistent (or one-to-one) transformation $\psi$ of the simply infinite system $1_0$. If in the latter theorem (still maintaining the hypotheses regarding $\Omega$ and $\theta$) we replace the number-series $1_0$ by an arbitrary chain $A_0$ out of such a system $S$, and define a transformation $\psi$ of $A_0$ in $\Omega$ in a manner analogous to that in ([126, II](#par-126-II), [III](#par-126-III)) by assuming that
 
 $\rho$. to every element $a$ of $A$ there is to correspond a determinate element $\psi(a)$ selected from $\Omega$, and
 
@@ -179,4 +179,4 @@ $\rho$. by [(50)](2_04_transformation-of-a-system-in-itself.qmd#par-50) this sta
 
 $\sigma$. if it is true for a number $n$, then from [(55)](2_04_transformation-of-a-system-in-itself.qmd#par-55) and from $A_{n'}=\omega(A_n)$ it follows that it is also true for the following number $n'$, which was to be proved. Since further by [(45)](2_04_transformation-of-a-system-in-itself.qmd#par-45) $A \partof \omega_0(A)$, then from [(10)](2_01_systems-of-elements.qmd#par-10) it results that the system $K$ compounded out of $A$ and all transforms $A_n$ is part of $\omega_0(A)$. Conversely, since by [(23)](2_02_transformation-of-a-system.qmd#par-23) $\omega(K)$ is compounded out of $\omega(A)=A_1$ and all systems $\omega(A_n)=A_{n'}$, therefore by [(78)](2_06_simply-infinite-systems.qmd#par-78) out of all systems $A_n$, which by [(9)](2_01_systems-of-elements.qmd#par-9) are parts of $K$, then by [(10)](2_01_systems-of-elements.qmd#par-10) is $\omega(K) \partof K$, i.e., $K$ is a chain [(37)](2_04_transformation-of-a-system-in-itself.qmd#par-37), and since by [(9)](2_01_systems-of-elements.qmd#par-9) $A \partof K$, then by [(47)](2_04_transformation-of-a-system-in-itself.qmd#par-47) it follows also that that $\omega_0(A) \partof K$. Therefore $\omega_0(A)=K$, i.e., the following theorem holds: If $\omega$ is a transformation of a system $S$ in itself, and $A$ any part of $S$, then is the chain of $A$ corresponding to the transformation $\omega$ compounded out of $A$ and all the transforms $\omega^n(A)$ resulting from repetitions of $\omega$. We advise the reader with this conception of a chain to return to the earlier theorems [(57)](2_04_transformation-of-a-system-in-itself.qmd#par-57), [(58)](2_04_transformation-of-a-system-in-itself.qmd#par-58).
 
-[^fn-1-chap-2_09]: For clearness here and in the following theorem [(126)](#par-126) I have especially mentioned condition [I.](#par-125-I), although properly it is a consequence of [II.](#par-125-II) and [III.](#par-125-III)
+[^fn-1-chap-16]: For clearness here and in the following theorem [(126)](#par-126) I have especially mentioned condition [I.](#par-125-I), although properly it is a consequence of [II.](#par-125-II) and [III.](#par-125-III)

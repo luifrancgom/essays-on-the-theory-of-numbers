@@ -6,7 +6,7 @@ $\alpha$. $N' \partof N$.
 
 $\beta$. $N=1_0$.
 
-$\gamma$. The element 1 is not contained in $N'$.
+[$\gamma$.]{#par-71-gamma} The element 1 is not contained in $N'$.
 
 $\delta$. The transformation $\phi$ is similar.
 

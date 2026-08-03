@@ -1,1 +1,73 @@
 # The class of simply infinite systems {#sec-the-class-of-simply-infinite-systems}
+
+[**132.**]{#par-132} Theorem. All simply infinite systems are
+similar to the number-series $N$ and consequently by
+[(33)](2_03_similarity-of-a-transformation.qmd#par-33) also to one another.
+
+::: {.proof}
+Let the simply infinite system $\Omega$ be set in
+order [(71)](2_06_simply-infinite-systems.qmd#par-71) by the transformation $\theta$, and let $\omega$ be the base-element of $\Omega$ thus resulting; if we again denote by $\theta_0$ the chains corresponding to the transformation
+$\theta$ [(44)](2_04_transformation-of-a-system-in-itself.qmd#par-44), then by [(71)](2_06_simply-infinite-systems.qmd#par-71) is the following true:
+
+$\alpha$. $\theta(\Omega) \partof \Omega$.
+
+$\beta$. $\Omega = \theta_0(\omega)$.
+
+$\gamma$. $\omega$ is not contained in $\theta(\Omega)$.
+
+$\delta$. The transformation $\theta$ is similar.
+
+If then $\psi$ denotes the transformation of the number-series
+$N$ defined in [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126), then from $\beta$ and [(128)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-128) we get first
+
+$$
+\psi(N)=\Omega,
+$$
+
+and hence we have only yet to show that $\psi$ is a similar transformation, i.e., [(26)](2_03_similarity-of-a-transformation.qmd#par-26) that to different numbers $m$, $n$ correspond different transforms $\psi(m)$, $\psi(n)$. On account of the symmetry we may by ([(90)](2_07_greater-and-less-numbers.qmd#par-90)) assume that $m>n$, hence $m \partof n'_0$, and the theorem to prove comes to this that $\psi(n)$ is not contained in $\psi(n'_0)$, and hence by [(127)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-127) is not contained in $\theta\psi(n_0)$. This we establish for every number $n$ by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). In fact,
+
+$\rho$. this theorem is true by $\gamma$ for $n = 1$, since $\psi(1)=\omega$ and $\psi(1_0)= \psi(N)=\Omega$.
+
+$\sigma$. If the theorem is true for a number $n$, then is it also true for the following number $n'$; for if $\psi(n')$, i.e., $\theta \psi(n)$, were contained in $\theta\psi(n'_0)$, then by $\delta$ and [(27)](2_03_similarity-of-a-transformation.qmd#par-27), $\psi(n)$ would also be contained in $\psi(n'_0)$ while our hypothesis states just the opposite; which was to be proved.
+:::
+
+[**133.**]{#par-133} Theorem. Every system which is similar to a simply infinite system and therefore by [(132)](#par-132), [(33)](2_03_similarity-of-a-transformation.qmd#par-33) to the number-series $N$ is simply infinite.
+
+::: {.proof}
+If $\Omega$ is a system similar to the number-series $N$, then by [(32)](2_03_similarity-of-a-transformation.qmd#par-32) there exists a similar transformation $\psi$ of $N$ such that
+
+[
+$$
+\text{I. } \psi(N) = \Omega;
+$$
+]{#equ-par-133-I}
+
+then we put
+
+[
+$$
+\text{II. } \psi(1) = \omega.
+$$
+]{#equ-par-133-II}
+
+If we denote, as in [(26)](2_03_similarity-of-a-transformation.qmd#par-26), by $\overline{\psi}$ the inverse, likewise similar transformation of $\Omega$, then to every element $\nu$ of $\Omega$ there corresponds a determinate number $\overline{\psi}(\nu)=n$, viz., that number whose transform $\psi(n) = \nu$. Since to this number $n$ there corresponds a determinate following number $\phi(n)=n'$, and to this again a determinate element $\psi(n')$ in $\Omega$ there belongs to every element $\nu$ of the system $\Omega$ a determinate element $\psi(n')$ of that system which as transform of $\nu$ we shall designate by $\theta(\nu)$. Thus a transformation $\theta$ of $\Omega$ in itself is completely determined,[^fn-1-chap-17] and in order to prove our theorem we will show that by $\theta \Omega$ is set in order [(71)](2_06_simply-infinite-systems.qmd#par-71) as a simply infinite system, i.e., that the conditions $\alpha$, $\beta$, $\gamma$, $\delta$ stated in the proof of [(132)](#par-132) are all fulfilled. First $\alpha$ is immediately obvious from the definition of $\theta$. Since further to every number $n$ corresponds an element $\nu = \phi(n)$, for which $\theta(\nu) = \psi(n')$, we have generally,
+
+$$
+\mathrm{III.\ }\psi(n') = \theta\psi(n),
+$$
+
+and thence in connection with [I](#equ-par-133-I), [II](#equ-par-133-II), $\alpha$ it results that the transformations $\theta$, $\psi$ fulfill all the conditions of theorem [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126); therefore $\beta$ follows from [(128)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-128) and [I](#equ-par-133-I). Further by [(127)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-127) and [I](#equ-par-133-I)
+
+$$
+\psi(N') = \theta \psi(N) = \theta(\Omega),
+$$
+
+and thence in combination with [II](#equ-par-133-II) and the similarity of the transformation $\psi$ follows $\gamma$, because otherwise $\psi(1)$ must be contained in $\psi(N')$, hence by [(27)](2_03_similarity-of-a-transformation.qmd#par-27) the number 1 in $N'$, which by [(71, $\gamma$)](2_06_simply-infinite-systems.qmd#par-71-gamma) is not the case. If finally $\mu$, $\nu$ denote elements of $\Omega$ and $m$, $n$ the corresponding numbers whose transforms are $\psi(m) = \mu$,
+$\psi(n) = \nu$, then from the hypothesis $\theta(\mu) = \theta(\nu)$ it follows by the foregoing that $\psi(m') = \psi(n')$, thence on account of the similarity of $\psi$, $\phi$ that $m' = n'$, $m = n$, therefore also $\mu = \nu$; hence also $\delta$ is true, which was to be proved.
+:::
+
+[**134.**]{#par-134} Remark. By the two preceding theorems [(132)](#par-132), [(133)](#par-133) all simply infinite systems form a class in the sense of [(34)](2_03_similarity-of-a-transformation.qmd#par-34). At the same time, with reference to [(71)](2_06_simply-infinite-systems.qmd#par-71), [(73)](2_06_simply-infinite-systems.qmd#par-73) it is clear that every theorem regarding numbers, i.e., regarding the elements $n$ of the simply infinite system $N$ set in order by the transformation $\phi$, and indeed every theorem in which we leave entirely out of consideration the special character of the elements $n$ and discuss only such notions as arise from the arrangement $\phi$, possesses perfectly general validity for every other simply infinite system $\Omega$ set in order by a transformation $\theta$ and its elements $\nu$, and that the passage from $N$ to $\Omega$ (e.g., also the translation of an arithmetic theorem from one language into another) is effected by the transformation $\psi$ considered in [(132)](#par-132), [(133)](#par-133), which changes every element $n$ of $N$ into an element $\nu$ of $\Omega$, i.e., into $\psi(n)$. This element $\nu$ can be called the $n$th element of $\Omega$ and accordingly the number $n$ is itself the $n$th number of the number-series $N$. The same significance which the transformation $\phi$ possesses for the laws in the domain $N$, in so far as every element $n$ is followed by a determinate element $\phi(n)=n'$, is found, after the change effected by $\psi$, to belong to the transformation $\theta$ for the same
+laws in the domain $\Omega$, in so far as the element $\nu=\psi(n)$ arising from the change of $n$ is followed by the element $\theta(\nu)=\psi(n')$ arising from the change of $n'$; we are therefore justified in saying that by $\psi \phi$ is changed into $\theta$, which is symbolically expressed by $\theta=\psi\phi\overline{\psi}$, $\phi=\overline{\psi}\theta\psi$. By these remarks, as I believe, the definition of the notion of numbers given in [(73)](2_06_simply-infinite-systems.qmd#par-73) is fully justified. We now proceed to further applications of
+theorem [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126).
+
+[^fn-1-chap-17]: Evidently $\theta$ is the transformation $\psi\phi\overline{\psi}$ compounded by [(25)](2_02_transformation-of-a-system.qmd#par-25) out of $\overline{\psi}$, $\phi$, $\psi$.
