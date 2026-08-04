@@ -1,1 +1,69 @@
 # Involution of numbers {#sec-involution-of-numbers}
+
+[**155.**]{#par-155} Definition. If in theorem [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) we again put $\Omega = N$, and further $\omega=a$, $\theta(n)=an=na$, we get a transformation $\psi$ of $N$ which still satisfies the condition
+
+[
+$$
+\text{I. }\psi(N) \partof N;
+$$
+]{#equ-par-155-I}
+
+the corresponding transform $\psi(n)$ of any number $n$ we denote by the symbol $a^n$, and call this number a *power of the base* $a$, while $n$ is called the *exponent* of this power of $a$. Hence this notion is completely determined by the conditions
+
+[
+$$
+\text{II. } a^1=a
+$$
+]{#equ-par-155-II}
+
+[
+$$
+\text{III. } a^{n'}=a\centerdot a^n =\rlap{$a^n\centerdot a$}.
+$$
+]{#equ-par-155-III}
+
+[**156.**]{#par-156} Theorem. $a^{m+n}=a^m\centerdot a^n$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(135, II)](2_11_addition-of-numbers.qmd#equ-par-135-II), [(155, III)](#equ-par-155-III), [(155, II)](#equ-par-155-II) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, we have
+
+$$
+a^{m+n}\centerdot a=(a^m\centerdot a^n)a;
+$$
+
+but by [(155, III)](#equ-par-155-III), [(135, III)](2_11_addition-of-numbers.qmd#equ-par-135-III) $a^{m+n}\centerdot a=a^{(m+n)'}=a^{m+n'}$, and by [(153)](2_12_multiplication-of-numbers.qmd#par-153), [(155, III)](#equ-par-155-III)
+$(a^m\centerdot a^n)a=a^m(a^n\centerdot a)=a^m\centerdot a^{n'}$; hence $a^{m+n'}=a^m\centerdot a^{n'}$, i.~e., the theorem is also true for the following number $n'$, which was to be proved.
+
+[**157.**]{#par-157} Theorem. $(a^m)^n=a^{mn}$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(155, II)](#equ-par-155-II), [(147, II)](2_12_multiplication-of-numbers.qmd#equ-par-147-II) the theorem is true for
+$n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, we have
+
+$$
+(a^m)^n\centerdot a^m=a^{mn}\centerdot a^m
+$$
+
+but by [(155, III)](#equ-par-155-III) $(a^m)^n\centerdot a^m=(a^m)^{n'}$, and by [(156)](#par-156), [(147, III)](2_12_multiplication-of-numbers.qmd#equ-par-147-III) $a^{mn}\centerdot a^m=a^{mn+m}=a^{mn'}$; hence $(a^m)^{n'}=a^{mn'}$, i. e., the theorem is also true for the following number $n'$, which was to be proved.
+
+[**158.**]{#par-158} Theorem. $(ab)^n=a^n\centerdot b^n$
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(155, II)](#equ-par-155-II) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, then by
+[(150)](2_12_multiplication-of-numbers.qmd#par-150), [(153)](2_12_multiplication-of-numbers.qmd#par-153), [(155, III)](#equ-par-155-III) we have also $(ab)^n\centerdot a= a(a^n\centerdot b^n)=(a\centerdot a^n)b^n=a^{n'}\centerdot b^n$, and thus $\bigl( (ab^n\centerdot a \bigr)b=(a^{n'}\centerdot b^n)b$; but by [(153)](2_12_multiplication-of-numbers.qmd#par-153), [(155, III)](#equ-par-155-III) $\bigl( (ab)^n\centerdot a \bigr)b=(ab)^n\centerdot (ab)=(ab)^{n'}$, and likewise
+
+$$
+ (a^{n'}\centerdot b^n)b = a^{n'}\centerdot (b^n\centerdot b)
+= a^{n'}\centerdot b^{n'};
+$$
+
+therefore $(ab)^{n'}=a^{n'}\centerdot b^{n'}$ i. e., the theorem is also true for the following number $n'$, which was to be proved.
