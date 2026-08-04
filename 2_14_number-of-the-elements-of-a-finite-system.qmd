@@ -1,1 +1,124 @@
 # Number of the elements of a finite system {#sec-number-of-the-elements-of-a-finite-system}
+
+[**159.**]{#par-159} Theorem. If $\Sigma$ is an infinite system, then is every one of the number-systems $Z_n$ defined in [(98)](2_07_greater-and-less-numbers.qmd#par-98) similarly transformable in $\Sigma$ (i.e., similar to a part of $\Sigma$), and conversely.
+
+::: {.proof}
+If $\Sigma$ is infinite, then by [(72)](2_06_simply-infinite-systems.qmd#par-72) there certainly exists a part $T$ of $\Sigma$, which is simply infinite, therefore by [(132)](2_10_the-class-of-simply-infinite-systems.qmd#par-132) similar to the number-series $N$, and consequently by [(35)](2_03_similarity-of-a-transformation.qmd#par-35) every system $Z_n$ as part of $N$ is similar to a part of $T$, therefore also to a part of $\Sigma$, which was to be proved.
+
+The proof of the converse---however obvious it may appear---is more complicated. If every system $Z_n$ is similarly transformable in $\Sigma$, then to every number $n$ corresponds such a similar transformation $\alpha_n$ of $Z_n$ that $\alpha_n(Z_n) \partof \Sigma$. From the existence of such a series of transformations $\alpha_n$, regarded as given, but respecting which nothing further is assumed, we derive first by the aid of theorem [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) the existence of a new series of such transformations $\psi_n$ possessing the special property that whenever $m \leqq n$, hence by [(100)](2_07_greater-and-less-numbers.qmd#par-100) $Z_m \partof Z_n$ the transformation $\psi_m$ of the part $Z_m$ is contained in the transformation $\psi_n$ of $Z_n$ [(21)](2_02_transformation-of-a-system.qmd#par-21), i.e., the transformations $\psi_m$ and $\psi_n$ completely coincide with each other for all numbers contained in $Z_m$, hence always
+
+$$
+\psi_m(m) = \psi_n(m).
+$$
+
+In order to apply the theorem stated to gain this end we understand by $\Omega$ that system whose elements are all possible similar transformations of all systems $Z_n$ in $\Sigma$, and by aid of the given elements $\alpha_n$, likewise contained in $\Omega$, we define in the following manner a transformation $\theta$ of $\Omega$ in itself. If $\beta$ is any element of $\Omega$, thus, e.g., a similar transformation of the determinate system $Z_n$ in $\Sigma$, then the system $\alpha_{n'}(Z_{n'})$ cannot be part of $\beta(Z_n)$, for otherwise $Z_{n'}$ would be
+similar by [(35)](2_03_similarity-of-a-transformation.qmd#par-35) to a part of $Z_n$, hence by [(107)](2_07_greater-and-less-numbers.qmd#par-107) to a proper part of itself, and consequently infinite, which would contradict theorem [(119)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-119); therefore there certainly exists in $Z_{n'}$ one number or several numbers $p$ such that $\alpha_{n'}(p)$ is not contained in $\beta(Z_n)$; from these
+numbers $p$ we select---simply to lay down something determinate---always the least $k$ [(96)](2_07_greater-and-less-numbers.qmd#par-96) and, since $Z_{n'}$ by [(108)](2_07_greater-and-less-numbers.qmd#par-108) is compounded out of $Z_n$ and $n'$, define a transformation $\gamma$ of $Z_{n'}$ such that for all numbers $m$ contained in $Z_n$ the transform $\gamma(m)=\beta(m)$ and besides $\gamma(n')=\alpha_{n'}(k)$; this obviously similar transformation $\gamma$ of $Z_{n'}$ in $\Sigma$ we consider then as a transform $\theta(\beta)$ of the transformation $\beta$,
+and thus a transformation $\theta$ of the system $\Omega$ in itself is completely defined. After the things named $\Omega$ and $\theta$ in [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) are determined we select finally for the element of $\Omega$, denoted by $\omega$ the given transformation $\alpha_1$; thus by [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) there is determined a transformation $\psi$ of the number-series $N$ in $\Omega$, which, if we denote the transform belonging to an arbitrary number $n$, not by $\psi(n)$ but by $\psi_n$, satisfies the conditions
+
+[
+$$
+\text{II. } \psi_1=\alpha_1
+$$
+]{#equ-par-159-II}
+
+[
+$$
+\text{III. } \psi_{n'}=\theta(\psi_n)
+$$
+]{#equ-par-159-III}
+
+By complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80) it results first that $\psi_n$ is a similar transformation of $Z_n$ in $\Sigma$; for
+
+$\rho$. by [II](#equ-par-159-II) this is true for $n =1$.
+
+$\sigma$. if this statement is true for a number $n$, it follows from [III](#equ-par-159-III) and from the character of the above described transition $\theta$ from $\beta$ to $\gamma$, that the statement is also true for the following number $n'$, which was to be proved. Afterward we show likewise by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80) that if $m$ is any number the above stated property
+
+$$
+\psi_n(m)=\psi_m(m)
+$$
+
+actually belongs to all numbers $n$, which are $\geqq m$, and therefore by [(93)](2_07_greater-and-less-numbers.qmd#par-93), [(74)](2_06_simply-infinite-systems.qmd#par-74) belong to the chain $m_0$; in fact,
+
+$\rho$. this is immediately evident for $n = m$, and
+
+$\sigma$. if this property belongs to a number $n$ it follows again from [III](#equ-par-159-III) and the nature of $\theta$, that it also belongs to the number $n'$, which was to be proved. After this special property of our new series of transformations $\psi_n$ has been established, we can easily prove our theorem. We define a transformation $\chi$ of the number-series $N$, in which to every number $n$ we let the transform $\chi(n)=\psi_n(n)$ correspond; obviously by [(21)](2_02_transformation-of-a-system.qmd#par-21) all transformations $\psi_n$ are contained in this one transformation $\chi$. Since $\psi_n$ was a transformation of $Z_n$ in $\Sigma$, it follows first that the number-series $N$ is likewise transformed by $\chi$ in $\Sigma$, hence $\chi(N) \partof \Sigma$. If further $m$, $n$ are different numbers we may by reason of symmetry according to [(90)](2_07_greater-and-less-numbers.qmd#par-90) suppose $m<n$; then by the foregoing $\chi(m)=\psi_m(m)=\psi_n(m)$, and $\chi(n)=\psi_n(n)$; but since $\psi_n$ was a similar transformation of $Z_n$ in $\Sigma$, and $m$, $n$ are different elements of $Z_n$, then is $\psi_n(m)$ different from $\psi_n(n)$, hence also $\chi(m)$ different from $\chi(n)$, i.e., $\chi$ is a similar transformation of $N$. Since further $N$ is an infinite system [(71)](2_06_simply-infinite-systems.qmd#par-71), the same thing is true by [(67)](2_05_the-finite-and-infinite.qmd#par-67) of the system $\chi(N)$ similar to it and by [(68)](2_05_the-finite-and-infinite.qmd#par-68), because $\chi(N)$ is part of $\Sigma$, also of $\Sigma$, which was to be proved.
+:::
+
+[**160.**]{#par-160} Theorem. A system $\Sigma$ is finite or infinite, according as there does or does not exist a system $Z_n$ similar to it.
+
+::: {.proof}
+If $\Sigma$ is finite, then by [(159)](#par-159) there exist systems $Z_n$ which are not similarly transformable in $\Sigma$; since by [(102)](2_07_greater-and-less-numbers.qmd#par-102) the system $Z_1$ consists of the single number $1$, and hence is similarly transformable in every system, then must the least number $k$ [(96)](2_07_greater-and-less-numbers.qmd#par-96) to which a system $Z_k$ not similarly transformable in $\Sigma$ corresponds be different from $1$ and hence by [(78)](2_06_simply-infinite-systems.qmd#par-78) $=n'$, and since $n<n'$ ([(91)](2_07_greater-and-less-numbers.qmd#par-91)) there exists a similar transformation $\psi$ of $Z_n$ in $\Sigma$; if then $\psi(Z_n)$ were only a proper part of $\Sigma$, i.e., if there existed an element $\alpha$ in $\Sigma$ not contained in $\psi(Z_n)$, then since $Z_{n'}=\mathfrak{M}(Z_n, n')$ [(108)](2_07_greater-and-less-numbers.qmd#par-108) we could extend this transformation $\psi$ to a similar transformation $\psi$ of $Z_{n'}$ in $\Sigma$ by putting $\psi(n')=\alpha$ while by our hypothesis $Z_{n'}$ is not similarly transformable in $\Sigma$. Hence $\psi(Z_n) = \Sigma$, i.e., $Z_n$ and $\Sigma$ are similar systems. Conversely, if a system $\Sigma$ is similar to a system $Z_n$, then by [(119)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-119), [(67)](2_05_the-finite-and-infinite.qmd#par-67) $\Sigma$ is finite, which was to be proved.
+:::
+
+[**161.**]{#par-161} Definition.  If $\Sigma$ is a finite system, then by [(160)](#par-160) there exists one and by [(120)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-120), [(33)](2_03_similarity-of-a-transformation.qmd#par-33) only one single number $n$ to which a system $Z_n$ similar to the system $\Sigma$ corresponds; this number $n$ is called the *number* [*Anzahl*] of the elements contained in $\Sigma$ (or also the *degree* of the system $\Sigma$) and we say $\Sigma$ consists of or is a system of $n$ elements, or the number $n$ shows *how many* elements are contained in $\Sigma$.[^fn-1-chap-21] If numbers are used to express accurately this determinate property of finite systems they are called *cardinal numbers*. As soon as a determinate similar transformation $\psi$ of the system $Z_n$ is chosen by reason of which $\psi(Z_n)=\Sigma$, then to every number $m$ contained in $Z_n$ (i.e., every number $m$ which is $\leqq n$) there corresponds a determinate element $\psi(m)$ of the system $\Sigma$, and conversely by [(26)](2_03_similarity-of-a-transformation.qmd#par-26) to every element of $\Sigma$ by the inverse transformation $\overline{\psi}$ there corresponds a determinate number $m$ in $Z_n$. Very often we denote all elements of $\Sigma$ by a single letter, e.g., $\alpha$, to which we append the distinguishing numbers $m$ as indices so that $\psi(m)$ is denoted by $\alpha_m$. We say also that these elements are *counted and set in order* by $\psi$ in determinate manner, and call $\alpha_m$ the $m$th element of $\Sigma$; if $m<n$ then $\alpha_{m'}$ is called the element *following* $\alpha_m$, and $\alpha_n$ is called the *last* element. In this counting of the elements therefore the numbers $m$ appear again as ordinal numbers [(73)](2_06_simply-infinite-systems.qmd#par-73).
+
+[**162.**]{#par-162} Theorem. All systems similar to a finite system possess the same number of elements.
+
+The proof follows immediately from [(33)](2_03_similarity-of-a-transformation.qmd#par-33), [(161)](#par-161).
+
+[**163.**]{#par-163} Theorem. The number of numbers contained in $Z_n$, i.e., of those numbers which are $\leqq n$, is $n$.
+
+::: {.proof}
+For by [(32)](2_03_similarity-of-a-transformation.qmd#par-32) $Z_n$ is similar to itself.
+:::
+
+[**164.**]{#par-164} Theorem. If a system consists of a single element, then is the number of its elements $=1$, and conversely.
+
+The proof follows immediately from [(2)](2_01_systems-of-elements.qmd#par-2), [(26)](2_03_similarity-of-a-transformation.qmd#par-26), [(32)](2_03_similarity-of-a-transformation.qmd#par-32), [(102)](2_07_greater-and-less-numbers.qmd#par-102), [(161)](#par-161).
+
+[**165.**]{#par-165} Theorem. If $T$ is proper part of a finite system $\Sigma$, then is the number of the elements of $T$ less than that of the elements of $\Sigma$.
+
+::: {.proof}
+By [(68)](2_05_the-finite-and-infinite.qmd#par-68) $T$ is a finite system, therefore similar to a system $Z_m$, where $m$ denotes the number of the elements of $T$; if further $n$ is the number of elements of $\Sigma$, therefore $\Sigma$ similar to $Z_n$, then by [(35)](2_03_similarity-of-a-transformation.qmd#par-35) $T$ is similar to a proper part $E$ of $Z_n$ and by [(33)](2_03_similarity-of-a-transformation.qmd#par-33) also $Z_m$ and $E$ are similar to each other; if then we were to have $n \leqq m$, hence $Z_n \partof Z_m$, by [(7)](2_01_systems-of-elements.qmd#par-7) $E$ would also be proper part of $Z_m$, and consequently $Z_m$ an infinite system, which contradicts theorem [(119)](2_08_finite-and-infinite-parts-of-the-number-series.qmd#par-119); hence by [(90)](2_07_greater-and-less-numbers.qmd#par-90), $m<n$, which was to be proved.
+:::
+
+[**166.**]{#par-166} Theorem. If $\Gamma=\mathfrak{M}(B,\gamma)$, where $B$ denotes a system of $n$ elements, and $\gamma$ an element of $\Gamma$ not contained in $B$, then $\Gamma$ consists of $n'$ elements.
+
+::: {.proof}
+For if $B=\psi(Z_n)$, where $\psi$ denotes a similar transformation of $Z_n$, then by [(105)](2_07_greater-and-less-numbers.qmd#par-105), [(108)](2_07_greater-and-less-numbers.qmd#par-108) it may be extended to a similar transformation $\psi$ of $Z_{n'}$, by putting $\psi(n')=\gamma$, and we get $\psi(Z_{n'})=\Gamma$, which was to be proved.
+:::
+
+[**167.**]{#par-167} Theorem. If $\gamma$ is an element of a system $\Gamma$ consisting of $n'$ elements, then is $n$ the number of all other elements of $\Gamma$.
+
+::: {.proof}
+For if $B$ denotes the aggregate of all elements in $\Gamma$ different from $\gamma$, then is $\Gamma=\mathfrak{M}(B,\gamma)$; if then $b$ is the number of elements of the finite system $B$, by the foregoing theorem $b'$ is the number of elements of $\Gamma$, therefore $=n'$, whence by [(26)](2_03_similarity-of-a-transformation.qmd#par-26) we get $b=n$, which was to be proved.
+:::
+
+[**168.**]{#par-168} Theorem. If $A$ consists of $m$ elements, and $B$ of $n$ elements, and $A$ and $B$ have no common element, then $\mathfrak{M}(A,B)$ consists of $m+n$ elements.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(166)](#par-166), [(164)](#par-164), [(135, II)](2_11_addition-of-numbers.qmd#equ-par-135-II) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, then is it also true for the following number $n'$. In fact, if $\Gamma$ is a system of $n'$ elements, then by [(167)](#par-167) we can put $\Gamma=\mathfrak{M}(B,\gamma)$ where $\gamma$ denotes an element and $B$ the system of the $n$ other elements of $\Gamma$. If then $A$ is a system of $m$ elements each of which is not contained in $\Gamma$, therefore also not contained in $B$, and we put $\mathfrak{M}(A,B)=\Sigma$, by our hypothesis $m+n$ the number of elements of $\Sigma$, and since $\gamma$ is not contained in $\Sigma$, then by [(166)](#par-166) the number of elements contained in $\mathfrak{M}(\Sigma,\gamma)=(m+n')$, therefore by [(135, III)](2_11_addition-of-numbers.qmd#equ-par-135-II) $=m+n'$; but since by [(15)](2_01_systems-of-elements.qmd#par-15) obviously $\mathfrak{M}(\Sigma,\gamma)=\mathfrak{M}(A,B,\gamma)= \mathfrak{M}(A,\Gamma)$, then is $m+n'$ the number of the elements of $\mathfrak{M}(A,\Gamma)$, which was to be proved.
+
+[**169.**]{#par-169} Theorem. If $A$, $B$ are finite systems of $m$, $n$ elements respectively, then is $\mathfrak{M}(A,B)$ a finite system and the number of its elements is $\leqq m+n$.
+
+::: {.proof}
+If $B \partof A$, then $\mathfrak{M}(A,B)=A$ and the number $m$ of the elements of this system is by [(142)](2_11_addition-of-numbers.qmd#par-142) $<m+n$, as was stated. But if $B$ is not part of $A$, and $T$ is the system of all those elements of $B$ that are not contained in $A$, then by [(165)](#par-165) is their number $p \leqq n$, and since obviously
+
+$$
+\mathfrak{M}(A,B)=\mathfrak{M}(A,T),
+$$
+
+then by [(143)](2_11_addition-of-numbers.qmd#par-143) is the number $m+p$ of the elements of this system $\leqq m+n$, which was to be proved.
+:::
+
+[**170.**]{#par-170} Theorem. Every system compounded out of a number $n$ of finite systems is finite.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(8)](2_01_systems-of-elements.qmd#par-8) the theorem is self-evident for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, and if $\Sigma$ is compounded out of $n'$ finite systems, then let $A$ be one of these systems and $B$ the system compounded out of all the rest; since their number by [(167)](#par-167) $=n$, then by our hypothesis $B$ is a finite system. Since obviously $\Sigma=\mathfrak{M}(A,B)$, it follows from this and from [(169)](#par-169) that $\Sigma$ is also a finite system, which was to be proved.
+
+[**171.**]{#par-171} Theorem. If $\psi$ is a dissimilar transformation of a finite system $\Sigma$ of $n$ elements, then is the number of elements of the transform $\psi(\Sigma)$ less than $n$.
+
+::: {.proof}
+If we select from all those elements of $\Sigma$ that possess one and the same transform, always one and only one at pleasure, then is the system $T$ of all these selected elements obviously a proper part of $\Sigma$, because $\psi$ is a dissimilar transformation of $\Sigma$ [(26)](2_03_similarity-of-a-transformation.qmd#par-26). At the same time it is clear that the transformation by [(21)](2_02_transformation-of-a-system.qmd#par-21) contained in $\psi$ of this part $T$ is a similar transformation, and that $\psi(T)=\psi(\Sigma)$; hence the system $\psi(\Sigma)$ is similar to the proper part $T$ of $\Sigma$, and consequently our theorem follows by [(162)](#par-162), [(165)](#par-165).
+:::
+
+[**172.**]{#par-172} Final remark. Although it has just been shown that the number $m$ of the elements of $\psi(\Sigma)$ is less than the number $n$ of the elements of $\Sigma$, yet in many cases we like to say that the number of elements of $\psi(\Sigma)=n$. The word number is then, of course, used in a different sense from that used hitherto [(161)](#par-161); for if $\alpha$ is an element of $\Sigma$ and $a$ the number of all those elements of $\Sigma$, that possess one and the same transform $\psi(\alpha)$ then is the latter as element of $\psi(\Sigma)$ frequently regarded still as representative of $a$ elements, which at least from their derivation may be considered as different from one another, and accordingly counted as $a$-fold element of $\psi(\Sigma)$. In this way we reach the notion, very useful in many cases, of systems in which every element is endowed with a certain frequency-number which indicates how often it is to be reckoned as element of the system. In the foregoing case, e.g., we would say that $n$ is the number of the elements of $\psi(\Sigma)$ counted in this sense, while the number $m$ of the actually different elements of this system coincides with the number of the elements of $T$. Similar deviations from the original meaning of a technical term which are simply extensions of the original notion, occur very frequently in mathematics; but it does not lie in the line of this memoir to go further into their discussion.
+
+[^fn-1-chap-21]: For clearness and simplicity in what follows we restrict the notion of the number throughout to finite systems; if then we speak of a number of certain things, it is always understood that the system whose elements these things are is a finite system.
