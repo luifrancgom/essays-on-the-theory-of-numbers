@@ -1,1 +1,124 @@
 # Multiplication of numbers {#sec-multiplication-of-numbers}
+
+[**147.**]{#par-147} Definition. After having found in @sec-addition-of-numbers an infinite system of new transformations of the number-series $N$ in itself, we can by [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) use each of these in order to produce new transformations $\psi$ of $N$. When we take $\Omega = N$, and $\theta(n) = m+n = n+m$, where $m$ is a determinate number, we certainly again have
+
+[
+$$
+\text{I. }  \psi(N) \partof N,
+$$
+]{#equ-par-147-I}
+
+and it remains, to determine $\psi$ completely only to select the element $\omega$ from $N$ at pleasure. The simplest case occurs when we bring this choice into a certain agreement with the choice of $\theta$, by putting $\omega = m$. Since the thus perfectly determinate $\psi$ depends upon this number $m$, we designate the corresponding transform $\psi(n)$ of any number $n$ by the symbol $m \times n$ or $m\centerdot n$ or $mn$, and call this number the *product* arising from the number $m$ by *multiplication* by the number $n$, or in short the product of the numbers $m$, $n$. This therefore by [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) is completely determined by the conditions
+
+
+[
+$$
+\text{II. } m\centerdot 1=m
+$$
+]{#equ-par-147-II}
+
+[
+$$
+\text{III. } mn'= mn+m.
+$$
+]{#equ-par-147-III}
+
+[**148.**]{#par-148} Theorem. $m'n = mn+n$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(147, II)](#equ-par-147-II) and [(135, II)](2_11_addition-of-numbers.qmd#equ-par-135-II) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, we have
+
+$$
+m'n+m'=(mn+n)+m'
+$$
+
+and consequently by [(147, II)](#equ-par-147-II), [(141)](2_11_addition-of-numbers.qmd#par-141), [(140)](2_11_addition-of-numbers.qmd#par-140), [(136)](2_11_addition-of-numbers.qmd#par-136), [(141)](2_11_addition-of-numbers.qmd#par-141), [(147, III)](#equ-par-147-III)
+
+$$
+m'n'=mn+(n+m')=mn+(m'+n)=mn+(m+n')
+$$
+
+$$
+=(mn+m)+n'=mn'+n';
+$$
+
+therefore the theorem is true for the following number $n'$, which was to be proved.
+
+[**149.**]{#par-149} Theorem. $1.n = n$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(147, II)](#equ-par-147-II) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, then we have $1.n+1=n+1$, i.e., by [(147, III)](#equ-par-147-III), [(135, II)](2_11_addition-of-numbers.qmd#equ-par-135-II) $1.n'=n'$, therefore the theorem also holds for the following number $n'$, which was to be proved.
+
+[**150.**]{#par-150} Theorem. $mn=nm$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(147, II)](#equ-par-147-II), [(149)](#par-149) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, then we have
+
+$$
+mn+m = nm+m,
+$$
+
+i.e., by [(147, III)](#equ-par-147-III), [(148)](#par-148) $mn'=n'm$, therefore the theorem is also true for the following number $n'$, which was to be proved.
+
+[**151.**]{#par-151} Theorem. $l(m+n)=lm+ln$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(135, II)](2_11_addition-of-numbers.qmd#equ-par-135-II), [(147, III)](#equ-par-147-III), [(147, II)](#equ-par-147-III) the theorem
+is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, we have
+
+$$
+l(m+n)+l=(lm+ln)+l;
+$$
+
+but by [(147, III)](#equ-par-147-III), [(135, III)](2_11_addition-of-numbers.qmd#equ-par-135-III) we have
+
+$$
+l(m+n)+l=l(m+n)'=l(m+n'),
+$$
+
+and by [(141)](2_11_addition-of-numbers.qmd#par-141), [(147, III)](#equ-par-147-III)
+
+$$
+(lm+ln)+l=lm+(ln+l)=lm+ln',
+$$
+
+consequently $l(m+n')=lm+ln'$, i.e., the theorem is true also for the following number $n'$, which was to be proved.
+
+[**152.**]{#par-152} Theorem. $(m+n)l=ml+nl$.
+
+The proof follows from [(151)](#par-151), [(150)](#par-150).
+
+[**153.**]{#par-153} Theorem. $(lm)n=l(mn)$.
+
+Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
+
+$\rho$. by [(147, II)](#par-147) the theorem is true for $n = 1$.
+
+$\sigma$. If the theorem is true for a number $n$, then we have
+
+$$
+(lm)n+lm=l(mn)+lm,
+$$
+
+i.e., by [(147, III)](#equ-par-147-III), [(151)](#par-151), [(147, III)](#equ-par-147-III)
+
+$$
+(lm)n'=l(mn+m)=l(mn'),
+$$
+
+hence the theorem is also true for the following number $n'$, which was to be proved.
+
+[**154.**]{#par-154} Remark. If in [(147)](#par-147) we had assumed no relation between $\omega$ and $\theta$, but had put $\omega=k$, $\theta(n)=
+m+n$, then by [(126)](2_09_definition-of-a-transformation-of-the-number-series-by-induction.qmd#par-126) we should have had a less simple transformation $\psi$ of the number-series $N$; for the number $1$ would $\psi(1)=k$ and for every other number (therefore contained in the form $n'$) would $\psi(n')=mn+k$; since thus would be fulfilled, as one could easily convince himself by the aid of the foregoing theorems, the condition $\psi(n')=\theta\psi(n)$, i.e., $\psi(n')=m+\psi(n)$ for all numbers $n$.
