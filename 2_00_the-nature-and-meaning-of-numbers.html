@@ -26,7 +26,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -89,6 +109,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -348,12 +397,33 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="preface-to-the-second-edition" class="level2">
 <h2 class="anchored" data-anchor-id="preface-to-the-second-edition">Preface to the second edition</h2>
+<p>The present memoir soon after its appearance met with both favorable and unfavorable criticisms; indeed serious faults were charged against it. I have been unable to convince myself of the justice of these charges, and I now issue a new edition of the memoir, which for some time has been out of print, without change, adding only the following notes to the first preface.</p>
+<p>The property which I have employed as the definition of the infinite system had been pointed out before the appearance of my paper by G. Cantor (<em>Ein Beitrag zur Mannigfaltigkeitslehre</em>, <em>Crelle’s Journal</em>, Vol. 84, 1878) <span class="citation" data-cites="cantor_beitrag_1878"><a href="references.html#ref-cantor_beitrag_1878" role="doc-biblioref">[1]</a></span>, as also by Bolzano (<em>Paradoxien des Unendlichen</em>, § 20, 1851) <span class="citation" data-cites="bolzano_paradoxien_1851"><a href="references.html#ref-bolzano_paradoxien_1851" role="doc-biblioref">[2]</a></span>. But neither of these authors made the attempt to use this property for the definition of the infinite and upon this foundation to establish with rigorous logic the science of numbers, and just in this consists the content of my wearisome labor which in all its essentials I had completed several years before the appearance of Cantor’s memoir and at a time when the work of Bolzano was unknown to me even by name. For the benefit of those who are interested in and understand the difficulties of such an investigation, I add the following remark. We can lay down an entirely different definition of the finite and infinite, which appears still simpler since the notion of similarity of transformation is not even assumed, viz.:</p>
+<blockquote class="blockquote">
+<p>A system <span class="math inline">\(S\)</span> is said to be finite when it may be so transformed in itself <a href="./2_04_transformation-of-a-system-in-itself.html#par-36">(36)</a> that no proper part <a href="./2_01_systems-of-elements.html#par-6">(6)</a> of <span class="math inline">\(S\)</span> is transformed in itself; in the contrary case <span class="math inline">\(S\)</span> is called an infinite system.</p>
+</blockquote>
+<p>Now let us attempt to erect our edifice upon this new foundation! We shall soon meet with serious difficulties, and I believe myself warranted in saying that the proof of the perfect agreement of this definition with the former can be obtained only (and then easily) when we are permitted to assume the series of natural numbers as already developed and to make use of the final considerations in <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-131">(131)</a>; and yet nothing is said of all these things in either the one definition or the other! From this we can see how very great is the number of steps in thought needed for such a remodeling of a definition.</p>
+<p>About a year after the publication of my memoir I became acquainted with G. Frege’s <em>Grundlagen der Arithmetik</em> <span class="citation" data-cites="frege_grundlagen_1884"><a href="references.html#ref-frege_grundlagen_1884" role="doc-biblioref">[3]</a></span>, which had already appeared in the year 1884. However different the view of the essence of number adopted in that work is from my own, yet it contains, particularly from § 79 on, points of very close contact with my paper, especially with my definition <a href="./2_04_transformation-of-a-system-in-itself.html#par-44">(44)</a>. The agreement, to be sure, is not easy to discover on account of the different form of expression; but the positiveness with which the author speaks of the logical inference from <span class="math inline">\(n\)</span> to <span class="math inline">\(n+1\)</span> (<span class="citation" data-cites="frege_grundlagen_1884"><a href="references.html#ref-frege_grundlagen_1884" role="doc-biblioref">[3, p. 93]</a></span>, below) shows plainly that here he stands upon the same ground with me. In the meantime E. Schröder’s <em>Vorlesungen über die Algebra der Logik</em> <span class="citation" data-cites="schroder_vorlesungen_1891"><a href="references.html#ref-schroder_vorlesungen_1891" role="doc-biblioref">[4]</a></span> has been almost completed (1890–1891). Upon the importance of this extremely suggestive work, to which I pay my highest tribute, it is impossible here to enter further; I will simply confess that in spite of the remark made on p.&nbsp;253 of Part I., I have retained my somewhat clumsy symbols <a href="./2_01_systems-of-elements.html#par-8">(8)</a> and <a href="./2_01_systems-of-elements.html#par-17">(17)</a>; they make no claim to be adopted generally but are intended simply to serve the purpose of this arithmetic paper to which in my view they are better adapted than sum and product symbols.</p>
 <div class="flushright" data-custom-style="flushright">
 <p>R. Dedekind.</p>
 </div>
 <p><span class="smallcaps">Harzburg</span>, August 24, 1893.</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-cantor_beitrag_1878" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Cantor, <span>“Ein <span>Beitrag</span> zur <span>Mannigfaltigkeitslehre</span>,”</span> <em>Journal für die reine und angewandte Mathematik (Crelles Journal)</em>, vol. 1878, no. 84, pp. 242–258, Jan. 1878, doi: <a href="https://doi.org/10.1515/crelle-1878-18788413">10.1515/crelle-1878-18788413</a>.</div>
+</div>
+<div id="ref-bolzano_paradoxien_1851" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">B. Bolzano and P. Frantisek, <em>Paradoxien des <span>Unendlichen</span></em>, 1st ed. Leipzig: C.H. Reclam sen., 1851. Available: <a href="https://archive.org/details/paradoxiendesune00bolz/">https://archive.org/details/paradoxiendesune00bolz/</a></div>
+</div>
+<div id="ref-frege_grundlagen_1884" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">G. Frege, <em>Grundlagen der <span>Arithmetik</span> eine logisch mathematische <span>Untersuchung</span> über den <span>Begriff</span> der <span>Zahl</span></em>, 1st ed. Wilhelm Koebner, 1884. Available: <a href="https://archive.org/details/11650895/">https://archive.org/details/11650895/</a></div>
+</div>
+<div id="ref-schroder_vorlesungen_1891" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">E. Schröder, <em>Vorlesungen über die <span>Algebra</span> der <span>Logik</span> (<span>Exakte</span> <span>Logik</span>)</em>, 1st ed. Leipzig: B. G. Teubner, 1891. Available: <a href="https://archive.org/details/bub_gb_rIFKAAAAYAAJ/">https://archive.org/details/bub_gb_rIFKAAAAYAAJ/</a></div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
