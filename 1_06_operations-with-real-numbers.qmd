@@ -1,4 +1,4 @@
-## Operations with real numbers
+# Operations with real numbers {#sec-operations-with-real-numbers}
 
 To reduce any operation with two real numbers $\alpha$, $\beta$ to operations with rational numbers, it is only necessary from the cuts $(A_1, A_2)$, $(B_1, B_2)$ produced by the numbers $\alpha$ and $\beta$ in the system $R$ to define the cut $(C_1, C_2)$ which is to correspond to the result of the operation, $\gamma$. I confine myself here to the discussion of the simplest case, that of addition.
 

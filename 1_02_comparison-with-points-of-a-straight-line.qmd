@@ -1,4 +1,4 @@
-# Comparison of the rational numbers with the points of a straight line
+# Comparison of the rational numbers with the points of a straight line {#sec-comparison-of-the-rational-numbers-with-the-points-of-a-straight-line}
 
 The above-mentioned properties of rational numbers recall the corresponding relations of position of the points of a straight line $L$. If the two opposite directions existing upon it are distinguished by "right" and "left," and $p$, $q$ are two different points, then either $p$ lies to the right of $q$, and at the same time $q$ to the left of $p$, or conversely $q$ lies to the right of $p$ and at the same time $p$ to the left of $q$. A third case is impossible, if $p$, $q$ are actually different points. In regard to this difference in position the following laws hold:
 

@@ -1,4 +1,4 @@
-## Infinitesimal analysis
+# Infinitesimal analysis {#sec-infinitesimal-analysis}
 
 Here at the close we ought to explain the connection between the preceding investigations and certain fundamental theorems of infinitesimal analysis.
 
