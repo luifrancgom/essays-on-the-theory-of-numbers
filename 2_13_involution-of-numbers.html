@@ -89,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
     };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -331,6 +360,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><span id="par-155"><strong>155.</strong></span> Definition. If in theorem <a href="./2_09_definition-of-a-transformation-of-the-number-series-by-induction.html#par-126">(126)</a> we again put <span class="math inline">\(\Omega = N\)</span>, and further <span class="math inline">\(\omega=a\)</span>, <span class="math inline">\(\theta(n)=an=na\)</span>, we get a transformation <span class="math inline">\(\psi\)</span> of <span class="math inline">\(N\)</span> which still satisfies the condition</p>
+<p><span id="equ-par-155-I"><span class="math display">\[
+\text{I. }\psi(N) \partof N;
+\]</span></span></p>
+<p>the corresponding transform <span class="math inline">\(\psi(n)\)</span> of any number <span class="math inline">\(n\)</span> we denote by the symbol <span class="math inline">\(a^n\)</span>, and call this number a <em>power of the base</em> <span class="math inline">\(a\)</span>, while <span class="math inline">\(n\)</span> is called the <em>exponent</em> of this power of <span class="math inline">\(a\)</span>. Hence this notion is completely determined by the conditions</p>
+<p><span id="equ-par-155-II"><span class="math display">\[
+\text{II. } a^1=a
+\]</span></span></p>
+<p><span id="equ-par-155-III"><span class="math display">\[
+\text{III. } a^{n'}=a\centerdot a^n =\rlap{$a^n\centerdot a$}.
+\]</span></span></p>
+<p><span id="par-156"><strong>156.</strong></span> Theorem. <span class="math inline">\(a^{m+n}=a^m\centerdot a^n\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="./2_11_addition-of-numbers.html#equ-par-135-II">(135, II)</a>, <a href="#equ-par-155-III">(155, III)</a>, <a href="#equ-par-155-II">(155, II)</a> the theorem is true for <span class="math inline">\(n = 1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, we have</p>
+<p><span class="math display">\[
+a^{m+n}\centerdot a=(a^m\centerdot a^n)a;
+\]</span></p>
+<p>but by <a href="#equ-par-155-III">(155, III)</a>, <a href="./2_11_addition-of-numbers.html#equ-par-135-III">(135, III)</a> <span class="math inline">\(a^{m+n}\centerdot a=a^{(m+n)'}=a^{m+n'}\)</span>, and by <a href="./2_12_multiplication-of-numbers.html#par-153">(153)</a>, <a href="#equ-par-155-III">(155, III)</a> <span class="math inline">\((a^m\centerdot a^n)a=a^m(a^n\centerdot a)=a^m\centerdot a^{n'}\)</span>; hence <span class="math inline">\(a^{m+n'}=a^m\centerdot a^{n'}\)</span>, i.~e., the theorem is also true for the following number <span class="math inline">\(n'\)</span>, which was to be proved.</p>
+<p><span id="par-157"><strong>157.</strong></span> Theorem. <span class="math inline">\((a^m)^n=a^{mn}\)</span>.</p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#equ-par-155-II">(155, II)</a>, <a href="./2_12_multiplication-of-numbers.html#equ-par-147-II">(147, II)</a> the theorem is true for <span class="math inline">\(n = 1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, we have</p>
+<p><span class="math display">\[
+(a^m)^n\centerdot a^m=a^{mn}\centerdot a^m
+\]</span></p>
+<p>but by <a href="#equ-par-155-III">(155, III)</a> <span class="math inline">\((a^m)^n\centerdot a^m=(a^m)^{n'}\)</span>, and by <a href="#par-156">(156)</a>, <a href="./2_12_multiplication-of-numbers.html#equ-par-147-III">(147, III)</a> <span class="math inline">\(a^{mn}\centerdot a^m=a^{mn+m}=a^{mn'}\)</span>; hence <span class="math inline">\((a^m)^{n'}=a^{mn'}\)</span>, i. e., the theorem is also true for the following number <span class="math inline">\(n'\)</span>, which was to be proved.</p>
+<p><span id="par-158"><strong>158.</strong></span> Theorem. <span class="math inline">\((ab)^n=a^n\centerdot b^n\)</span></p>
+<p>Proof by complete induction <a href="./2_06_simply-infinite-systems.html#par-80">(80)</a>. For</p>
+<p><span class="math inline">\(\rho\)</span>. by <a href="#equ-par-155-II">(155, II)</a> the theorem is true for <span class="math inline">\(n = 1\)</span>.</p>
+<p><span class="math inline">\(\sigma\)</span>. If the theorem is true for a number <span class="math inline">\(n\)</span>, then by <a href="./2_12_multiplication-of-numbers.html#par-150">(150)</a>, <a href="./2_12_multiplication-of-numbers.html#par-153">(153)</a>, <a href="#equ-par-155-III">(155, III)</a> we have also <span class="math inline">\((ab)^n\centerdot a= a(a^n\centerdot b^n)=(a\centerdot a^n)b^n=a^{n'}\centerdot b^n\)</span>, and thus <span class="math inline">\(\bigl( (ab^n\centerdot a \bigr)b=(a^{n'}\centerdot b^n)b\)</span>; but by <a href="./2_12_multiplication-of-numbers.html#par-153">(153)</a>, <a href="#equ-par-155-III">(155, III)</a> <span class="math inline">\(\bigl( (ab)^n\centerdot a \bigr)b=(ab)^n\centerdot (ab)=(ab)^{n'}\)</span>, and likewise</p>
+<p><span class="math display">\[
+(a^{n'}\centerdot b^n)b = a^{n'}\centerdot (b^n\centerdot b)
+= a^{n'}\centerdot b^{n'};
+\]</span></p>
+<p>therefore <span class="math inline">\((ab)^{n'}=a^{n'}\centerdot b^{n'}\)</span> i. e., the theorem is also true for the following number <span class="math inline">\(n'\)</span>, which was to be proved.</p>
 
 
 

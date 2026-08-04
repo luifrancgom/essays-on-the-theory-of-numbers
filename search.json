@@ -378,6 +378,17 @@
     ]
   },
   {
+    "objectID": "2_13_involution-of-numbers.html",
+    "href": "2_13_involution-of-numbers.html",
+    "title": "20  Involution of numbers",
+    "section": "",
+    "text": "155. Definition. If in theorem (126) we again put \\(\\Omega = N\\), and further \\(\\omega=a\\), \\(\\theta(n)=an=na\\), we get a transformation \\(\\psi\\) of \\(N\\) which still satisfies the condition\n\\[\n\\text{I. }\\psi(N) \\partof N;\n\\]\nthe corresponding transform \\(\\psi(n)\\) of any number \\(n\\) we denote by the symbol \\(a^n\\), and call this number a power of the base \\(a\\), while \\(n\\) is called the exponent of this power of \\(a\\). Hence this notion is completely determined by the conditions\n\\[\n\\text{II. } a^1=a\n\\]\n\\[\n\\text{III. } a^{n'}=a\\centerdot a^n =\\rlap{$a^n\\centerdot a$}.\n\\]\n156. Theorem. \\(a^{m+n}=a^m\\centerdot a^n\\).\nProof by complete induction (80). For\n\\(\\rho\\). by (135, II), (155, III), (155, II) the theorem is true for \\(n = 1\\).\n\\(\\sigma\\). If the theorem is true for a number \\(n\\), we have\n\\[\na^{m+n}\\centerdot a=(a^m\\centerdot a^n)a;\n\\]\nbut by (155, III), (135, III) \\(a^{m+n}\\centerdot a=a^{(m+n)'}=a^{m+n'}\\), and by (153), (155, III) \\((a^m\\centerdot a^n)a=a^m(a^n\\centerdot a)=a^m\\centerdot a^{n'}\\); hence \\(a^{m+n'}=a^m\\centerdot a^{n'}\\), i.~e., the theorem is also true for the following number \\(n'\\), which was to be proved.\n157. Theorem. \\((a^m)^n=a^{mn}\\).\nProof by complete induction (80). For\n\\(\\rho\\). by (155, II), (147, II) the theorem is true for \\(n = 1\\).\n\\(\\sigma\\). If the theorem is true for a number \\(n\\), we have\n\\[\n(a^m)^n\\centerdot a^m=a^{mn}\\centerdot a^m\n\\]\nbut by (155, III) \\((a^m)^n\\centerdot a^m=(a^m)^{n'}\\), and by (156), (147, III) \\(a^{mn}\\centerdot a^m=a^{mn+m}=a^{mn'}\\); hence \\((a^m)^{n'}=a^{mn'}\\), i. e., the theorem is also true for the following number \\(n'\\), which was to be proved.\n158. Theorem. \\((ab)^n=a^n\\centerdot b^n\\)\nProof by complete induction (80). For\n\\(\\rho\\). by (155, II) the theorem is true for \\(n = 1\\).\n\\(\\sigma\\). If the theorem is true for a number \\(n\\), then by (150), (153), (155, III) we have also \\((ab)^n\\centerdot a= a(a^n\\centerdot b^n)=(a\\centerdot a^n)b^n=a^{n'}\\centerdot b^n\\), and thus \\(\\bigl( (ab^n\\centerdot a \\bigr)b=(a^{n'}\\centerdot b^n)b\\); but by (153), (155, III) \\(\\bigl( (ab)^n\\centerdot a \\bigr)b=(ab)^n\\centerdot (ab)=(ab)^{n'}\\), and likewise\n\\[\n(a^{n'}\\centerdot b^n)b = a^{n'}\\centerdot (b^n\\centerdot b)\n= a^{n'}\\centerdot b^{n'};\n\\]\ntherefore \\((ab)^{n'}=a^{n'}\\centerdot b^{n'}\\) i. e., the theorem is also true for the following number \\(n'\\), which was to be proved.",
+    "crumbs": [
+      "The nature and meaning of numbers",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Involution of numbers</span>"
+    ]
+  },
+  {
     "objectID": "_license.html",
     "href": "_license.html",
     "title": "22  License",
