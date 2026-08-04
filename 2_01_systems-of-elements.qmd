@@ -18,7 +18,7 @@ The proof follows from [(3)](2_01_systems-of-elements.qmd#par-3), [(2)](2_01_sys
 
 The proof follows from [(3)](2_01_systems-of-elements.qmd#par-3), [(6)](2_01_systems-of-elements.qmd#par-6).
 
-[**8.**]{#par-8} Definition. By the system *compounded* out of any systems $A$, B, C, $\ldots$ to be denoted by $\mathfrak{M}(A, B, C, \ldots)$ we mean that system whose elements are determined by the following prescription: a thing is considered as element of $\mathfrak{M}(A, B, C, \ldots)$ when and only when it is element of some one of the systems $A$, $B$, C, $\ldots$, i.e., when it is element of $A$, or $B$, or $C$, $\ldots$. We include also the case where only a single system $A$ exists; then obviously $\mathfrak{M}(A)=A$. We observe further that the system $\mathfrak{M}(A, B, C, \ldots)$ compounded out of $A$, $B$, $C$, $\ldots$ is carefully to be distinguished from the system whose elements are the systems $A$, $B$, $C$, $\ldots$ themselves.
+[**8.**]{#par-8} Definition. By the system *compounded* out of any systems $A$, $B$, $C$, $\ldots$ to be denoted by $\mathfrak{M}(A, B, C, \ldots)$ we mean that system whose elements are determined by the following prescription: a thing is considered as element of $\mathfrak{M}(A, B, C, \ldots)$ when and only when it is element of some one of the systems $A$, $B$, $C$, $\ldots$, i.e., when it is element of $A$, or $B$, or $C$, $\ldots$. We include also the case where only a single system $A$ exists; then obviously $\mathfrak{M}(A)=A$. We observe further that the system $\mathfrak{M}(A, B, C, \ldots)$ compounded out of $A$, $B$, $C$, $\ldots$ is carefully to be distinguished from the system whose elements are the systems $A$, $B$, $C$, $\ldots$ themselves.
 
 [**9.**]{#par-9} Theorem. The systems $A$, $B$, $C$, $\ldots$ are parts of $\mathfrak{M}(A, B, C, \ldots)$.
 
@@ -32,7 +32,7 @@ The proof follows from [(8)](2_01_systems-of-elements.qmd#par-8), [(3)](2_01_sys
 
 The proof follows from [(9)](2_01_systems-of-elements.qmd#par-9), [(7)](2_01_systems-of-elements.qmd#par-7).
 
-[**12.**]{#par-12} Theorem. If each of the systems $P$, Q, $\ldots$ is part of one of the systems $A$, $B$, $C$, $\ldots$ then is $\mathfrak{M}(P, Q, \ldots) \partof \mathfrak{M}(A, B, C, \ldots)$.
+[**12.**]{#par-12} Theorem. If each of the systems $P$, $Q$, $\ldots$ is part of one of the systems $A$, $B$, $C$, $\ldots$ then is $\mathfrak{M}(P, Q, \ldots) \partof \mathfrak{M}(A, B, C, \ldots)$.
 
 The proof follows from [(11)](2_01_systems-of-elements.qmd#par-11), [(10)](2_01_systems-of-elements.qmd#par-10).
 
@@ -50,7 +50,7 @@ $$
 
 The proof follows from [(13)](2_01_systems-of-elements.qmd#par-13), [(10)](2_01_systems-of-elements.qmd#par-10).
 
-[**15.**]{#par-15} Theorem. If each of the systems $P$, $Q$, $\ldots$ is part of one of the systems $A$, $B$, C, $\ldots$, and if each of the latter is compounded out of any of the former, then is
+[**15.**]{#par-15} Theorem. If each of the systems $P$, $Q$, $\ldots$ is part of one of the systems $A$, $B$, $C$, $\ldots$, and if each of the latter is compounded out of any of the former, then is
 
 $$
 \mathfrak{M}(P, Q, \ldots) = \mathfrak{M}(A, B, C, \ldots).
