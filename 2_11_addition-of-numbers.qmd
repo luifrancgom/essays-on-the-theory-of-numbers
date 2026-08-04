@@ -32,7 +32,7 @@ $$
 
 Proof by complete induction [(80)](2_06_simply-infinite-systems.qmd#par-80). For
 
-$\rho$. the theorem is true for $n=1$, since by ([(135), II](#equ-par-135-II))
+$\rho$. the theorem is true for $n=1$, since by [(135, II)](#equ-par-135-II)
 
 $$
 m'+1=(m')'=(m+1)',
