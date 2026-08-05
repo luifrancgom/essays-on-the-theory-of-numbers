@@ -6,4 +6,4 @@ Originally released on April 8, 2007 as Project Gutenberg `[EBook #21016]`, this
 
 The preparation and digitisation of this text were carried out by Jonathan Ingram, Keith Edkins, and the Online Distributed Proofreading Team at [http://www.pgdp.net](http://www.pgdp.net).
 
-This Quarto edition was prepared by Luis Francisco Gómez. The complete source code and project files are hosted on GitHub at [https://github.com/luifrancgom/essays-on-the-theory-of-numbers](https://github.com/luifrancgom/essays-on-the-theory-of-numbers).
+This Quarto edition was prepared by Luis Francisco Gómez. The complete source code and project files are hosted on GitHub at [https://github.com/luifrancgom/essays-on-the-theory-of-numbers](https://github.com/luifrancgom/essays-on-the-theory-of-numbers). Cross references throughout the text were modified and adapted to work with Quarto, and a bibliography was added to cover the references mentioned in the original manuscript.
