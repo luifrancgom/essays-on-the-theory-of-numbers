@@ -1,0 +1,108 @@
+
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+# Essays on the theory of numbers (Quarto Edition)
+
+[![](https://github.com/luifrancgom/essays-on-the-theory-of-numbers/actions/workflows/publish.yml/badge.svg)](https://github.com/luifrancgom/essays-on-the-theory-of-numbers/actions/workflows/publish.yml)
+
+This repository contains a edition of Richard Dedekind **Essays on the
+theory of Numbers** translated to english by Wooster Woodruff Beman and
+authored using [Quarto](https://quarto.org/).
+
+The project is based on the LaTeX source and OCR work by [Project
+Gutenberg - `EBook #21016`](https://www.gutenberg.org/files/21016/).
+
+The text is currently in the public domain in the USA and can be
+accessed via the [Project
+Gutenberg](https://www.gutenberg.org/ebooks/21016).
+
+------------------------------------------------------------------------
+
+## 📖 Read Online
+
+You can access the rendered versions of the book through the following
+links:
+
+| Format | Link |
+|:---|:---|
+| **🌐 HTML** | [View Web Version](https://luifrancgom.github.io/essays-on-the-theory-of-numbers/) |
+| **📄 PDF** | [Download PDF](https://luifrancgom.github.io/essays-on-the-theory-of-numbers/Essays-on-the-theory-of-numbers.pdf) |
+
+------------------------------------------------------------------------
+
+## 🛠 Build from Source
+
+To generate the book locally, ensure you have
+[Git](https://git-scm.com/) and
+[Quarto](https://quarto.org/docs/download/) installed on your system.
+
+### Clone the Repository
+
+Open your terminal and run the following commands to download the code
+and enter the project folder:
+
+``` bash
+git clone https://github.com/luifrancgom/essays-on-the-theory-of-numbers.git
+cd essays-on-the-theory-of-numbers
+```
+
+### Install Dependencies
+
+To render the PDF version, you need a LaTeX distribution. If you do not
+have one installed, Quarto can set up a lightweight version (TinyTeX)
+for you:
+
+``` bash
+quarto install tinytex
+```
+
+### Render the Book
+
+Once the dependencies are ready, you can render all formats (HTML and
+PDF) with a single command:
+
+``` bash
+quarto render
+```
+
+### Accessing Intermediate Files
+
+By default, Quarto cleans up intermediate files after rendering. If you
+want to inspect the generated `.tex` (LaTeX) or `.md` (Markdown) source
+files, you must modify the `_quarto.yml` configuration file.
+
+Uncomment (or add) the following options under the pdf format section:
+
+``` yaml
+format:
+  pdf:
+    keep-md: true
+    keep-tex: true
+```
+
+After saving the changes to `_quarto.yml`, run `quarto render` again.
+The files will then remain in your project directory for you to access.
+
+## ⚖️ License and Attribution
+
+This project is licensed under the [PROJECT GUTENBERG
+LICENSE](LICENSE.md).
+
+### Credits
+
+- **Original Text:** *Essays on the theory of numbers* (1901) by
+  **Richard Dedekind** and translated by **Wooster Woodruff Beman**. The
+  original content is in the **Public Domain** in the USA and can be
+  accessed via the [Project
+  Gutenberg](https://www.gutenberg.org/ebooks/21016).
+- **LaTeX Source & OCR:** This edition is based on the preparation and
+  digitisation carried out by Jonathan Ingram, Keith Edkins, and the
+  Online Distributed Proofreading Team at <http://www.pgdp.net>.
+- **Quarto Conversion:** Converted to Quarto by [Luis Francisco Gomez
+  Lopez](https://github.com/luifrancgom/essays-on-the-theory-of-numbers).
+- **Cover Image:** Corresponds to the painting [Mental Calculation. In
+  Public School of S. A.
+  Rachinsky](https://commons.wikimedia.org/wiki/File:BogdanovBelsky_UstnySchet.jpg)
+  by Nikolay Bogdanov-Belsky (1868 - 1945), which is a **Public Domain**
+  work in the USA.
